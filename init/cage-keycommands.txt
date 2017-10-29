@@ -1,0 +1,2 @@
+max definecommand C patcher inserttextobj cage.;
+max definecommandinstructions patcher C "cage abstraction";
