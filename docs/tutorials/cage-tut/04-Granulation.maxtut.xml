@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+
+<chapter name="cage Tutorial 4: Symbolic Granulation">
+
+<openfile name="Granulation" patch="Granulation.maxpat"/>
+
+
+<indexinfo category="Electrospectral" title="Granulation">Electrospectral</indexinfo>
+
+<header>Tutorial 4: Symbolic Granulation</header>
+
+<body>In this tutorial, we will learn how to achieve symbolic granular synthesis.</body>
+<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
+
+<subhead>Granular synthesis</subhead>
+
+<body>In the domain of signal processing, granular synthesis is well-known sound synthesis method that operates on the microsound time scale. In its simplest form, a sound sample is split into chunks of a certain length, called "grains", which are played back individually, and which can be layered on top of each other. In its most general form, each grain can be played at independent duration, speed, gain, transposition, or any other pertinent parameter.</body>
+
+<body>The standard parameters to drive this signal process are, most often: the grain region, i.e. the region of the sound file from where chunks are extracted), the grain length (or "size"), and the time interval between two consecutive chunks.</body>
+
+<subhead>Bringing granular synthesis into the symbolic domain</subhead>
+
+<body>This abstract granulation process is something which can also apply to the case of symbolic scores, and it turns out that one can deal with the same parameters which are pertinent in the signal case: the region from where grains must be extracted, the grain size, and the time interval between two consecutive grains. Only, grains will not be chunks of a sound file, but rather chunks of a score, for instance chunks of a <o>bach.roll</o> object.</body>
+
+<body>Open the tutorial patcher, and check the big green toggle on the top. This starts the granulation machine, and you can already see notes being added int the <o>bach.roll</o> at bottom. But why does it work? Who has set the parameters?</body>
+
+<body>The initial parameters are set as <o>cage.granulate</o>'s arguments. By default, <o>cage.granulate</o> accepts three arguments: the time interval between consecutive grains in milliseconds (in our case: <m>500</m>ms), the grain size in milliseconds (in our case: <m>1000</m>ms), and the temporal region from which grains should be extracted (in our case, from <m>0</m>ms to <m>2000</m>ms). When we turn <o>cage.granulate</o> on, it starts working with these parameters. But how can <o>cage.granulate</o> know the score it needs to granulate? It can, thanks to the feedback orange cable, which has to be connected to the <o>bach.roll</o> to be granulated, and which will sends to <o>bach.roll</o> the request of getting a given subregion (a "grain"). This process happens automatically provided that you link the orange and purple cables as shown. However, there's no magic in it: <o>cage.granulate</o> sends some <m>subroll</m> requests (to retrieve "grains" of the original roll), and accepts as answer the gathered syntax of such roll. Try to connect a print object to the last <o>cage.granulate</o>'s outlet to see what <o>cage.granulate</o> outputs!</body>
+
+<body>So, when you open the patch and turn on the machine, what happens is that each half second <o>cage.granulate</o> adds to the resulting <o>bach.roll</o> (at bottom) a "grain" of the original <o>bach.roll</o> (at top) having length exactly 1 second. This grain has been extracted randomly inside the region between 0 and 2 seconds.</body>
+
+<subhead>Changing parameters in real-time</subhead>
+
+<body>You can of course change the parameters for the granulation. First of all, you can modify the score from which grains are extracted (i.e. the top <o>bach.roll</o>): adding notes, deleting notes, opening a new file, or switching to another preset - any action you perform on the <o>bach.roll</o> will affect the result in real-time.</body>
+
+<body>The handiest way to modify the grain region, is to use <o>bach.roll</o>'s integrated loop region as grain region. <o>bach.roll</o>'s loop region can be shown/hidden via <m>Cmd+L</m> (mac) or <m>Ctrl+L</m> (win), and once it is shown it can be disabled/enabled via <m>Cmd+Shift+L</m> (mac) or <m>Ctrl+Shift+L</m> (win). When a loop is shown/hidden/disabled/enabled, a <b>loop on</b> or <b>loop off</b> notification is sent through <o>bach.roll</o>'s playout (the "on" message will only be displayed if the loop is both shown and enabled). Also, whenever the loop region is dragged or modified by the user with the mouse, a notification will be sent through the playout, in the form <b>loop <m>start</m> <m>end</m></b>, where the starting and ending point of the loop are given in milliseconds.</body>
+
+<body>Notice that enabling or disabling the loop system only affects the playing of the original <o>bach.roll</o>: a disabled loop, though displayed, is ignored at playtime. However, in our case, we don't need at all the sequencing capabilities of the original <o>bach.roll</o>: we only need the loop to be a visual representation of a loop region. What we want, is to link the visual representation of the loop region to the region where grains need to be extracted. In order to do so, whenever the user changes the loop via the interface, we intercept the <b>loop</b> notification coming from the playout with <o>bach.keys</o>, and we ignore such notification if what comes next is a symbol (i.e. <b>on</b> or <b>off</b>), as we are only interested in the notification of the loop region in the form <b>loop <m>start</m> <m>end</m></b>. Once we have intercepted these extremes of the grain region, we input them in <o>cage.granulate</o>'s grain region inlet, namely the last one.</body>
+
+<body>Try to move the loop region while the machine is running, and notice how the resulting grains will be extracted from different regions of the original score. Notice incidentally that no parentheses are needed when we send the grain region extremes through the last outlet: we do need parentheses, on the other hand, if we set these values as arguments - indeed we wrote <b>(0 2000)</b> -, since those two values both must be gathered to represent the third argument.</body>
+
+<body>We can also modify the grain interval and the grain size, via the 3rd and 4th inlet of <o>cage.granulate</o>. Type in the blue number box a value greater than 500, and see how the grains will start to get rarefied. Decrease the value to increase the density of grains. Instead of entering a single number, representing a precise time interval between grains, we can enter a couple of numbers, for instance via the blue <o>rslider</o>: by doing so, we ask <o>cage.granulate</o> to pick an uniform random value between the two values we are inputting. For instance, if we input <m>200 800</m>, the temporal distance between two grains will vary from grain to grain and each time will be a random interval between 200ms and 800ms. Of course, we can send a list containing two times the same value (as by clicking on the <o>rslider</o> without dragging), and this will be the same as entering a single number.</body>
+
+<body>The same paradigm is true for the fourth inlet, accepting the grain size: we can either enter a single number (which we don't do in the patch), or a couple of numbers, from where the machine will extract randomly a possibly different grain size for each one of the grains. For instance, entering <m>1000 2000</m> will force <o>cage.granulate</o> to pick grains lasting between one and two seconds. Notice that the length of the picked grain cannot be longer than the length of the grain region (if this is the case, the grain is trimmed).</body>
+
+<body>This paradigm is quite typical throughout cage: a single number for a parameter simply sets the parameter, a couple of number set a minimum and maximum value for the parameter, which is in turn chose randomly within this range. One can also substitute to the first argument a couple of values (which in this case has to be wrapped in a level of parentheses, since otherwise <o>cage.granulate</o> will have no clue that they both refer to the first argument), for instance setting <b>(400 600)</b> instead of <b>500</b> will ask <o>cage.granulate</o> to pick random intervals between 400ms and 600ms.</body>
+
+<body>Try to modify the states of the blue and red <o>rslider</o>s, and see how the granulation is affected.</body>
+
+<subhead>Granulation playback in real-time</subhead>
+
+<body>One might want to play the content that is being granulated: in some sense, one would like to use the resulting <o>bach.roll</o> as a symbolic buffer, where we write stuff (we add grains one by one) and we read stuff (we sequence it, we play its content). In order to do so, the simplest thing to do is to play and write at the same time: however, since we need to write stuff before we play it, there has to be a small delay of the reading (playing) with respect to the writing.</body>
+
+<body>The subpatch taking care of playing is the <m>also_play</m> patch. To activate playing, simply open the gate which is right above such subpatch. To understand how it works, doubleclick on the subpatch to open it: whenever the machine toggle is checked, a bang is delayed of half a second: after this time, the cursor is set to 0ms, and we ask <o>bach.roll</o> to <m>play</m>. The bottom <o>bach.roll</o> starts then to output information from its playout, and this information is processed and played as MIDI data by <o>bach.ezmidiplay</o>. The "writing cursor" and the "playing cursor" will thus be always delayed by half a second: whenever the machine adds a new grain, such grain will be played half a second later. You can of course reduce such delay, but it is safer not to go under a certain threshold: experiment to find the threshold that best suits your granulation. Once we turn off the granulation machine, a <m>stop</m> message is sent to <o>bach.roll</o>, so that immediately (with virtually no delay) stops playing.</body>
+
+<subhead>Conclusion and further steps</subhead>
+
+<body>The score granulation is a process simulating, in the symbolic domain, the granulation of a sound sample. We have seen how to drive the parameters controlling such process, and how to play the result in real-time. 
+If you want to dig more into the features of <o>cage.granulate</o>, you can also transpose or stretch each individual grain by using the <m>transp</m> and <m>rate</m> attributes. The paradigm is the same as for any other parameter: a single number sets a static value for rate or transposition, while a couple of numbers set a range from where rate or transposition might be taken randomly.</body>
+
+<seealsolist>
+<seealso name="cage.granulat"></seealso>
+<seealso name="bach.ezmidiplay"></seealso>
+<seealso name="bach.roll"></seealso>
+<seealso name="rslider"></seealso>
+</seealsolist>
+
+</chapter>

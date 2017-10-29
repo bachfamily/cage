@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+
+<chapter name="cage Tutorial 9: Fractals">
+
+<openfile name="Fractals" patch="Fractals.maxpat"/>
+
+
+<indexinfo category="Automata" title="Fractals">Automata</indexinfo>
+
+<header>Tutorial 9: Fractals</header>
+
+<body>In this tutorial, we will build a more advanced example of L-system, constructing a fractal-like rhythmic figure, via <o>cage.chain</o>. In order to follow this tutorial you should be familiar with the L-systems tutorial, which introduces the usage of <o>cage.chain</o>.</body>
+
+<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
+
+
+<subhead>Fractals and L-systems</subhead>
+
+<body>Sometimes rules of <o>cage.chain</o> can be a way to explore a pattern. L-systems were originally conceived by Aristid Lindenmayer to describe recursively the behaviour of plant cells and to model the growth processes of plant development.</body>
+
+<body>Occasionally these patterns end up yielding fractal-like shapes. L-systems are indeed very well suited to define certain classes of fractals. For instance, at each step of the process, we might want a certain musical figure to become denser and denser with small events, however by retaining the idea that the local shape matches the global shape.</body>
+
+<body>Suppose we want to iteratively build a figure according to the following rule: we start as a given whole note. At each step, we consider all notes: if the note pitch does not match the original note, then we leave the note as it is; otherwise, we subdivide the note into three equally long notes (triplets), the former and the latter keeping as pitch the one of the original note, whereas the middle one having as pitch its <m>N</m>-th prime harmonic, where <m>N</m> is the index of the iteration step we are performing (so at the first step we get the 2nd harmonic, at the second step we get the 3rd harmonic, then the 5th, then the 7th, then 11th, 13th, and so on). Let's see how we can achieve such a process via <o>cage.chain</o>.</body>
+
+<subhead>Base note interface</subhead>
+
+<body>Open the tutorial patch. Suppose we start with a single note, marked as "base note" in the patch. Each time this note is changed via the interface, its pitch comes out <o>bach.roll</o>'s Cents outlet, we get rid of all the level of parentheses via <o>bach.flat</o>, and we introduce it as starting element for <o>bach.chain</o>.</body>
+
+<body>Notice that the interface handling is performed in the purple patch "p handle_interface". Although this is not the object of this tutorial, it might be worth to give it a look, and we will discuss it very briefly. We set as "automessage" the "dump cents" message; the "automessage" is a message which is automatically sent to the object "invisibly" whenever something is modified via the interface: we set this at the patch opening so that whenever we move the note, its cents are output. Also we dump the cents immediately at the patch opening (so that everything is ready). Finally, at startup, we also tell the object to prevent any editing except the one for the note pitch; however we do so after having selected the note (otherwise, the selection itself would be prevented, unless we add "selection" explicitly after the <m>preventedit</m> minus). You might also want to look for #automessage and #preventedit in bach Help Center to know more about these topics.</body>
+
+<subhead>In-depth representation</subhead>
+
+<body>However, if you look carefully to the orange message, we do not set the mere pitch as starting word ("axiom") for <o>cage.chain</o>: we actually set a (wrapped) llll composed by a number (1) and the pitch itself: indeed we need to keep track both of the pitch of the note and of its duration. This means: we start with a note having duration 1 (= 1/1: a whole note), and having as pitch the one of the base note.</body>
+
+<body>Say our base pitch is 3600 ms. What should happen at the first iteration? Well, <o>cage.chain</o> should output the current state <b>(1 3600)</b>, then we must process each note in the current state (there is just one), and since it has the same pitch as the base note, we want to divide this into 3, yielding <b>(1/3 3600) (1/3 4800) (1/3 3600)</b>, since 4800 is the second partial of 3600. At the next step we should replicate the behavior on each one of these notes: the middle one is a modified note, thus we'll leave it untouched, while we will modify the first and last one, substituting them with <b>(1/9 3600) (1/9 6702) (1/9 3600)</b>, since 6702mc is roughly the third partial of 3600mc.</body>
+
+<body>This is a handy way to represent result, however this doesn't represent the nature of result. If we had to perform the same operation starting from a single note in a <o>bach.score</o>, we would divide the note into three, then again into three. The resulting rhythm would not be merely the sequence <b>1/9 1/9 1/9 1/3 1/9 1/9 1/9</b>, but would be hierarchically organized in a so-called rhythmic tree. (The bach library has a tutorial about the intricacies of rhythmic trees, Beams Through The Trees, you might want to follow if you haven't done that yet.) Such structure would keep the splitting levels, yielding <b>((1/9 1/9 1/9) 1/3 (1/9 1/9 1/9))</b> or equivalently <b>((1/9 1/9 1/9) (1/3) (1/9 1/9 1/9))</b>. This is a more convenient way to represent the result, since <o>bach.score</o> immediately understands that we're actually aiming for triplets inside triplets, and will display them properly.
+(As a little side note, we might just pay attention to set the <m>maketreecompatiblewithts</m> attribute to false, in order to ignore the 4/4 beaming imposition.)</body>
+
+<body>This leaves us with the following issue: not only do we need to either keep or split each note into three, but we also need to add a level of parentheses at each operation. How do we do that? Well, we'll simply feed <o>cage.chain</o> back with a list having one more level of parentheses in its lambda inlet. Starting from <b>(1 3600)</b>, this will yield <b>((1/3 3600) (1/3 4800) (1/3 3600))</b>.</body>
+
+<body>Very well. However, by default <o>cage.chain</o> only operates at its root level. At this moment, then, it analyzes the llll representing its current state and realizes that such llll has a single element (the big parenthesis). Consequently, it should output such element from the lambda outlet - which is not really what we want: we need <o>cage.chain</o> to understand that the actual elements are inside the big parenthesis. How do we do that? We need to use the "maxdepth" attribute: if we set <m>maxdepth</m> to -2, this immediately tells <o>cage.chain</o> that the actual llll where the elements are found is no longer at root level, rather at the one-but-last level of the llll. This is equivalent to considering the inner <b>(1/3 3600) (1/3 4800) (1/3 3600)</b> as the llll containing the actual elements (i.e. the list whose depth is exactly 2: this is the meaning of the "minus 2").</body>
+
+
+<subhead>The rule</subhead>
+
+<body>Once we've set the <m>maxdepth</m> problem, we need to actually set up the algorithm for the rewriting rule. This is done in the red panel of the patch. We consider that <o>cage.chain</o> now outputs the actual elements, "notes" in the form <b>(<m>duration</m> <m>pitch</m>)</b>. We pick the duration: if it does not coincides with the base note pitch, we simply pass it through and wrap it once (light blue cable). Otherwise, we build three new notes. The durations are build by dividing the note duration by 3, and repeating it 3 times; the pitches are build by keeping the note pitch as first and last, and adding as middle pitch the <m>N</m>-th partial of the base note.</body>
+
+<body>But how do we know the iteration number <m>N</m>? Well, such number is always output, at the beginning of the iteration, via the right (lambda) outlet. Once it comes out, we need to retrieve the <m>N</m>-th prime number (starting from 2), which we do via <o>bach.primeser</o> and <o>bach.lookup</o>. <o>bach.primeser</o> with arguments "2 none 200" builds the series of primes starting from 2, without any upper limit, and having 200 elements. So it returns: <b>2 3 5 7 9 11 13 17 19...</b> and so on, for 200 elements. We would not be able to support more than 200 iterations with this patch, but this is not a real trouble, since chords will grow exponentially, and we'll be only able to get to a handful of iteration (way before 200), before computation time becoming too big.</body>
+ 
+<body>While building the three new notes, we'll use as frequency for the middle one, the frequency of the base note (converted via <o>bach.mc2f</o>) times the number of partial (the <m>N</m>-th prime number). This gives us the actual frequency of the note, which needs to be converted back into midicents via <o>bach.f2mc</o>.</body>
+
+<body>Finally, once we have the three durations and the three pitches, we list them as two rows of a matrix and then transpose the matrix via <o>bach.trans</o>, so to end up with couples of <b>(<m>duration</m> <m>pitch</m>) (<m>duration</m> <m>pitch</m>) (<m>duration</m> <m>pitch</m>)</b>. We wrap this result once, and we are done.</body>
+
+
+<subhead>Display</subhead>
+
+<body>Now it's finally time to play with the patch! Try to set the yellow numberbox to 2, then 3, 4, 5... and see what happens!</body>
+
+<body>When <o>cage.chain</o>'s left inlet is fed with an integer value <m>N</m>, the module performs <m>N</m> rewriting steps, and outputs them all in a list. Since we only need the last step to be displayed, we pick it via <o>bach.pick</o>.</body>
+
+<body>Then, our result is not really written in a syntax understandable for <o>bach.score</o>; however we are not far from <o>bach.score</o>'s gathered syntax, so we decide to rewrite each element <b>(<m>duration</m> <m>pitch</m>)</b> in the form <b>(<m>duration</m> (<m>pitch</m> 100 0))</b>, which is the gathered syntax of a <o>bach.score</o> chord having one note, with velocity 100 and with no tie (see #score+gathered+syntax in bach Help Center to know more).
+This is achieved via the <o>bach.mapalem</o> in the green part of the patch</body>
+
+<body>Finally, we wrap the input and prepend the time signature 4/4. We wrap everything twice (one level for the measure, one level for the voice), and we are done!</body> 
+
+
+<subhead>Conclusion</subhead>
+
+<body>We have built and analyzed a more complex case involving <o>cage.chain</o>'s in-depth rewriting mechanism, yielding a fractal-like figure.</body>
+
+<seealsolist>
+<seealso name="cage.chain"></seealso>
+<seealso name="L-systems"></seealso>
+</seealsolist>
+
+</chapter>

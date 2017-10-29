@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+
+<chapter name="cage Tutorial 3: Melodic Profiles">
+
+<openfile name="MelodicProfiles" patch="MelodicProfiles.maxpat"/>
+
+
+<indexinfo category="Profiles" title="Melodic Profiles">Generation</indexinfo>
+
+<header>Tutorial 3: Melodic Profiles</header>
+
+<body>In this tutorial, we will learn how to generate and modify melodic profiles from a geometrical point of view.</body>
+<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
+
+
+<subhead>Melodic profiles in cage</subhead>
+
+<body>Generally speaking, a melodic profile is a combination of a sequence of pitches and a rhythm. For our purposes, we will ignore the rhythmic part, which might be added later separately, and we will only focus on the profile as a sequence of equally spaced pitches. This is clearly reductive, however it contains already a certain number of musical possibilities. All the modules of cage dealing with such possibilities have their name starting with cage.profile., for instance <o>cage.profile.gen</o> or <o>cage.profile.stretch</o>, and so on.</body>
+
+<subhead>Generating a profile</subhead>
+
+<body>The first thing we might want to do is to generate a profile. Of course we might write the profile notes names or midicents explicitly in a message box, of inside a <o>bach.roll</o> or <o>bach.score</o>. However, in this tutorial we want to focus on the generation and modification of profiles from a geometrical point of view: so we might want to generate a melodic profile starting from a breakpoint function. But how do we do that?</body>
+
+<body>First of all, let us clarify what we mean when we say "generate a melodic profile" starting from a breakpoint function. One way to convert a breakpoint function into a melodic profile, is to treat such function "literally": as a continuous glissando starting from a given pitch. In this sense, we don't need cage at all: we should just set the function as pitch breakpoint function for a single note (which is also a good exercise to get accustomed with pitch breakpoints - you can for instance use the <m>addchord</m> message of <o>bach.roll</o>, with a note containing breakpoint information: look up #breakpoint+syntax in the bach help center). On the other hand, we might want to convert the continuous function into a sequence of discrete notes, whose pitches follow the segments and curves of the breakpoint function. In this case, we might take advantage of cage, and namely of the <o>cage.profile.gen</o> module.</body>
+
+<body>The <o>cage.profile.gen</o> module is the one in charge of generating melodic profiles starting from breakpoint functions. It expects the function in its right inlet, and the number of notes in which it has to be sampled in the left inlet. The syntax to define the breakpoint function in the right inlet is the usual breakpoint function syntax in bach: a list of wrapped elements in the form <b>(<m>x</m> <m>y</m> <m>slope</m>) (<m>x</m> <m>y</m> <m>slope</m>) (<m>x</m> <m>y</m> <m>slope</m>)...</b>, where the slope elements define the slope of the previous segment (i.e. the first one will be ignored) as a standard Max slope (from -1 to 1, 0 being linear). These slopes are all optional: if they are not present, a linear 0 slope will be used.</body>
+
+<body>Connect the outlet of <o>cage.profile.gen</o> to the left inlet of the red <o>bach.reg</o>, in the bottom right part of the patch. Such part of the patch is dedicated indeed to the display of melodic profiles - as we said, for cage a melodic profile is simply a sequence of pitches, and we cannot plug it in directly into a <o>bach.roll</o>: we first need to wrap it once (to tell <o>bach.roll</o> that we want to display it in the first voice), and we need to assign some onsets (or even just a couple of them: the remaining ones will be inferred from the distance between the last input ones). That's why the display patch will be handy during this tutorial: just link to the red <o>bach.reg</o> any melodic profile you want to be displayed.</body>
+
+<body>Once you have connected the outlet of <o>cage.profile.gen</o> to the display section, click on the green message: notice how the resulting melodic profile follows the behavior of the breakpoint function. Try to modify the breakpoint function, and notice that as you do that, the <m>listdump</m> message is automatically sent via the rightmost bang of the <o>function</o> object. This means that the function given to <o>cage.profile.gen</o> is automatically updated, and you just need to click on the green message again to see the new result. This last operation can be, of course, done also automatically, provided that you link the rightmost bang of the <o>function</o> object also with the green message: in this case, all you need to do is modify the breakpoint function, and the resulting notes will be updated in realtime.</body>
+
+<body>As a side note, the function doesn't have to be equally sampled, but we can sample it at precise points: have a look at <o>cage.profile.gen</o>'s help file, should you need this behavior.</body>
+
+
+<subhead>Modifying a profile</subhead>
+
+<body>Once the profile has been generated, we can operate on it in a certain number of ways. Some ways of operation are straightforward. For instance, shifting the profiles is equivalent to using <o>bach.+</o>. Some other ways are still basic, but slightly less trivial; for instance we can mirror each pitch with respect to a fixed note, by using <o>cage.profile.mirror</o>. Disconnect the cable going from <o>cage.profile.gen</o> to the display section of the patch, and connect it to the outlet of <o>cage.profile.mirror</o>, and click again on the green message. Notice how the profile is now symmetric with respect to the C above middle C (the one having 7200 midicents, given as argument or in the right inlet).</body>
+
+<body>Another way to modify a profile is by perturbing it, i.e. adding to each note an aleatory interval (upwards or downwards). This is obtained via <o>cage.profile.perturb</o>, and the maximum allowed shift can be given as attribute (or in the right inlet). Connect the outlet of <o>cage.profile.perturb</o> to the display section to see the effects. This perturbation can be better seen if we switch from a semitonal tone division to a quartertonal or eighth-tonal tone division (click on the "4" or "8" messages in the display section): we will see how any element in the "profile" sublibrary acts upon floating point midicents number which are never explicitly quantized to the semitonal grid. In other words: when you generate, mirror, perturb a profile (or any other operation), you are generating pitches which don't necessarily correspond to exact piano keys. Select notes in the score, and notice in the legend how their midicents value doesn't necessarily end with a double zero (don't forget: if the midicent value is a multiple of 100, this means that the note is a note of the equally tempered 12-tone-system). This means that the displayed midicent is only an approximation of the actual midicent. If you need to snap each pitch to the nearest pitch in the semitonal grid (as the display shows), you can always use the <o>bach.mcapprox</o> module, giving the tone division as argument. The patch does it right after <o>cage.profile.perturb</o>: connect the outlet of <o>bach.mcapprox</o> to the display section and notice how now the displayed pitches coincide with the midicents shown in the legend. Notice how <o>bach.mcapprox</o> receives the tone division whenever we change it in the display section.</body>
+
+<body>A standard way to act on sequences of elements is by filtering them. This is achieved via <o>cage.profile.filter</o>. The type of filtering can be specified via the first argument, which can be one of the following: "average", "median", "custom". The first one implements an average filter (it substitutes each note with the average pitch of a certain number of neighbor notes), the second one implements a median filter (it does the same with the median, instead of the average), while the last one implements a custom filter, via a lambda loop (see <o>cage.profile.filter</o> help file to know more about this latter). The second argument for <o>cage.profile.filter</o> is indeed the size of this "neighborhood" of notes over which the average or median (or custom filtering) has to be taken. We set it to be three: this is called the "window size". How does this work exactly? Suppose we had as a sequence of incoming pitches <b>7000 7100 7400 7500 7300 7200</b>. The algorithm first split this sequence into a sequence of overlapping windows of 3 elements (since our window size is 3): <b>7000 7100 7400</b>, then <b>7100 7400 7500</b>, then <b>7400 7500 7300</b>, and finally <b>7500 7300 7200</b>. Then it takes the median of each one of such windows, and collect the results. The median is the middle element in the reordered sequence of elements, so the first window yields <b>7100</b>, the second one <b>7400</b>, the third one yields <b>7400</b> (the reordered window would be <b>7300 7400 7500</b>), the fourth one yields <b>7300</b>. We collect all results, and we get <b>7100 7400 7400 7300</b>, which is our filtered result. Notice how the result has two pitches less than the original result, due to windowing. Average and median filters tend to smooth the incoming profile, as you might surely happen to know if you've come across DSP filters. As a final note, <o>cage.profile.filter</o> can repeat the filtering process more than once if you give a third integer argument (the so called "iteration order").</body> 
+
+<subhead>Conclusion</subhead>
+
+<body>We have learned how to construct sequences of melodic pitches starting from breakpoint functions, and how to perform a basic set of modifications upon such sequences of pitches.</body>
+
+<seealsolist>
+<seealso name="cage.profile.gen"></seealso>
+<seealso name="bach.slot"></seealso>
+</seealsolist>
+
+</chapter>

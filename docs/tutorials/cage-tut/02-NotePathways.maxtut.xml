@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+
+<chapter name="cage Tutorial 2: Note Pathways">
+
+<openfile name="NotePathways" patch="NotePathways.maxpat"/>
+
+
+<indexinfo category="Generation" title="Note Pathways">Generation</indexinfo>
+
+<header>Tutorial 2: Note Pathways</header>
+
+<body>In this tutorial, we will learn how to randomly produce note walks in real-time, where notes are taken from a given harmonic reservoir.</body>
+<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
+
+
+<subhead>Real-time or off-line generation?</subhead>
+
+<body>In cage we have two different ways to produce notes, corresponding to two different types of modules in the "Generation" category. On one side, we have the modules producing all the notes at once, according to a given criteria: these include <o>cage.scale</o>, <o>cage.arpeggio</o> and <o>cage.harmser</o>. These modules expects all the parameters, and then output all the produced notes at once (off-line).</body>
+
+<body>Two other modules, on the other hand, are dedicated to producing notes one by one: <o>cage.noterandom</o> and <o>cage.notewalk</o>. Whenever we send a <m>bang</m>, a certain note is picked (according to some criteria) and output. To output another note, we need to send another <m>bang</m>, and so on. Notes are picked from a given "reservoir", i.e. from a given set of possible notes; and of course such reservoir can be built via the previous off-line modules, so we can easily pick notes from a given scale, or chord, or harmonic series.</body>
+
+<body>These real-time modules are designed to work in combination with <o>bach.transcribe</o>: their output is to be simply input in <o>bach.transcribe</o>'s right inlet, and this latter will be in charge of writing the incoming notes in the <o>bach.roll</o> connected to <o>bach.transcribe</o>'s right outlet.</body>
+
+<subhead>Picking random notes from a reservoir</subhead>
+
+<body>Open the tutorial patch, and look at the left example. To simply pick random notes from a reservoir, <o>cage.noterandom</o> is the easiest way to go. Its second inlet expects the list of possible notes (the reservoir, indeed). We can of course take advantage of <o>cage.scale</o> or <o>cage.arpeggio</o> to build this reservoir: that's what we do in the left side of the patch, where a <o>cage.noterandom</o> takes information from a D major scale, from 4800mc to 8600mc. (Of course, nothing prevents us from writing the reservoir explicitly as a list of pitches in midicents, if we wish).</body>
+
+<body>Once the reservoir has been introduced, we can simply start banging the left inlet of <o>cage.noterandom</o>: the module will directly yield, one by one, a picked note. Clicked on the green button, and have a look at the Max window: <o>cage.noterandom</o> has output a random pitch from the D major scale, along with two other numbers, which look like a velocity and a voice number. Click on the green button again, and another note is picked, along with the same velocity and voice number. But before that, the previous picked note is output again, with velocity 0 (which looks like a note-off for the previous note). But why does <o>cage.noterandom</o> also output fixed velocity and voice number values? And why does it output the note-off?</body>
+
+<body>The point is that, as we have seen, both <o>cage.noterandom</o> and <o>cage.notewalk</o> are designed to work in conjunction with <o>bach.transcribe</o>, which means that they have to feed it information about midicents, velocity and voice number of the incoming note, as long as possible note-offs to stop previous notes. This behavior is completely transparent to you: just connect <o>cage.noterandom</o>'s first outlet to <o>bach.transcribe</o>'s second inlet, and everything will work as expected. If you need to change velocity or voice number of the incoming notes, you can change the <m>vel</m> and <m>voicenum</m> attributes at any time. However, in our simple tutorial, we don't need this.</body>
+
+<body>In order to start transcribing incoming data, we need to turn <o>bach.transcribe</o> on. Notice that <o>bach.transcribe</o> has 1 as <m>play</m> attribute, so that it will automatically play the transcribed content (and the <o>bach.ezmidiplay</o> connected to the playout will output the played information in MIDI form). Since we don't want to manually send bangs, we use a <o>metro</o> object, driven by the same toggle which drives the on/off for the transcription. It is the yellow toggle: now you can turn it on, and the transcription begins, with bangs being sent each 200ms. </body>
+
+<subhead>Continuous paths</subhead>
+
+<body>You'll have noticed that the notes produced by our left example aren't really correlated in any way: they are just random notes from a reservoir. We might want, on the other hand, to produce a path of notes which follows a more continuous line. In other words, once we pick a note, we might want the next picked note to lie near the previously picked one.</body>
+
+<body>To achieve this, we should swap <o>cage.noterandom</o> with <o>cage.notewalk</o>. This latter produces a "random walk" inside the . A random walk is exactly what we need: a path inside a grid of notes, where the passage from one step to another is handled via a list of possible steps. For instance, if we set <b>1 -1</b> as list of possible steps, once we pick a note N, we'll know for sure that the next picked note will be either the one right before N in the grid, or the one right after N in the grid. This produces the most continuous flow of notes.</body>
+
+<body>Look at the right example. The <o>cage.notewalk</o> module works in a similar manner than <o>cage.noterandom</o>: it needs a reservoir in its second inlet (and in our example we're feeding it with a fragment of Eb minor scale), and it is driven by bangs which will output notes one by one, to be in turn fed to <o>bach.transcribe</o>. However, notice that <o>cage.notewalk</o> need more stuff to be defined in order for it to work. Namely: it needs a starting pitch in its third inlet (and we give the 6300 Eb) and the list of possible steps in the fourth inlet. The safest way to be sure that all these values be defined when the patch is opened is to also give them as arguments. However notice the required order of arguments: <o>cage.notewalk</o> expects as first two arguments the velocity and the voice number (<o>cage.noterandom</o> accepts such arguments too), then the list of admitted steps and the starting pitch. Also notice that the list of admitted steps need to be wrapped in a pair of parentheses when given as argument, while it needs to be a flat list when sent through the fourth inlet (see grey messages).</body>
+
+<body>You can already start generating notes by turning on the blue toggle: notice how the notes by default form continuous fragments of the minor scale: we only allow indeed steps of 1 and -1 (i.e.: going from one reservoir note to the next, or from one reservoir note to the previous). Try to click on other grey messages, and the possible steps increase, so that little jumps start to appear in the thread.</body>
+
+<body>Turn the machine off, and then turn it on again. Notice that the flux restarts exactly at the pitch position where you had left it. In order to reset the flux to a specific position, you need to send again the starting pitch, for instance via the orange number box. You can set this pitch at any time to reset the position of the flux.</body>
+
+<body>Now click on the red message, reset the starting pitch to 6300ms, and turn the machine on. What happens?The pathway goes upwards right away, and hits the "ceiling" given by the higher note in the reservoir. Turn the machine off, reset the starting pitch and try again: you'll get the same result. Why is the red message different from grey messages? Grey messages could cause too "ceiling hits" (or the "floor hits"), however they had a more balanced behavior, and eventually the flow of notes will come down. The fact is that, in order to have a balanced probabilistic behavior, you need all elements of the list of admitted steps to sum up to zero. In this case, and only in this case, the "average step" will thus be 0, assuring that the flux will in any case wander more or less around the starting pitch.</body>
+
+<subhead>Conclusion</subhead>
+
+<body>We have learned how to construct random paths of notes, and random walk of nothes via <o>cage.noterandom</o> and <o>cage.notewalk</o>.</body>
+
+<seealsolist>
+<seealso name="cage.scale">Create a scale</seealso>
+<seealso name="cage.arpeggio">Create an arpeggio</seealso>
+<seealso name="bach.roll">Display and edit a score in proportional notation</seealso>
+<seealso name="bach.transcribe">Fills a bach.roll according to incoming MIDI data</seealso>
+</seealsolist>
+
+</chapter>

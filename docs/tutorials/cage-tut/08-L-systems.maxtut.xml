@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+
+<chapter name="cage Tutorial 8: L-systems">
+
+<openfile name="L-systems" patch="L-systems.maxpat"/>
+
+
+<indexinfo category="Automata" title="L-systems">Automata</indexinfo>
+
+<header>Tutorial 8: L-system</header>
+
+<body>In this tutorial, we will learn how to modify a starting element according to some rules.</body>
+<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
+
+
+<subhead>What is an L-system?</subhead>
+
+<body>An L-system (or Lindenmayer system) is essentially a rewriting system and a type of formal grammar. An L-system is built upon a starting alphabet, containing the "letters" which can be used to create "words", and a collection of rules that expand each "word" into some different (often larger) one. The module which is in charge of handling such rewriting systems is <o>cage.chain</o>, which indeed is able to create chains of "words" starting from a given one and according to some defined rules. </body>
+
+<subhead>An alphabet of notes</subhead>
+
+<body>Of course "letters" might not be necessarily real alphabet letters. For instance, we might use pitches as "letters", and use them to create "words" according to the given rules.</body>
+
+<body>Let us take a more concrete example, by opening the tutorial patch. Suppose we want to use as alphabet letters all pitches (in midicents). An L-system is thus a system which operates on some word (i.e. sequence of notes) by rewriting it, and in order to start modifying something, we need an initial word to be set. This initial "word" is often called "axiom", since somehow it is "taken for granted", whereas all the "words" we will construct via our rules are "derived words" (or "theorems"). The starting word must be input in <o>cage.chain</o>'s second inlet. Let us choose as starting word a scrambled version of the C major arpeggio from middle C upwards across to octaves: we can construct such "word" of notes simply by using <o>cage.arpeggio</o>. Click on the red bang to send this word to all the <o>cage.chain</o>s objects in the patch. We have defined the starting word, i.e. the current state of the object, and nothing has been output yet. If we need to change the state of the object (the word "internally stored") at any time, we just need to input a new sequence.</body>
+
+<subhead>Rewriting rules</subhead>
+
+<body>Once we've defined a starting word, we need to to define the rewriting rule. Since a rule is a function to be used by <o>cage.chain</o>, an user accustomed to the bach and cage environments might already suspect that the easiest way to define it is via a lambda loop. Indeed, the handiest way to set the rewriting function is by patching: the incoming input of the rewriting function will be sent through <o>cage.chain</o>'s middle (lambda) outlet, and we are expected to insert the result into <o>cage.chain</o>'s right (lambda) inlet. (There is another way to define rules, more explicitly, through the third inlet, but refer to the module's help file and reference to know more about it.)</body>
+
+<body>In principle, an L-system rule can be anything at all: anything that takes the incoming sequence of "letters" and outputs another sequence of "letters". For instance, we might define as a perfectly valid rule the one circularly shifting each letter of one step left. With the english alphabet, starting from "pear" this would lead to "earp", then "arpe" and so on. Notice that this, of course, does not guarantee that the generated words be actually english words. However, we can of course do the same with notes.</body>
+
+<body>However, to implement such a rule, <o>cage.chain</o> would be of very little help: we would just need to bang a <o>bach.reg</o> containing the starting word, modify the letters as we wish (for instance, via a <o>bach.rot</o>), and collect the result in another <o>bach.reg</o>. Have a look at the leftmost example, and try to bang the brown button to see it in action.</body>
+
+<subhead>The rule order</subhead>
+
+<body>So what is <o>cage.chain</o> for? Well, <o>cage.chain</o> is definitely helpful more when our rules do not depend on the whole word, but just depend locally on a "window" of letters. More precisely, <o>cage.chain</o> is helpful when our rule is of the following form: for each <m>N</m> consecutive letters, take them and substitute them with different ones. Rules in this form are quite important, because they can give birth to interesting patterns and case, and they are employed in most "classic" L-systems, as well as many other formal grammars.</body>
+
+<body>With the english alphabet, a perfectly valid rule might be: for each couple of consecutive letters, substitute them with the letter being half way between them in the alphabet (rounded to the left, if there's no such letter). If we start with "pear", we need to find the half-way-letters between "p" and "e", then between "e" and "a", and finally between "a" and "r". This gives us "jci". We can of course do the same with notes. We will say that such rule has order 2, meaning that the rule actually acts on groups of 2 letters, and replaces them with something else. The order for a <o>cage.chain</o> object is simply set via the "order" attribute, or via the first argument.</body>
+
+<body>Notice that couples are considered overlapping ("pe", "ea" and "ar": not just "pe" and "ar"!), and that for each couple the resulting sequence of letters is collected and then the resulting word is creating by juxtaposing all collected sequences. This means, by the way, that we can assign more than one letter as result of an operation. For instance, we can substitute to each couple the starting letter of the couple and the one half way between them; starting from "pear" this would yield "pjecai". Also notice that "r" has, in this way, disappeared; we will deal with this issue later, when we will deal with pad and align.</body>
+
+<body>A rule similar to the one illustrated above would be: for each triplet of consecutive letters, substitute the middle one with the one half-way between the first and the third. This rule has order 3 (it acts each time on three letters), collecting each time one letter for each overlapping triplet of consecutive letters. For instance, if we started from "pearled", this would lead us to the Calvinian unpronounceable "hkfkh".</body>
+
+<subhead>An example of rule</subhead>
+
+<body>We can translate the above example from the english alphabet to the alphabet of notes. Look at the blue <o>cage.chain</o>: the lambda rule translates the principle illustrated above: triplets of pitches ("letters") are output from <o>cage.chain</o>'s middle outlet (since order is set to 3 via the argument), which expects us to plug the result of the rewriting on such letters in the lambda inlet. What we do is, for each triplet, take the first and last element (via <o>bach.nth</o> multiple picking syntax), and return their average.</body>
+
+<body>Rules, in L-systems, can be thought of in very different manners, and can be given very different roles. The rule we have just defined creates some sort of "link of validity" between two pitch sequences, retaining some characteristics of the former during the passage. Namely, our rule acts as an average filter, by smoothing the pitch profile of the starting word, while somehow retaining the overall shape.</body>
+
+
+<subhead>Iterative rewriting</subhead>
+
+<body>Once we've performed a rewriting step, the internal state (memory) of the module has been modified to the new (rewritten) word. It is not hard now to rewrite this latter again, by simply clicking on the blue button again. In this way we can simply achieve</body>
+
+<body>If you want to perform many rewriting steps at once, you can of course use <o>uzi</o>. Or, if you also need to collect all the partial results, you can simply send a positive integer, representing the number of steps to be performed, instead of a bang (as explained in <o>cage.chain</o>'s help file).</body>
+
+
+<subhead>Padding</subhead>
+
+<body>Let us take back our example of "pearled" rewritten into "hkfkh". Notice that that the resulting word has two letters less than the original one: this is due to the fact that, if we take triplets of consecutive letters in a 7-letter word, we just have 5 of them ("pea", "ear", "arl", "rle", "led"). This might be an issue, since, if we iterate the rule, we get "gkg", and then simply "g", and then nothing, since we don't have any more triplet to act upon. We've end up by only having 3 possible iterations for our rule.</body>
+
+<body>This issue does not show up in our blue <o>cage.chain</o>'s example: you might have noticed that <o>cage.chain</o> has preserved the same number of notes at each passage. How did it do that?</body>
+
+<body>The fact is that, in order to do so, at each iteration <o>cage.chain</o> has augmented the number of letters in the input so that the result could end up having the same number of letters as the input. This process is called padding, and there are multiple ways to achieve it.</body>
+
+<body>One way to do so is by replicating the initial and final letter for the desired number of times. In our "pearled" example, since we had two letters less than expected, that would lead to adding one letter at the beginning and one letter at the end, yielding "ppearledd", which will turn into "jhkfkhd". This latter has thus seven letters, as the original word, and as expected. If we replicate the rule, we'll be sure that we will always have 7-letter words. This is what <o>cage.chain</o> does by default, and this is the reason why we ended up having always sequence of 7 notes. </body>
+
+<body>Another way of doing this is to explicitly specify which should be the padding element, by using the "pad" attribute. In this case, the element used to pad is no longer the starting or ending "letter", rather the one specified. Notice that this request is far than secondary: click on the red button to reset the <o>cage.chain</o> state to a scrambled arpeggio, then click on the blue message to tell <o>cage.chain</o> that the padding element is middle C, finally click repeatedly on the blue bang. Notice how the sequence of notes now converges to the middle C (this is natural: at each step you have to imagine as if there were two additional middle C's, one at left and one at right). Also, have a look at what happens with the purple message: the padding is simply turned off!</body>
+
+<body>There are a few more intricacies of padding, connected with the the resulting sequence for each <m>N</m>-plet can be aligned differently with the <m>N</m>-plet itself. For instance in our "pearled" example we have assumed that the padding had to be done both at left and at right, thus we say that the padding is center-aligned, but nothing prevents us from padding as "pearleddd" or similarly. In this case, the result will differ. The padding direction can be set via the "align" attribute (see the module's help file or reference to know more).</body>
+
+<subhead>Padding mode</subhead>
+
+<body>One further intricacy of the pad is the fact that it can be performed either before each iteration step, or after. Until now, we have performed our padding before processing the word, so that "pearled" became "ppearledd", hence the result "jhkfkhd". However, we might decide that the padding has to be performed after the word processing, so that "pearled" is processed to "hkfkh" and hence "phkfkhd".</body>
+
+<body>This last case is handy in many situations. For instance, suppose we want to build a rule that fills up iteratively the space between each two letters with the "average" of such letters. As a first thought, for each couple of consecutive letters, we might substitute the starting one and the average between the two. We wish to obtain something that brings "pearled" gets to "pjehakrflkehd".
+The problem is that, with no padding at all, our rule leads to "pjehakrflkeh", with no final "d", since the "ed" couple yields "eh". However, if we add a padding in "pre" mode (which is the default), we get first of all "pearledd" (notice that we have no starting double "p", since now we're using couples, and a single padding element suffice: by default it is at the end rather than at the beginning, but you can change this via the "align" attribute), hence "pjehakrflkehdd", with a double final "d", since "dd" yields the same "dd". How can we obtain our "pjehakrflkehd"?</body>
+
+<body>Well, the trick is that in this case we don't want to pad before processing, but we need to pad after processing. If we do so, we process "pearled" to "pjehakrflkeh", and only then we pad with the final "d" (borrowed from the starting word": "pjehakrflkehd". The same example can be easily translated into pitches, and the post-padding is achieved by setting the "padmode" attribute to "post".</body>
+
+<body>Look at the orange example: we can use a rule of order 2, which then outputs the couples through the middle lambda outlet. We substitute to each couple the starting element and their average, but the module is set in "post" padmode: the result has always the starting and ending note fixed, and fills up the space between each couple of notes.</body>
+
+<subhead>Conclusion</subhead>
+
+<body>We have learned how to produce iterations of a given "word" according to defined rules and we have learned to handle a few intricacies of such representations.</body>
+
+<seealsolist>
+<seealso name="cage.chain"></seealso>
+</seealsolist>
+
+</chapter>

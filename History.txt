@@ -1,0 +1,96 @@
+v. 0.4.1
+
+***********************
+*** VERSION CHANGES ***
+***********************
+
+- multiple objects		Behavior with partial dumps is now consistent.
+					Only header elements presents in the input score are output
+
+- cage.meta.*			Multiple fixed bugs; now the system is reliable
+
+- cage.granulate		New @align attribute to align grain start position to chords or markers
+
+- cage.timestretch		Now supports negative factors, and also supports bach.score
+
+- cage.profile.filter		minimum and maximum filters added
+
+- cage.arpeggio			Fixed issues with dominant 7th, 9th, 11th and 13th
+
+==========================
+
+
+v. 0.4
+
+***********************
+*** VERSION CHANGES ***
+***********************
+
+- cage.inv, cage.transp, cage.stretch, cage.shift
+				New abstractions
+
+- cage.markov.analysis, cage.markov.synthesis
+				New abstractions easily allowing the handling of Markov chains
+
+- cage.harmser			New "stretchmode" attribute to set if stretch must be performed in pitches or frequency domain
+
+- cage.scale, cage.arpeggio	"base" attribute now also works not at module instantiation
+
+- cage.ezsynth~			No longer clicks with short notes	
+					Fixed delay issue
+				Now the attack, release and diapason attributes work as expected
+
+- cage.mix			Now works with bach.score gathered syntax as well
+
+- cage.meta.engine		New "autoinstances" and "clearinstances" messages
+				Vastly redesigned system (now handling marker and tempo playback)
+
+- cage.meta.header		Added an inlet and outlet to retrieve instance ID
+
+- cage.lumbricus		Fixed behavior
+
+- cage.remapvoices		Now different voices from the source scores can be mixed into one voice of the destination
+
+- cage.spacer, cage.wedge, cage.looper
+				Updated for working with bach 0.7.9
+
+
+========
+
+v. 0.3.1
+
+help files are now up to date
+
+cage.lumbricus		Fixed multiple bugs
+
+
+========
+
+v 0.2.1
+
+“Earthworms”	tutorial patch now opens
+
+cage.transp, cage.freqshift, cage.timestretch
+			new abstractions
+
+cage.rev		now also reverses pitch breakpoints and slots
+
+cage.sdif.ptrack.*
+			now can renumber partials in *harmonic* partial tracking analysis, so that cage.sdif.ptrack.toroll also works properly for harmonic ptrack.
+
+cage.scale	now supports octotonic, hexatonic and chromatic scales
+
+cage.notewalk	fixed behavior at the boundaries of the pitch region (no more unwanted ribattuti)
+			fixed behavior while changing scale
+
+cage.sdif.chordseq.pack, cage.sdif.chordseq.unpack, cage.sdif.chordseq.toroll
+			new abstractions 
+
+cage.rhythminterp, cage.chordinterp
+			normalization is performed within the abstraction
+
+cage.remapvoices
+			fixed behavior with the “addchords” message
+			now it is possible to mix voices of a bach.roll or an “addchords” message
+
+cage.wedge	now allows multiple insertions at once

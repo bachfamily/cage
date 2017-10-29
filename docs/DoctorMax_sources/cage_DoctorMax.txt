@@ -1,0 +1,35 @@
+/Users/danieleghisi/Documents/Max 7/Packages/cage/docs/DoctorMax_sources
+
+
+
+/Users/danieleghisi/Documents/Max 7/Packages/bach/source/commons/dg/bach_doc_commons_dg.h
+/Users/danieleghisi/Documents/Max 7/Packages/bach/source/commons/dg/bach_doc_commons_dg.h
+/Users/danieleghisi/Documents/Max 7/Packages/cage/docs/refpages/cage_ref
+/Users/danieleghisi/Documents/Max 7/Packages/cage/init
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+cage
+1
+1
+0
+0
+0
+
+/Users/danieleghisi/Documents/Max 7/Packages/cage/interfaces
+1
+cage math
+0
+/Users/danieleghisi/Documents/Max 7/Packages/cage/help
+0
+cage.help
+/Users/danieleghisi/Documents/Max 7/Packages/cage/help/cage.help.json
+cage.help.home.maxpat, cage.help.search.maxpat, cage.help.searchtag.maxpat, cage.help.welcome.maxpat
+

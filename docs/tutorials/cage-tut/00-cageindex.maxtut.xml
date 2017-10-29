@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+
+<chapter name="cage Tutorials: Table of Contents">
+
+<h1>
+cage Tutorials - Table of Contents
+</h1>
+
+<p>
+
+<h2>Generation</h2>
+
+<ul>
+<li><link type="tutorial" module="cage" name="01-ScalesAndArpeggi">Scales And Arpeggi</link> — Learn how to generate scales and arpeggi</li>
+<li><link type="tutorial" module="cage" name="02-NotePathways">Note Pathways</link> — Learn how to create live random walks of pitches</li>
+</ul>
+
+
+<h2>Profiles</h2>
+
+<ul>
+    <li><link type="tutorial" module="cage" name="03-MelodicProfiles">Melodic Profiles</link> — Learn how to generate pitch sequences from breakpoint functions and how to modify them</li>
+</ul>
+
+
+<h2>Electrospectral</h2>
+
+<ul>
+    <li><link type="tutorial" module="cage" name="04-Granulation">Granulation</link> — Learn how to granulate a score</li>
+    <li><link type="tutorial" module="cage" name="05-RingAndFrequencyModulation">Ring And Frequency Modulation</link> — Learn advanced frequential harmonic techniques</li>
+    <li><link type="tutorial" module="cage" name="06-VirtualFundamentals">Virtual Fundamentals</link> — Learn how to handle virtual fundamentals</li>
+</ul>
+
+
+
+<h2>Transformation</h2>
+
+<ul>
+    <li><link type="tutorial" module="cage" name="07-WorkingWithTime">Working With Time</link> — Learn how to warp time for your needs</li>
+</ul>
+
+
+
+<h2>Automata</h2>
+
+<ul>
+    <li><link type="tutorial" module="cage" name="08-L-systems">L-systems</link> — Learn how to obtain musical sequences via rule-based generative systems</li>
+    <li><link type="tutorial" module="cage" name="09-Fractals">Fractals</link> — Learn how to obtain fractal-like figures via iterative rewriting</li>
+    <li><link type="tutorial" module="cage" name="10-LifeOnTonnetz">Life On Tonnetz</link> — Play Conway's "Game of Life" on the tonnetz notes</li>
+    <li><link type="tutorial" module="cage" name="11-Earthworms">Earthworms</link> — Learn how to build rule-based sequences</li>
+</ul>
+
+</p>
+
+</chapter>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+
+<chapter name="cage Tutorial 1: Scales And Arpeggi">
+
+<openfile name="ScalesAndArpeggi" patch="ScalesAndArpeggi.maxpat"/>
+
+
+<indexinfo category="Generation" title="Scales And Arpeggi">Generation</indexinfo>
+
+<header>Tutorial 1: Scales And Arpeggi</header>
+
+<body>In this tutorial, we will learn how to generate scales and arpeggi.</body>
+<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
+
+
+<subhead>What is a scale? What is an arpeggio?</subhead>
+
+<body>A scale is, in its most general definition, any sequence of ascending pitches. We might add further requests, such as the pitches being "not too far" from each other: usually when intervals between notes are wide, we change the name of the "object", and we call it "arpeggio". In any case, both structures are similar: ascending sequence of pitches. A particular role are played in western music by ascending pitch sequences which replicate a same pattern at regular distances, i.e. "periodic" scales or arpeggi. Among such structures, an even more specific role is played by the ones whose pattern is exactly one octave wide: such structures are named "octaviant" scales or arpeggi, and when we speak of scales and arpeggi, we usually refer implicitly to octaviant scales and arpeggi. All most commons western scales are octaviant scales, and thus are simply defined by a pattern of intervals between their notes.</body>
+
+<body>Let's take an explicit example: the A major scale. We might characterize it by saying that its notes are <b>A B C# D E F# G# A</b>, or by saying that this scale starts from A with an interval pattern of <b>200 200 100 200 200 200 100</b>, given in cents. This latter representation is handier, since if we need now to characterize a C major scale, we just need to keep the same interval pattern, and change the base note.</body>
+
+<body>We can generate arpeggi in exactly the same way: however, the everyday's terminology to define arpeggi overlaps with the one defining chords, so that we might want to build a "G dominant seventh" or a "D diminished" arpeggio, and so on.</body>
+
+
+<subhead>Generating scales with <m>cage</m></subhead>
+
+<body>To generate the pitches of a given scale, we can use the <o>cage.scale</o> module. To define which scale we want to generate, we might use one of the aforementioned representation: for instance, we might say that we want a A major scale (within a certain pitch range) or that we want a scale having a given pattern (always within a certain pitch range).</body>
+
+<body>Open the tutorial patch. If you know precisely which scale you want to generate, you might write statically as arguments the parameters we need: the lowest note in the range, the upper note in the range, and the scale type. In the simplest case, this can be defined as a symbol: major scales ends with capital <m>M</m>, minor scales ends with small <m>m</m>; in any case these letters are preceded by the base note of the scale. For instance <b>CM</b> stands for a C major scale, whereas <b>F#m</b> stands for a F# minor scale. Click on the red bang: this will build a C# minor scale within the range 6100-8400 cents. Since the upper notes of the range is a natural C, notice how the C# minor scale will not end on a C# (which lies outside the range).</body>
+
+<body>Also notice that <o>cage.scale</o> module only produces a plain list of pitches, and not the gathered syntax of a <o>bach.roll</o> or <o>bach.score</o>. This means that we have to format it in order to display it. Of course we can both display it in a <o>bach.roll</o> and in a <o>bach.score</o>: if we want the latter case, we should take advantage of the <o>bach.beatbox</o> abstraction, which takes all the lists of parameters and adds a parenthesis level for each measure. <o>bach.beatbox</o> needs at least the measureinfo (in its simplest form: the wrapped time signature), the sequence of pitches (one llll for each voice, which is why we use <o>bach.wrap</o> to add a level of parentheses, and the sequence of durations (one llll for each voice also, and if we give less durations than pitches the last one is repeated, as in our case).</body>
+
+<body>If you need to change the parameters of the scale after the instantiation of <o>cage.scale</o>, have a look at the example with the green number boxes and messages: you can change the starting range pitch (leftmost inlet), the ending range pitch (middle inlet) and the scale type.</body>
+
+
+<subhead>Generic patterns</subhead>
+
+<body>The scale type doesn't need to be either major or minor: as we said, you can also define a scale through the pattern of its intervals. To do so, simply set the plain list of intervals of the pattern in the last inlet (or as last argument, but wrapped): click on the yellow message (and then on the green bang). If we define a pattern, we might also want to define explicitly the pitch at which such pattern should start: otherwise the module will always consider the pattern starting from middle C. To define the pattern starting pitch, we need to set the <m>base</m> attribute; for instance, clicking on the orange message will force the pattern to start on middle C#, instead of middle C.</body>
+
+<body>Also notice that pitch structures need not to be octaviant: use the bottom yellow message to build a non-octaviant scale.</body>
+
+
+<subhead>Generating arpeggi</subhead>
+
+<body>The mechanism for generating arpeggi copies exactly the one to generate scales. However, we have more symbolic suffixes to define arpeggi than scales: look at any of the pink messages, which defines a different chord type: thus we can define augmented chords (<b>aug</b>), major seventh chords (<b>maj7</b>), minor seventh chords (<b>min7</b>), diminished chords (<b>dim</b>), diminished seventh chords (<b>dim7</b>), dominant 7th, 9th, 11th or 13 chords (<b>7</b>, <b>9</b>, <b>11</b>, <b>13</b>). As for scales, we can define the chord explicitly via its pattern and base note (light blue messages).</body>
+
+<subhead>Conclusion</subhead>
+
+<body>We have learned how to construct the pitches of scales and arpeggi within cage via <o>cage.scale</o> and <o>cage.arpeggio</o>.</body>
+
+<seealsolist>
+<seealso name="cage.scale">Create a scale</seealso>
+<seealso name="cage.arpeggio">Create an arpeggio</seealso>
+<seealso name="bach.score">Display and edit a score in classical notation</seealso>
+<seealso name="bach.beatbox">Box voice-wise parameters into measure-wise information</seealso>
+</seealsolist>
+
+</chapter>
