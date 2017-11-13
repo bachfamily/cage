@@ -2933,7 +2933,7 @@
 					"presentation_rect" : [ 362.0, 1046.0, 556.0, 226.0 ],
 					"spacing_x" : 10.0,
 					"tabcolor" : [ 0.517647, 0.415686, 0.160784, 0.0 ],
-					"tabs" : [ "bach.unpacknote", "bach.mc2f", "bach.f2mc", "bach.score2roll", "bach.chordrev", "bach.chordrot", "bach.restrot", "bach.tierev", "bach.fromc&r", "bach.toc&r", "bach.slot2line", "bach.slot2curve", "bach.slot2function", "bach.slot2filtercoeff", "bach.dl2line", "bach.dl2curve", "bach.mcapprox", "bach.sliceheader", "bach.mono", "bach.combinevoices", "bach.transcribe", "bach.ezmidiplay" ],
+					"tabs" : [ "bach.unpacknote", "bach.mc2f", "bach.f2mc", "bach.score2roll", "bach.chordrev", "bach.chordrot", "bach.restrot", "bach.tierev", "bach.fromc&r", "bach.toc&r", "bach.slot2line", "bach.slot2curve", "bach.slot2function", "bach.slot2filtercoeff", "bach.dl2line", "bach.dl2curve", "bach.approx", "bach.sliceheader", "bach.mono", "bach.combinevoices", "bach.transcribe", "bach.ezmidiplay" ],
 					"textcolor" : [ 0.2, 0.2, 0.2, 1.0 ]
 				}
 
@@ -4869,7 +4869,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-178",
-					"items" : [ "(Seen", "elements:)", ",", "bach.roll", ",", "bach.read", ",", "<separator>", ",", "(Notation", "topics:)", ",", "- zooming interface commands", ",", "- querying length, domain, pixels", ",", "- synchronizing roll and bpatcher", ",", "- roll notifications", ",", "- the done notification", ",", "- read and write messages", ",", "<separator>", ",", "(Also", "used:)", ",", "bach.keys", ",", "bach.iter", ",", "bach.filter", ",", "bach.flat", ",", "bach.slice", ",", "bach.rot", ",", "bach.expr", ",", "bach.filternull", ",", "bach.mc2f", ",", "bach.f2mc", ",", "bach.join", ",", "bach.reg", ",", "bach.collect", ",", "bach.ezmidiplay", ",", "bach.mcapprox" ],
+					"items" : [ "(Seen", "elements:)", ",", "bach.roll", ",", "bach.read", ",", "<separator>", ",", "(Notation", "topics:)", ",", "- zooming interface commands", ",", "- querying length, domain, pixels", ",", "- synchronizing roll and bpatcher", ",", "- roll notifications", ",", "- the done notification", ",", "- read and write messages", ",", "<separator>", ",", "(Also", "used:)", ",", "bach.keys", ",", "bach.iter", ",", "bach.filter", ",", "bach.flat", ",", "bach.slice", ",", "bach.rot", ",", "bach.expr", ",", "bach.filternull", ",", "bach.mc2f", ",", "bach.f2mc", ",", "bach.join", ",", "bach.reg", ",", "bach.collect", ",", "bach.ezmidiplay", ",", "bach.approx" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,

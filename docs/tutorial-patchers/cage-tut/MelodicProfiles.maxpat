@@ -97,7 +97,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 22.0, 352.0, 110.0, 23.0 ],
 					"style" : "",
-					"text" : "bach.mcapprox 2"
+					"text" : "bach.approx 2"
 				}
 
 			}
@@ -724,7 +724,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bach.mcapprox.maxpat",
+				"name" : "bach.approx.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
