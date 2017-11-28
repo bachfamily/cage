@@ -1,4 +1,4 @@
-v. 0.4.1
+v. 0.5
 
 
 ***********************
@@ -13,6 +13,10 @@ v. 0.4.1
 - cage.granulate		New @align attribute to align grain start position to chords or markers
 
 - cage.timestretch		Now supports negative factors, and also supports bach.score
+
+- cage.transp			Now supports dynamic transpositions
+
+- cage.freqshift 		Now supports dynamic freqshift
 
 - cage.profile.filter		minimum and maximum filters added
 
