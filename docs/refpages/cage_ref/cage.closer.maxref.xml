@@ -25,14 +25,14 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				Incoming cents
+				Incoming pitches
 			</digest>
 			<description>
 			</description>
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				Reference pitch
+				Reference pitch (as pitch or in cents)
 			</digest>
 			<description>
 			</description>
@@ -43,10 +43,10 @@
 	<outletlist>
 		<outlet id="0" type="INLET_TYPE">
 			<digest>
-				Modified cents
+				Modified pitches
 			</digest>
 			<description>
-				The modified llll of cents of the notes, so that each note
+				The modified pitches of the notes (as pitch or in cents), so that each note
 				maintains its pitch-class, but is as close as possible to the reference pitch.
 			</description>
 		</outlet>
@@ -54,12 +54,13 @@
 
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg name="reference_pitch" optional="1" type="number">
+		<objarg name="reference_pitch" optional="1" type="number/pitch">
 			<digest>
 				Reference pitch
 			</digest>
 			<description>
-				The optional argument sets the initial reference pitch in midicents
+				The optional argument sets the initial reference pitch in cents
+				or as pitch
 				(also see <m>number</m> message).
 			</description>
 		</objarg>
@@ -100,6 +101,17 @@
 				octave modified so that their distance to the reference pitch is minimal.
 			</description>
 		</method>
+		<method name="pitch">
+			<arglist />
+			<digest>
+				Set reference pitch
+			</digest>
+			<description>
+				A pitch in the second inlet is the reference pitch.
+				All pitches coming in the first inlet will have their
+				octave modified so that their distance to the reference pitch is minimal.
+			</description>
+		</method>
 	</methodlist>
 
 	<!--ATTRIBUTES-->
@@ -109,13 +121,6 @@
 				Outlet Types
 			</digest>
 			<description>
-				The <m>out</m> attribute is a sequence of characters identifying the outlet types (one character for each llll outlet). Characters can be one of the followings: <br />
-				<m>n</m> (default): 'native' output: faster and more precise between bach objects, but unreadable by standard Max objects (an "bach.llll" message appears instead). <br />
-				<m>t</m>: 'text' output: slower and limited in size, but readable by standard Max objects. A plain llll in text format is a generic Max message. <br />
-				<m>x</m>: disabled output (nothing is output) <br />
-				<m>p</m>: 'portal' output: only used by bach.portal to intercept the @out attribute specified while creating the abstraction (see bach.portal). <br />
-				The native output is recommended, unless communication with standard Max messages is needed. Disabling unused outputs can be useful if extreme optimization of the patch is needed.
-				<br /> <br />
 			</description>
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="symbol" size="1" value="Behavior" />
@@ -134,12 +139,12 @@
 	<misc name = "Input">
 		<entry name ="Inlet 1 (llll)">
 			<description>
-				Incoming cents.
+				Incoming pitches.
 			</description>
 		</entry>
 		<entry name ="Inlet 2 (number/llll)">
 			<description>
-				Reference pitch.
+				Reference pitch (as pitch or in cents).
 			</description>
 		</entry>
 	</misc>
@@ -147,8 +152,8 @@
 	<misc name = "Output">
 		<entry name ="Outlet 1 (llll)">
 			<description>
-				Modified cents.
-				The modified llll of cents of the notes, so that each note
+				Modified pitches.
+				The modified pitches of the notes (as pitch or in cents), so that each note
 				maintains its pitch-class, but is as close as possible to the reference pitch.
 			</description>
 		</entry>

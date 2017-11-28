@@ -1,5 +1,16 @@
 v. 0.5
 
+*************************
+*** IMPORTANT CHANGES ***
+*************************
+
+- Latin pitch syntax is NO LONGER supported. Now pitch syntax is uniformely defined
+	as bach's pitch syntax (middle C is C5). Please modify your patches accordingly.
+	See #pitch+syntax in the bach help center to know more
+
+- cage.offset			is now deprecated, use cage.shift instead
+
+
 
 ***********************
 *** VERSION CHANGES ***
@@ -21,6 +32,52 @@ v. 0.5
 - cage.profile.filter		minimum and maximum filters added
 
 - cage.arpeggio			Fixed issues with dominant 7th, 9th, 11th and 13th
+
+- cage.markov.analysis		Now works properly
+
+- cage.repeat, cage.trim	New abstraction
+
+- multiple objects		Behavior with partial dumps is now consistent.
+					Only header elements presents in the input score are output
+
+- cage.wedge, cage.looper, cage.spacer, cage.rot
+				Now markers are supported
+
+- cage.granulate		New @align attribute to align grain start position to chords or markers
+
+- cage.timestretch		Now supports negative factors, and also supports bach.score
+				Now works properly with markers, with roll and score
+
+- cage.timewarp			New @normalize attribute to normalize time coordinates between 0 and 1
+
+- cage.profile.filter		minimum and maximum filters added
+				padding modes and attributes added (pad, padmode, align, roundalign)
+
+- cage.arpeggio			Fixed issues with dominant 7th, 9th, 11th and 13th
+
+- cage.rot			Optimized
+
+- cage.join			Works with bach.score
+
+- cage.scale			Now "base" works also for non-octaviating scales 
+
+- cage.meta.*			Several improvements
+				new "dump" attribute added
+
+- cage.fm			now the lower sideband is correctly calculated
+
+- cage.extract			now supports @startmarker and @endmarker attributes
+				now supports bach.score measure extraction 
+
+- cage.looper			now works properly when 0 loops are requested
+
+- cage.shift			Now supports bach.score too
+
+- cage.ezsynth			Attack and release were swapped. Now they work properly
+
+
+
+
 
 ==========================
 
