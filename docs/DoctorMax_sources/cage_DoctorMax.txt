@@ -3,7 +3,7 @@
 
 
 /Users/danieleghisi/Documents/Max 7/Packages/bach/source/commons/dg/bach_doc_commons_dg.h
-/Users/danieleghisi/Documents/Max 7/Packages/bach/source/commons/dg/bach_doc_commons_dg.h
+/Users/danieleghisi/Documents/Max 7/Packages/bach/source/commons/aa/bach_doc_commons_aa.h
 /Users/danieleghisi/Documents/Max 7/Packages/cage/docs/refpages/cage_ref
 /Users/danieleghisi/Documents/Max 7/Packages/cage/init
 1
