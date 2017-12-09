@@ -81,7 +81,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 243.0, 11.0, 120.0, 19.0 ],
 					"style" : "",
-					"text" : "v0.5 beta",
+					"text" : "v0.5.0.1 beta",
 					"textcolor" : [ 0.109804, 0.109804, 0.109804, 1.0 ],
 					"varname" : "autohelp_top_digest[3]"
 				}
@@ -398,6 +398,10 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 93.5, 271.0, 60.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.sort"
 												}
@@ -413,6 +417,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 93.5, 240.0, 131.5, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.join 3"
 												}
@@ -443,6 +451,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 93.5, 174.0, 56.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.flat"
 												}
@@ -458,6 +470,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 57.0, 309.0, 155.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.subs @multi 1 @out t"
 												}
@@ -473,6 +489,10 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 68.5, 138.0, 129.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.find 226 128 162"
 												}
@@ -749,6 +769,10 @@
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
 													"patching_rect" : [ 93.5, 271.0, 60.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.sort"
 												}
@@ -764,6 +788,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 93.5, 240.0, 80.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.join"
 												}
@@ -794,6 +822,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 93.5, 183.0, 56.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.flat"
 												}
@@ -809,6 +841,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 58.5, 409.0, 116.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.subs @multi 1"
 												}
@@ -824,6 +860,10 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 68.5, 138.0, 106.0, 20.0 ],
+													"saved_object_attributes" : 													{
+														"versionnumber" : 80001
+													}
+,
 													"style" : "",
 													"text" : "bach.find 194 160"
 												}
@@ -1722,57 +1762,57 @@
 			}
 , 			{
 				"name" : "bach.filter.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.filternull.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.sieve.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.keychain.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.split.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.change.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.prepend.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.belong.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1784,22 +1824,22 @@
 			}
 , 			{
 				"name" : "bach.lookup.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.replace.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.+.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
-				"patcherrelativepath" : "../../bach/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach copy/patchers",
+				"patcherrelativepath" : "../../bach copy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
