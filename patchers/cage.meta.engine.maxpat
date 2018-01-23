@@ -38,6 +38,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-65",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 441.0, 35.0, 136.0, 22.0 ],
+					"style" : "",
+					"text" : "cage.checkbachversion"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bubble" : 1,
 					"bubbleside" : 3,
 					"id" : "obj-85",
@@ -437,7 +449,7 @@
 				"box" : 				{
 					"comment" : "llll: Messages for rendered score",
 					"id" : "obj-63",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2446,7 +2458,7 @@
 									"pitcheditrange" : [ "null" ],
 									"stafflines" : [ 5, 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80000,
+									"versionnumber" : 80001,
 									"voicenames" : [ "(", ")", "(", ")" ],
 									"voicespacing" : [ 17.0, 17.0, 17.0 ],
 									"vzoom" : 60.0
@@ -2833,7 +2845,7 @@
 									"pitcheditrange" : [ "null" ],
 									"stafflines" : [ 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80000,
+									"versionnumber" : 80001,
 									"voicenames" : [ "(", ")" ],
 									"voicespacing" : [ 0.0, 17.0 ],
 									"vzoom" : 60.0,
@@ -8400,7 +8412,7 @@
 				"box" : 				{
 					"comment" : "llll: init/Gathered syntax",
 					"id" : "obj-52",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -8414,7 +8426,7 @@
 				"box" : 				{
 					"comment" : "llll: Messages from Playout",
 					"id" : "obj-53",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -8428,7 +8440,7 @@
 				"box" : 				{
 					"comment" : "llll: Messages to original score",
 					"id" : "obj-54",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -9618,7 +9630,231 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "bach.mapchord.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.sliceheader.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.filternull.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.filter.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.+.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.belong.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cage.meta.autoinstance_poly.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/cage/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.lookup.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.locate.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.replace.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.prepend.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.repeat.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.dx2x.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
+				"patcherrelativepath" : "../../bach_new/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cage.checkbachversion.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/cage/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.iter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.keys.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.nth.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.collect.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.is.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.flat.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.pick.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.reg.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.portal.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.eq.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.args.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.slice.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.join.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.neq.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.subs.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.expr.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.value.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.intersection.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.length.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.thin.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.wrap.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.find.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.rev.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.playkeys.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.score.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.rot.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.roll.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.mapelem.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.pad.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.pipe.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.print.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
