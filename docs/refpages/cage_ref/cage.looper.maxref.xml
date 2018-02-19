@@ -169,7 +169,7 @@
 		<method name="list">
 			<arglist />
 			<digest>
-				In third inlet: insertion point and duration
+				Function depends on inlet
 			</digest>
 			<description>
 			</description>
@@ -177,7 +177,7 @@
 		<method name="list">
 			<arglist />
 			<digest>
-				Function depends on inlet
+				In third inlet: insertion point and duration
 			</digest>
 			<description>
 			</description>

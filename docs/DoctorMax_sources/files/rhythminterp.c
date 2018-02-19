@@ -21,11 +21,12 @@
  Interpolate between chords
  
  @description
- <o>cage.rhythminterp</o> interpolates between any number of chords,
- by creating additional chord notes when needed.
+ <o>cage.rhythminterp</o> interpolates between rhythms
  
  @discussion
  <o>cage.rhythminterp</o> is conceived to work in conjunction with <o>nodes</o>.
+ If rhythms do not have the same number of chords, the module is capable of 
+ adding additional rhythmic events to smooth out the interpolation.
  
  @category
  cage, cage transformation
@@ -70,8 +71,8 @@ void main_foo() {
 	CLASS_ATTR_LABEL(c,"mode",0,"Mode");
 	CLASS_ATTR_BASIC(c,"mode",0);
 	// @description If the <m>mode</m> attribute is set to 0,
-	// interpolating between rhythms with different numbers of notes
-	// may produce a rhythm with more notes than any of its contributors.
+	// interpolating between rhythms with different numbers of chords
+	// may produce a rhythm with more chords than any of its contributors.
 	// If it is set to 1, the number of notes of the resulting rhythm
 	// is always limited to the number of notes of the largest contributor.
 	// The default is 0.

@@ -1,6 +1,53 @@
 {
-  "cage.agogics": {
-    "digest": "Create accelerandi and rallentandi",
+  "cage.sdif.ptrack.assemble": {
+    "digest": "Assemble partials into a partial tracking SDIF llll",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "partial tracking",
+      "assemble",
+      "stream",
+      "partial"
+    ],
+    "seealso": [
+      "bach.writesdif",
+      "cage.sdif.ptrack.resolve",
+      "cage.sdif.ptrack.pack",
+      "cage.sdif.ptrack.toroll"
+    ]
+  },
+  "cage.markov.analysis": {
+    "digest": "Markov probability transition matrices",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage automata"
+    ],
+    "keywords": [
+      "rule",
+      "Markov",
+      "chain",
+      "sequence",
+      "probability",
+      "transition",
+      "matrix",
+      "analyze",
+      "sparse",
+      "analysis"
+    ],
+    "seealso": [
+      "cage.markov.synthesis",
+      "anal",
+      "prob"
+    ]
+  },
+  "cage.timewarp": {
+    "digest": "Perform temporal distortion",
     "module": "cage",
     "category": [
       "cage",
@@ -9,17 +56,423 @@
     "keywords": [
       "time",
       "tempo",
+      "marker",
+      "function",
       "accelerando",
       "rallentando",
-      "agogics",
-      "acceleration",
-      "constant",
-      "repeat",
-      "repetition",
-      "cell"
+      "agogics"
+    ],
+    "seealso": [
+      "cage.agogics",
+      "cage.timestretch"
+    ]
+  },
+  "cage.ezptrack": {
+    "digest": "Track notes in chord sequences",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "score",
+      "partial tracking",
+      "chord",
+      "glue",
+      "pitch",
+      "time",
+      "threshold",
+      "sequence",
+      "track",
+      "note"
+    ],
+    "seealso": [
+      "bach.roll",
+      "bach.sdif.peaks.toroll"
+    ]
+  },
+  "cage.join": {
+    "digest": "Join rolls",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "join",
+      "glue",
+      "chunk",
+      "segment",
+      "roll",
+      "together",
+      "concatenate",
+      "juxtapose",
+      "measure",
+      "score"
+    ],
+    "seealso": [
+      "cage.slice"
+    ]
+  },
+  "cage.timestretch": {
+    "digest": "Perform temporal stretch",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "stretch",
+      "roll",
+      "time",
+      "timestretch"
     ],
     "seealso": [
       "cage.timewarp"
+    ]
+  },
+  "cage.extract": {
+    "digest": "Extract portion of roll or score",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "extract",
+      "subroll",
+      "roll",
+      "subscore",
+      "score",
+      "crop",
+      "portion"
+    ],
+    "seealso": [
+      "cage.slice"
+    ]
+  },
+  "cage.sdif.markers.pack": {
+    "digest": "Pack parameters of a markers SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "markers",
+      "pack",
+      "gather",
+      "join",
+      "stream"
+    ],
+    "seealso": [
+      "bach.writesdif",
+      "cage.sdif.markers.unpack",
+      "cage.sdif.markers.toroll"
+    ]
+  },
+  "cage.profile.gen": {
+    "digest": "Generate pitch profiles",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage profiles"
+    ],
+    "keywords": [
+      "profile",
+      "generate",
+      "create",
+      "melody",
+      "pitch",
+      "breakpoint function",
+      "sample"
+    ],
+    "seealso": [
+      "cage.profile.mirror",
+      "cage.profile.perturb",
+      "cage.profile.rectify",
+      "cage.profile.filter",
+      "cage.profile.snap",
+      "cage.profile.stretch"
+    ]
+  },
+  "cage.sdif.ptrack.unpack": {
+    "digest": "Unpack parameters of a partial tracking SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "partial tracking",
+      "unpack",
+      "parse",
+      "separate",
+      "unjoin",
+      "stream"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "cage.sdif.ptrack.pack",
+      "cage.sdif.ptrack.toroll",
+      "cage.sdif.ptrack.resolve",
+      "cage.sdif.ptrack.assemble"
+    ]
+  },
+  "cage.chroma.fromcentroid": {
+    "digest": "Find a chroma vector corresponding having a given tonal centroid",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage set theory"
+    ],
+    "keywords": [
+      "chroma",
+      "centroid",
+      "convert",
+      "vector",
+      "transform"
+    ],
+    "seealso": [
+      "cage.chroma.2centroid"
+    ]
+  },
+  "cage.sdif.markers.fromroll": {
+    "digest": "Export markers SDIF analysis from a <o>bach.roll</o>",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "markers",
+      "convert",
+      "score",
+      "export"
+    ],
+    "seealso": [
+      "bach.writesdif",
+      "bach.roll",
+      "cage.sdif.markers.pack",
+      "cage.sdif.markers.unpack"
+    ]
+  },
+  "cage.shift": {
+    "digest": "Insert or delete time at the beginning of a score",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "shift",
+      "move",
+      "offset",
+      "roll",
+      "score"
+    ],
+    "seealso": [
+      "cage.rot",
+      "cage.rev",
+      "cage.inv"
+    ]
+  },
+  "cage.envelopes": {
+    "digest": "Modify a <o>bach.roll</o> or <o>bach.score</o> via synchronized envelopes",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "score",
+      "synchronize",
+      "envelope",
+      "curve",
+      "value",
+      "chord",
+      "modify",
+      "real-time",
+      "lambda loop"
+    ],
+    "seealso": [
+      "bach.roll",
+      "bach.score",
+      "bach.slot"
+    ]
+  },
+  "cage.tonnetz.flip": {
+    "digest": "Flip tonnetz coordinates",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage set theory"
+    ],
+    "keywords": [
+      "tonnetz",
+      "flip",
+      "horizontal",
+      "vertical",
+      "symmetry",
+      "coordinate"
+    ],
+    "seealso": [
+      "cage.tonnetz.rot"
+    ]
+  },
+  "cage.rot": {
+    "digest": "Circularly rotate rolls",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "rotate",
+      "circular",
+      "roll"
+    ],
+    "seealso": [
+      "cage.rev",
+      "cage.inv",
+      "cage.shift"
+    ]
+  },
+  "cage.transp": {
+    "digest": "Transpose scores",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "transpose",
+      "roll",
+      "score"
+    ],
+    "seealso": [
+      "cage.rev",
+      "cage.rot",
+      "cage.freqshift"
+    ]
+  },
+  "cage.sdif.chordseq.toroll": {
+    "digest": "Import a partial tracking SDIF analysis into a <o>bach.roll</o>",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "chord sequence",
+      "convert",
+      "score",
+      "import",
+      "stream",
+      "voice"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "bach.roll",
+      "cage.sdif.chordseq.pack",
+      "cage.sdif.chordseq.unpack",
+      "cage.ezaddsynth~",
+      "bach.ezmidiplay"
+    ]
+  },
+  "cage.closer": {
+    "digest": "Modify pitch octave to approach a given pitch",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "modify",
+      "octave",
+      "change",
+      "approach",
+      "near",
+      "pitch",
+      "pitch-class",
+      "close",
+      "closer"
+    ],
+    "seealso": [
+      "cage.notesnap"
+    ]
+  },
+  "cage.sdif.chordseq.pack": {
+    "digest": "Pack parameters of a partial tracking SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "chord sequence",
+      "pack",
+      "gather",
+      "join",
+      "stream"
+    ],
+    "seealso": [
+      "bach.writesdif",
+      "cage.sdif.chordseq.unpack",
+      "cage.sdif.chordseq.toroll"
+    ]
+  },
+  "cage.chroma.topcset": {
+    "digest": "Convert a chroma vector into pitch-classes and velocities",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage set theory"
+    ],
+    "keywords": [
+      "chroma",
+      "pitch-class",
+      "convert",
+      "vector",
+      "velocity",
+      "threshold"
+    ],
+    "seealso": [
+      "cage.chroma.frompcset"
+    ]
+  },
+  "cage.profile.perturb": {
+    "digest": "Randomly perturb a pitch profile",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage profiles"
+    ],
+    "keywords": [
+      "profile",
+      "perturb",
+      "random",
+      "amount",
+      "pitch",
+      "melody"
+    ],
+    "seealso": [
+      "cage.profile.gen",
+      "cage.profile.mirror",
+      "cage.profile.rectify",
+      "cage.profile.filter",
+      "cage.profile.snap",
+      "cage.profile.stretch"
     ]
   },
   "cage.arpeggio": {
@@ -42,6 +495,241 @@
     ],
     "seealso": [
       "cage.scale"
+    ]
+  },
+  "cage.sdif.fzero.toroll": {
+    "digest": "Import a fundamental frequency SDIF analysis into a <o>bach.roll</o>",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "fundamental frequency",
+      "convert",
+      "score",
+      "import",
+      "stream",
+      "voice"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "bach.roll",
+      "cage.sdif.fzero.pack",
+      "cage.sdif.fzero.unpack",
+      "cage.ezaddsynth~"
+    ]
+  },
+  "cage.dynamics": {
+    "digest": "Process velocities",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage electrospectral"
+    ],
+    "keywords": [
+      "velocity",
+      "compress",
+      "limiter",
+      "gain"
+    ],
+    "seealso": [
+      "cage.envelopes"
+    ]
+  },
+  "cage.rm": {
+    "digest": "Compute symbolic ring modulation",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage electrospectral"
+    ],
+    "keywords": [
+      "ring modulation",
+      "pitch",
+      "chord"
+    ],
+    "seealso": [
+      "cage.fm",
+      "cage.virtfund"
+    ]
+  },
+  "cage.harmser": {
+    "digest": "Create an harmonic series",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage generation"
+    ],
+    "keywords": [
+      "harmonic series",
+      "generate",
+      "stretch",
+      "fundamental",
+      "pitch",
+      "note"
+    ],
+    "seealso": [
+      "cage.scale",
+      "cage.arpeggio"
+    ]
+  },
+  "cage.profile.mirror": {
+    "digest": "Invert pitch profile",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage profiles"
+    ],
+    "keywords": [
+      "profile",
+      "invert",
+      "melody",
+      "pitch",
+      "mirror"
+    ],
+    "seealso": [
+      "cage.profile.gen",
+      "cage.profile.perturb",
+      "cage.profile.rectify",
+      "cage.profile.filter",
+      "cage.profile.snap",
+      "cage.profile.stretch"
+    ]
+  },
+  "cage.sdif.markers.unpack": {
+    "digest": "Unpack parameters of a markers SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "markers",
+      "unpack",
+      "parse",
+      "separate",
+      "unjoin",
+      "stream"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "cage.sdif.markers.pack",
+      "cage.sdif.markers.toroll"
+    ]
+  },
+  "cage.inv": {
+    "digest": "Perform inversion",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "reverse",
+      "inverse",
+      "roll",
+      "score"
+    ],
+    "seealso": [
+      "cage.rot",
+      "cage.rev",
+      "cage.shift"
+    ]
+  },
+  "cage.sdif.peaks.unpack": {
+    "digest": "Unpack parameters of a peaks SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "peaks",
+      "unpack",
+      "parse",
+      "separate",
+      "unjoin",
+      "stream"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "cage.sdif.peaks.pack",
+      "cage.sdif.peaks.toroll"
+    ]
+  },
+  "cage.explodevoices": {
+    "digest": "Route chords to different voices",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "explode",
+      "voice",
+      "route",
+      "chords",
+      "slot",
+      "score"
+    ],
+    "seealso": [
+      "cage.remapvoices",
+      "bach.combinevoices",
+      "bach.roll",
+      "bach.score"
+    ]
+  },
+  "cage.notewalk": {
+    "digest": "Output a random walk of MIDI notes",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage generation"
+    ],
+    "keywords": [
+      "pick",
+      "note",
+      "walk",
+      "drunk",
+      "random",
+      "output",
+      "pitch",
+      "grid",
+      "step",
+      "lambda loop",
+      "validate"
+    ],
+    "seealso": [
+      "cage.noterandom"
+    ]
+  },
+  "cage.sdif.ptrack.resolve": {
+    "digest": "Resolve parameters of a partial tracking SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "partial tracking",
+      "resolve",
+      "stream",
+      "partial"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "cage.sdif.ptrack.assemble",
+      "cage.sdif.ptrack.unpack",
+      "cage.sdif.ptrack.toroll"
     ]
   },
   "cage.cascade~": {
@@ -71,248 +759,180 @@
       "filtergraph~"
     ]
   },
-  "cage.chain": {
-    "digest": "One-dimensional cellular automata and L-systems",
+  "cage.sdif.markers.toroll": {
+    "digest": "Import a markers SDIF analysis into a <o>bach.roll</o>",
     "module": "cage",
     "category": [
       "cage",
-      "cage automata"
+      "cage SDIF"
     ],
     "keywords": [
-      "cellular automata",
-      "chain",
-      "L-system",
-      "rewrite",
-      "write",
-      "sequence",
-      "vector",
-      "rule",
-      "system",
-      "lambda loop"
+      "SDIF file",
+      "analysis",
+      "markers",
+      "convert",
+      "score",
+      "import"
     ],
     "seealso": [
-      "cage.life"
+      "bach.readsdif",
+      "bach.roll",
+      "cage.sdif.markers.pack",
+      "cage.sdif.markers.unpack"
     ]
   },
-  "cage.chordinterp": {
-    "digest": "Interpolate between chords",
+  "cage.sdif.peaks.pack": {
+    "digest": "Pack parameters of a peaks SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "peaks",
+      "pack",
+      "gather",
+      "join",
+      "stream"
+    ],
+    "seealso": [
+      "bach.writesdif",
+      "cage.sdif.peaks.unpack",
+      "cage.sdif.peaks.toroll"
+    ]
+  },
+  "cage.sdif.fzero.pack": {
+    "digest": "Pack parameters of a fundamental frequency SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "fundamental frequency",
+      "pack",
+      "gather",
+      "join",
+      "stream"
+    ],
+    "seealso": [
+      "bach.writesdif",
+      "cage.sdif.fzero.unpack",
+      "cage.sdif.fzero.toroll"
+    ]
+  },
+  "cage.sdif.fzero.unpack": {
+    "digest": "Unpack parameters of a fundamental frequency SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "fundamental frequency",
+      "unpack",
+      "parse",
+      "separate",
+      "unjoin",
+      "stream"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "cage.sdif.fzero.pack",
+      "cage.sdif.fzero.toroll"
+    ]
+  },
+  "cage.scale": {
+    "digest": "Create a scale",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage generation"
+    ],
+    "keywords": [
+      "scale",
+      "generate",
+      "name",
+      "pattern",
+      "repeat",
+      "chord",
+      "range",
+      "pitch",
+      "note"
+    ],
+    "seealso": [
+      "cage.arpeggio"
+    ]
+  },
+  "cage.agogics": {
+    "digest": "Create accelerandi and rallentandi",
     "module": "cage",
     "category": [
       "cage",
       "cage transformation"
     ],
     "keywords": [
-      "pitch",
-      "interpolate",
-      "chord"
+      "time",
+      "tempo",
+      "accelerando",
+      "rallentando",
+      "agogics",
+      "acceleration",
+      "constant",
+      "repeat",
+      "repetition",
+      "cell"
     ],
     "seealso": [
-      "cage.rhythminterp",
-      "cage.fm",
-      "cage.rm",
-      "cage.rollinterp"
+      "cage.timewarp"
     ]
   },
-  "cage.chroma.fromcentroid": {
-    "digest": "Find a chroma vector corresponding having a given tonal centroid",
+  "cage.profile.filter": {
+    "digest": "Filter pitch profiles",
     "module": "cage",
     "category": [
       "cage",
-      "cage set theory"
+      "cage profiles"
     ],
     "keywords": [
-      "chroma",
-      "centroid",
-      "convert",
-      "vector",
-      "transform"
+      "profile",
+      "filter",
+      "apply",
+      "melody",
+      "pitch"
     ],
     "seealso": [
-      "cage.chroma.2centroid"
+      "cage.profile.gen",
+      "cage.profile.mirror",
+      "cage.profile.perturb",
+      "cage.profile.rectify",
+      "cage.profile.snap",
+      "cage.profile.stretch"
     ]
   },
-  "cage.chroma.frompcset": {
-    "digest": "Convert a pitch-class set into a chroma vector",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage set theory"
-    ],
-    "keywords": [
-      "chroma",
-      "pitch-class",
-      "convert",
-      "vector",
-      "velocity"
-    ],
-    "seealso": [
-      "cage.chroma.topcset"
-    ]
-  },
-  "cage.chroma.tocentroid": {
-    "digest": "Find tonal centroid of a chroma vector",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage set theory"
-    ],
-    "keywords": [
-      "chroma",
-      "centroid",
-      "convert",
-      "vector",
-      "transform"
-    ],
-    "seealso": [
-      "cage.chroma.fromcentroid"
-    ]
-  },
-  "cage.chroma.topcset": {
-    "digest": "Convert a chroma vector into pitch-classes and velocities",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage set theory"
-    ],
-    "keywords": [
-      "chroma",
-      "pitch-class",
-      "convert",
-      "vector",
-      "velocity",
-      "threshold"
-    ],
-    "seealso": [
-      "cage.chroma.frompcset"
-    ]
-  },
-  "cage.closer": {
-    "digest": "Modify pitch octave to approach a given pitch",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "modify",
-      "octave",
-      "change",
-      "approach",
-      "near",
-      "pitch",
-      "pitch-class",
-      "close",
-      "closer"
-    ],
-    "seealso": [
-      "cage.notesnap"
-    ]
-  },
-  "cage.dynamics": {
-    "digest": "Process velocities",
+  "cage.virtfund": {
+    "digest": "Compute virtual fundamentals",
     "module": "cage",
     "category": [
       "cage",
       "cage electrospectral"
     ],
     "keywords": [
-      "velocity",
-      "compress",
-      "limiter",
-      "gain"
-    ],
-    "seealso": [
-      "cage.envelopes"
-    ]
-  },
-  "cage.envelopes": {
-    "digest": "Modify a <o>bach.roll</o> or <o>bach.score</o> via synchronized envelopes",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "score",
-      "synchronize",
-      "envelope",
-      "curve",
-      "value",
-      "chord",
-      "modify",
-      "real-time",
-      "lambda loop"
-    ],
-    "seealso": [
-      "bach.roll",
-      "bach.score",
-      "bach.slot"
-    ]
-  },
-  "cage.explodevoices": {
-    "digest": "Route chords to different voices",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "explode",
-      "voice",
-      "route",
-      "chords",
-      "slot",
-      "score"
-    ],
-    "seealso": [
-      "cage.remapvoices",
-      "bach.combinevoices",
-      "bach.roll",
-      "bach.score"
-    ]
-  },
-  "cage.extract": {
-    "digest": "Extract portion of roll or score",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "extract",
-      "subroll",
-      "roll",
-      "subscore",
-      "score",
-      "crop",
-      "portion"
-    ],
-    "seealso": [
-      "cage.slice"
-    ]
-  },
-  "cage.ezptrack": {
-    "digest": "Track notes in chord sequences",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "score",
-      "partial tracking",
-      "chord",
-      "glue",
+      "virtual fundamental",
       "pitch",
-      "time",
-      "threshold",
-      "sequence",
-      "track",
-      "note"
+      "score",
+      "chord"
     ],
     "seealso": [
-      "bach.roll",
-      "bach.sdif.peaks.toroll"
+      "cage.fm",
+      "cage.rm",
+      "cage.timewarp"
     ]
   },
   "cage.ezsampler~": {
@@ -340,516 +960,6 @@
       "bach.ezmidiplay"
     ]
   },
-  "cage.ezsynth~": {
-    "digest": "Quick additive synthesizer",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage audio"
-    ],
-    "keywords": [
-      "audio rendering",
-      "synthesize",
-      "additive synthesis",
-      "slot",
-      "score",
-      "quick"
-    ],
-    "seealso": [
-      "cage.ezsampler~",
-      "bach.roll",
-      "bach.score",
-      "bach.ezmidiplay"
-    ]
-  },
-  "cage.fm": {
-    "digest": "Compute symbolic frequency modulation",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage electrospectral"
-    ],
-    "keywords": [
-      "frequency modulation",
-      "pitch",
-      "chord"
-    ],
-    "seealso": [
-      "cage.rm",
-      "cage.virtfund"
-    ]
-  },
-  "cage.freqshift": {
-    "digest": "Transpose scores linearly in the frequency domain",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage electrospectral"
-    ],
-    "keywords": [
-      "transpose",
-      "linear",
-      "linearly",
-      "shift",
-      "frequency",
-      "freqshift",
-      "roll",
-      "score"
-    ],
-    "seealso": [
-      "cage.transp",
-      "cage.rev",
-      "cage.rot"
-    ]
-  },
-  "cage.granulate": {
-    "digest": "Perform symbolic granulation",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage electrospectral"
-    ],
-    "keywords": [
-      "granulate",
-      "score",
-      "grain",
-      "size",
-      "region",
-      "interval",
-      "density"
-    ],
-    "seealso": [
-      "bach.roll",
-      "bach.score"
-    ]
-  },
-  "cage.harmser": {
-    "digest": "Create an harmonic series",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage generation"
-    ],
-    "keywords": [
-      "harmonic series",
-      "generate",
-      "stretch",
-      "fundamental",
-      "pitch",
-      "note"
-    ],
-    "seealso": [
-      "cage.scale",
-      "cage.arpeggio"
-    ]
-  },
-  "cage.inv": {
-    "digest": "Perform inversion",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "reverse",
-      "inverse",
-      "roll",
-      "score"
-    ],
-    "seealso": [
-      "cage.rot",
-      "cage.rev",
-      "cage.shift"
-    ]
-  },
-  "cage.join": {
-    "digest": "Join rolls",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "join",
-      "glue",
-      "chunk",
-      "segment",
-      "roll",
-      "together",
-      "concatenate",
-      "juxtapose",
-      "measure",
-      "score"
-    ],
-    "seealso": [
-      "cage.slice"
-    ]
-  },
-  "cage.life": {
-    "digest": "Two-dimensional cellular automata",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage automata"
-    ],
-    "keywords": [
-      "cellular automata",
-      "Conway",
-      "Game of Life",
-      "rewrite",
-      "write",
-      "sequence",
-      "matrix",
-      "rule",
-      "system",
-      "lambda loop"
-    ],
-    "seealso": [
-      "cage.chain"
-    ]
-  },
-  "cage.looper": {
-    "digest": "Loop a portion of a bach.roll",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "loop",
-      "roll",
-      "repeat",
-      "insert"
-    ],
-    "seealso": [
-      "cage.repeat",
-      "cage.wedge",
-      "cage.spacer",
-      "cage.mix",
-      "cage.agogics"
-    ]
-  },
-  "cage.lumbricus": {
-    "digest": "Generate rule-based sequences",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage automata"
-    ],
-    "keywords": [
-      "sequence",
-      "cell",
-      "rule",
-      "family",
-      "weight",
-      "chain"
-    ],
-    "seealso": [
-      "cage.chain",
-      "cage.life",
-      "bach.constraints"
-    ]
-  },
-  "cage.markov.analysis": {
-    "digest": "Markov probability transition matrices",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage automata"
-    ],
-    "keywords": [
-      "rule",
-      "Markov",
-      "chain",
-      "sequence",
-      "probability",
-      "transition",
-      "matrix",
-      "analyze",
-      "sparse",
-      "analysis"
-    ],
-    "seealso": [
-      "cage.markov.synthesis",
-      "anal",
-      "prob"
-    ]
-  },
-  "cage.markov.synthesis": {
-    "digest": "Calculate Markov transitions",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage automata"
-    ],
-    "keywords": [
-      "rule",
-      "Markov",
-      "chain",
-      "sequence",
-      "probability",
-      "transition",
-      "matrix",
-      "calculate",
-      "extract",
-      "pick",
-      "random",
-      "synthesis"
-    ],
-    "seealso": [
-      "cage.markov.analysis",
-      "anal",
-      "prob"
-    ]
-  },
-  "cage.meta.engine": {
-    "digest": "Handle meta-scores by assigning patches to notes",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage meta"
-    ],
-    "keywords": [
-      "score",
-      "meta",
-      "metascore",
-      "engine",
-      "maquette",
-      "patch"
-    ],
-    "seealso": [
-      "cage.meta.header"
-    ]
-  },
-  "cage.meta.header": {
-    "digest": "Header for patches used in meta-scores",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage meta"
-    ],
-    "keywords": [
-      "score",
-      "meta",
-      "metascore",
-      "header",
-      "maquette",
-      "patch"
-    ],
-    "seealso": [
-      "cage.meta.engine"
-    ]
-  },
-  "cage.mix": {
-    "digest": "Mix rolls",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "mix",
-      "superimpose",
-      "roll",
-      "score"
-    ],
-    "seealso": [
-      "cage.looper",
-      "cage.spacer",
-      "cage.wedge"
-    ]
-  },
-  "cage.noterandom": {
-    "digest": "Output random MIDI notes",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage generation"
-    ],
-    "keywords": [
-      "pick",
-      "note",
-      "random",
-      "output",
-      "pitch",
-      "grid",
-      "probability",
-      "weight",
-      "lambda loop",
-      "validate"
-    ],
-    "seealso": [
-      "cage.notewalk",
-      "cage.weightbuilder"
-    ]
-  },
-  "cage.notewalk": {
-    "digest": "Output a random walk of MIDI notes",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage generation"
-    ],
-    "keywords": [
-      "pick",
-      "note",
-      "walk",
-      "drunk",
-      "random",
-      "output",
-      "pitch",
-      "grid",
-      "step",
-      "lambda loop",
-      "validate"
-    ],
-    "seealso": [
-      "cage.noterandom"
-    ]
-  },
-  "cage.pitchfilter": {
-    "digest": "Apply pitch filters to musical data",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage electrospectral"
-    ],
-    "keywords": [
-      "filter",
-      "pitch",
-      "apply",
-      "velocity",
-      "threshold",
-      "breakpoint function",
-      "score",
-      "chord"
-    ],
-    "seealso": [
-      "cage.cascade~"
-    ]
-  },
-  "cage.profile.filter": {
-    "digest": "Filter pitch profiles",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage profiles"
-    ],
-    "keywords": [
-      "profile",
-      "filter",
-      "apply",
-      "melody",
-      "pitch"
-    ],
-    "seealso": [
-      "cage.profile.gen",
-      "cage.profile.mirror",
-      "cage.profile.perturb",
-      "cage.profile.rectify",
-      "cage.profile.snap",
-      "cage.profile.stretch"
-    ]
-  },
-  "cage.profile.gen": {
-    "digest": "Generate pitch profiles",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage profiles"
-    ],
-    "keywords": [
-      "profile",
-      "generate",
-      "create",
-      "melody",
-      "pitch",
-      "breakpoint function",
-      "sample"
-    ],
-    "seealso": [
-      "cage.profile.mirror",
-      "cage.profile.perturb",
-      "cage.profile.rectify",
-      "cage.profile.filter",
-      "cage.profile.snap",
-      "cage.profile.stretch"
-    ]
-  },
-  "cage.profile.mirror": {
-    "digest": "Invert pitch profile",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage profiles"
-    ],
-    "keywords": [
-      "profile",
-      "invert",
-      "melody",
-      "pitch",
-      "mirror"
-    ],
-    "seealso": [
-      "cage.profile.gen",
-      "cage.profile.perturb",
-      "cage.profile.rectify",
-      "cage.profile.filter",
-      "cage.profile.snap",
-      "cage.profile.stretch"
-    ]
-  },
-  "cage.profile.perturb": {
-    "digest": "Randomly perturb a pitch profile",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage profiles"
-    ],
-    "keywords": [
-      "profile",
-      "perturb",
-      "random",
-      "amount",
-      "pitch",
-      "melody"
-    ],
-    "seealso": [
-      "cage.profile.gen",
-      "cage.profile.mirror",
-      "cage.profile.rectify",
-      "cage.profile.filter",
-      "cage.profile.snap",
-      "cage.profile.stretch"
-    ]
-  },
-  "cage.profile.rectify": {
-    "digest": "Rectify pitch profiles via reflections",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage profiles"
-    ],
-    "keywords": [
-      "profile",
-      "rectify",
-      "clip",
-      "force",
-      "region",
-      "reflect",
-      "mirror",
-      "pitch",
-      "melody"
-    ],
-    "seealso": [
-      "cage.profile.gen",
-      "cage.profile.mirror",
-      "cage.profile.perturb",
-      "cage.profile.filter",
-      "cage.profile.snap",
-      "cage.profile.stretch"
-    ]
-  },
   "cage.profile.snap": {
     "digest": "Snap pitch profiles to pitch grids",
     "module": "cage",
@@ -873,51 +983,6 @@
       "cage.profile.stretch"
     ]
   },
-  "cage.profile.stretch": {
-    "digest": "Stretch pitch profiles",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage profiles"
-    ],
-    "keywords": [
-      "profile",
-      "stretch",
-      "pitch",
-      "melody",
-      "center",
-      "factor"
-    ],
-    "seealso": [
-      "cage.profile.gen",
-      "cage.profile.mirror",
-      "cage.profile.perturb",
-      "cage.profile.rectify",
-      "cage.profile.filter",
-      "cage.profile.snap"
-    ]
-  },
-  "cage.remapvoices": {
-    "digest": "Remap the voices of a roll",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "voice",
-      "map",
-      "remap",
-      "roll",
-      "score"
-    ],
-    "seealso": [
-      "cage.spacer",
-      "cage.wedge",
-      "cage.explodevoices",
-      "bach.combinevoices"
-    ]
-  },
   "cage.repeat": {
     "digest": "Repeat a roll or score",
     "module": "cage",
@@ -938,123 +1003,30 @@
       "cage.agogics"
     ]
   },
-  "cage.rev": {
-    "digest": "Perform retrogrades",
+  "cage.chain": {
+    "digest": "One-dimensional cellular automata and L-systems",
     "module": "cage",
     "category": [
       "cage",
-      "cage scores"
+      "cage automata"
     ],
     "keywords": [
-      "retrograde",
-      "reverse",
-      "roll",
-      "score"
+      "cellular automata",
+      "chain",
+      "L-system",
+      "rewrite",
+      "write",
+      "sequence",
+      "vector",
+      "rule",
+      "system",
+      "lambda loop"
     ],
     "seealso": [
-      "cage.rot",
-      "cage.inv",
-      "cage.shift"
+      "cage.life"
     ]
   },
-  "cage.rhythminterp": {
-    "digest": "Interpolate between chords",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage transformation"
-    ],
-    "keywords": [
-      "rhythm",
-      "interpolate",
-      "chord"
-    ],
-    "seealso": [
-      "cage.chordinterp",
-      "cage.fm",
-      "cage.rm",
-      "cage.rollinterp"
-    ]
-  },
-  "cage.rm": {
-    "digest": "Compute symbolic ring modulation",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage electrospectral"
-    ],
-    "keywords": [
-      "ring modulation",
-      "pitch",
-      "chord"
-    ],
-    "seealso": [
-      "cage.fm",
-      "cage.virtfund"
-    ]
-  },
-  "cage.rollinterp": {
-    "digest": "Interpolate two <o>bach.roll</o> objects",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "interpolate",
-      "score",
-      "crossfade",
-      "random",
-      "probability",
-      "modify",
-      "velocity",
-      "threshold"
-    ],
-    "seealso": [
-      "bach.roll"
-    ]
-  },
-  "cage.rot": {
-    "digest": "Circularly rotate rolls",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "rotate",
-      "circular",
-      "roll"
-    ],
-    "seealso": [
-      "cage.rev",
-      "cage.inv",
-      "cage.shift"
-    ]
-  },
-  "cage.scale": {
-    "digest": "Create a scale",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage generation"
-    ],
-    "keywords": [
-      "scale",
-      "generate",
-      "name",
-      "pattern",
-      "repeat",
-      "chord",
-      "range",
-      "pitch",
-      "note"
-    ],
-    "seealso": [
-      "cage.arpeggio"
-    ]
-  },
-  "cage.sdif.chordseq.pack": {
+  "cage.sdif.ptrack.pack": {
     "digest": "Pack parameters of a partial tracking SDIF analysis",
     "module": "cage",
     "category": [
@@ -1064,7 +1036,7 @@
     "keywords": [
       "SDIF file",
       "analysis",
-      "chord sequence",
+      "partial tracking",
       "pack",
       "gather",
       "join",
@@ -1072,239 +1044,110 @@
     ],
     "seealso": [
       "bach.writesdif",
-      "cage.sdif.chordseq.unpack",
-      "cage.sdif.chordseq.toroll"
+      "cage.sdif.ptrack.unpack",
+      "cage.sdif.ptrack.toroll",
+      "cage.sdif.ptrack.assemble"
     ]
   },
-  "cage.sdif.chordseq.toroll": {
-    "digest": "Import a partial tracking SDIF analysis into a <o>bach.roll</o>",
+  "cage.wedge": {
+    "digest": "Insert a roll in another roll",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage scores"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "chord sequence",
-      "convert",
+      "insert",
+      "space",
+      "roll",
+      "split"
+    ],
+    "seealso": [
+      "cage.mix",
+      "cage.spacer",
+      "cage.mix",
+      "cage.glue"
+    ]
+  },
+  "cage.pitchfilter": {
+    "digest": "Apply pitch filters to musical data",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage electrospectral"
+    ],
+    "keywords": [
+      "filter",
+      "pitch",
+      "apply",
+      "velocity",
+      "threshold",
+      "breakpoint function",
       "score",
-      "import",
-      "stream",
-      "voice"
+      "chord"
     ],
     "seealso": [
-      "bach.readsdif",
-      "bach.roll",
-      "cage.sdif.chordseq.pack",
-      "cage.sdif.chordseq.unpack",
-      "cage.ezaddsynth~",
-      "bach.ezmidiplay"
+      "cage.cascade~"
     ]
   },
-  "cage.sdif.chordseq.unpack": {
-    "digest": "Unpack parameters of a chord sequence SDIF analysis",
+  "cage.lumbricus": {
+    "digest": "Generate rule-based sequences",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage automata"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "chord sequence",
-      "chordseq",
-      "unpack",
-      "parse",
-      "separate",
-      "unjoin",
-      "stream"
+      "sequence",
+      "cell",
+      "rule",
+      "family",
+      "weight",
+      "chain"
     ],
     "seealso": [
-      "bach.readsdif",
-      "cage.sdif.chordseq.pack",
-      "cage.sdif.chordseq.toroll"
+      "cage.chain",
+      "cage.life",
+      "bach.constraints"
     ]
   },
-  "cage.sdif.fzero.pack": {
-    "digest": "Pack parameters of a fundamental frequency SDIF analysis",
+  "cage.mix": {
+    "digest": "Mix rolls",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage scores"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "fundamental frequency",
-      "pack",
-      "gather",
-      "join",
-      "stream"
+      "mix",
+      "superimpose",
+      "roll",
+      "score"
     ],
     "seealso": [
-      "bach.writesdif",
-      "cage.sdif.fzero.unpack",
-      "cage.sdif.fzero.toroll"
+      "cage.looper",
+      "cage.spacer",
+      "cage.wedge"
     ]
   },
-  "cage.sdif.fzero.toroll": {
-    "digest": "Import a fundamental frequency SDIF analysis into a <o>bach.roll</o>",
+  "cage.tonnetz.rot": {
+    "digest": "Rotate tonnetz coordinates",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage set theory"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "fundamental frequency",
-      "convert",
-      "score",
-      "import",
-      "stream",
-      "voice"
+      "tonnetz",
+      "rotate",
+      "coordinate",
+      "step",
+      "degree",
+      "clockwise",
+      "counterclockwise"
     ],
     "seealso": [
-      "bach.readsdif",
-      "bach.roll",
-      "cage.sdif.fzero.pack",
-      "cage.sdif.fzero.unpack",
-      "cage.ezaddsynth~"
-    ]
-  },
-  "cage.sdif.fzero.unpack": {
-    "digest": "Unpack parameters of a fundamental frequency SDIF analysis",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage SDIF"
-    ],
-    "keywords": [
-      "SDIF file",
-      "analysis",
-      "fundamental frequency",
-      "unpack",
-      "parse",
-      "separate",
-      "unjoin",
-      "stream"
-    ],
-    "seealso": [
-      "bach.readsdif",
-      "cage.sdif.fzero.pack",
-      "cage.sdif.fzero.toroll"
-    ]
-  },
-  "cage.sdif.markers.fromroll": {
-    "digest": "Export markers SDIF analysis from a <o>bach.roll</o>",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage SDIF"
-    ],
-    "keywords": [
-      "SDIF file",
-      "analysis",
-      "markers",
-      "convert",
-      "score",
-      "export"
-    ],
-    "seealso": [
-      "bach.writesdif",
-      "bach.roll",
-      "cage.sdif.markers.pack",
-      "cage.sdif.markers.unpack"
-    ]
-  },
-  "cage.sdif.markers.pack": {
-    "digest": "Pack parameters of a markers SDIF analysis",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage SDIF"
-    ],
-    "keywords": [
-      "SDIF file",
-      "analysis",
-      "markers",
-      "pack",
-      "gather",
-      "join",
-      "stream"
-    ],
-    "seealso": [
-      "bach.writesdif",
-      "cage.sdif.markers.unpack",
-      "cage.sdif.markers.toroll"
-    ]
-  },
-  "cage.sdif.markers.toroll": {
-    "digest": "Import a markers SDIF analysis into a <o>bach.roll</o>",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage SDIF"
-    ],
-    "keywords": [
-      "SDIF file",
-      "analysis",
-      "markers",
-      "convert",
-      "score",
-      "import"
-    ],
-    "seealso": [
-      "bach.readsdif",
-      "bach.roll",
-      "cage.sdif.markers.pack",
-      "cage.sdif.markers.unpack"
-    ]
-  },
-  "cage.sdif.markers.unpack": {
-    "digest": "Unpack parameters of a markers SDIF analysis",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage SDIF"
-    ],
-    "keywords": [
-      "SDIF file",
-      "analysis",
-      "markers",
-      "unpack",
-      "parse",
-      "separate",
-      "unjoin",
-      "stream"
-    ],
-    "seealso": [
-      "bach.readsdif",
-      "cage.sdif.markers.pack",
-      "cage.sdif.markers.toroll"
-    ]
-  },
-  "cage.sdif.peaks.pack": {
-    "digest": "Pack parameters of a peaks SDIF analysis",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage SDIF"
-    ],
-    "keywords": [
-      "SDIF file",
-      "analysis",
-      "peaks",
-      "pack",
-      "gather",
-      "join",
-      "stream"
-    ],
-    "seealso": [
-      "bach.writesdif",
-      "cage.sdif.peaks.unpack",
-      "cage.sdif.peaks.toroll"
+      "cage.tonnetz.flip"
     ]
   },
   "cage.sdif.peaks.toroll": {
@@ -1333,94 +1176,103 @@
       "cage.ezptrack"
     ]
   },
-  "cage.sdif.peaks.unpack": {
-    "digest": "Unpack parameters of a peaks SDIF analysis",
+  "cage.ezsynth~": {
+    "digest": "Quick additive synthesizer",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage audio"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "peaks",
-      "unpack",
-      "parse",
-      "separate",
-      "unjoin",
-      "stream"
+      "audio rendering",
+      "synthesize",
+      "additive synthesis",
+      "slot",
+      "score",
+      "quick"
     ],
     "seealso": [
-      "bach.readsdif",
-      "cage.sdif.peaks.pack",
-      "cage.sdif.peaks.toroll"
+      "cage.ezsampler~",
+      "bach.roll",
+      "bach.score",
+      "bach.ezmidiplay"
     ]
   },
-  "cage.sdif.ptrack.assemble": {
-    "digest": "Assemble partials into a partial tracking SDIF llll",
+  "cage.remapvoices": {
+    "digest": "Remap the voices of a roll",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage scores"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "partial tracking",
-      "assemble",
-      "stream",
-      "partial"
+      "voice",
+      "map",
+      "remap",
+      "roll",
+      "score"
     ],
     "seealso": [
-      "bach.writesdif",
-      "cage.sdif.ptrack.resolve",
-      "cage.sdif.ptrack.pack",
-      "cage.sdif.ptrack.toroll"
+      "cage.spacer",
+      "cage.wedge",
+      "cage.explodevoices",
+      "bach.combinevoices"
     ]
   },
-  "cage.sdif.ptrack.pack": {
-    "digest": "Pack parameters of a partial tracking SDIF analysis",
+  "cage.slice": {
+    "digest": "Slice roll",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage scores"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "partial tracking",
-      "pack",
-      "gather",
-      "join",
-      "stream"
+      "slice",
+      "split",
+      "chunk",
+      "segment",
+      "roll"
     ],
     "seealso": [
-      "bach.writesdif",
-      "cage.sdif.ptrack.unpack",
-      "cage.sdif.ptrack.toroll",
-      "cage.sdif.ptrack.assemble"
+      "cage.join"
     ]
   },
-  "cage.sdif.ptrack.resolve": {
-    "digest": "Resolve parameters of a partial tracking SDIF analysis",
+  "cage.meta.engine": {
+    "digest": "Handle meta-scores by assigning patches to notes",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage meta"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "partial tracking",
-      "resolve",
-      "stream",
-      "partial"
+      "score",
+      "meta",
+      "metascore",
+      "engine",
+      "maquette",
+      "patch"
     ],
     "seealso": [
-      "bach.readsdif",
-      "cage.sdif.ptrack.assemble",
-      "cage.sdif.ptrack.unpack",
-      "cage.sdif.ptrack.toroll"
+      "cage.meta.header"
+    ]
+  },
+  "cage.rhythminterp": {
+    "digest": "Interpolate between chords",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage transformation"
+    ],
+    "keywords": [
+      "rhythm",
+      "interpolate",
+      "chord"
+    ],
+    "seealso": [
+      "cage.chordinterp",
+      "cage.fm",
+      "cage.rm",
+      "cage.rollinterp"
     ]
   },
   "cage.sdif.ptrack.toroll": {
@@ -1450,67 +1302,218 @@
       "cage.ezaddsynth~"
     ]
   },
-  "cage.sdif.ptrack.unpack": {
-    "digest": "Unpack parameters of a partial tracking SDIF analysis",
+  "cage.profile.rectify": {
+    "digest": "Rectify pitch profiles via reflections",
     "module": "cage",
     "category": [
       "cage",
-      "cage SDIF"
+      "cage profiles"
     ],
     "keywords": [
-      "SDIF file",
-      "analysis",
-      "partial tracking",
-      "unpack",
-      "parse",
-      "separate",
-      "unjoin",
-      "stream"
+      "profile",
+      "rectify",
+      "clip",
+      "force",
+      "region",
+      "reflect",
+      "mirror",
+      "pitch",
+      "melody"
     ],
     "seealso": [
-      "bach.readsdif",
-      "cage.sdif.ptrack.pack",
-      "cage.sdif.ptrack.toroll",
-      "cage.sdif.ptrack.resolve",
-      "cage.sdif.ptrack.assemble"
+      "cage.profile.gen",
+      "cage.profile.mirror",
+      "cage.profile.perturb",
+      "cage.profile.filter",
+      "cage.profile.snap",
+      "cage.profile.stretch"
     ]
   },
-  "cage.shift": {
-    "digest": "Insert or delete time at the beginning of a score",
+  "cage.freqshift": {
+    "digest": "Transpose scores linearly in the frequency domain",
     "module": "cage",
     "category": [
       "cage",
-      "cage scores"
+      "cage electrospectral"
     ],
     "keywords": [
+      "transpose",
+      "linear",
+      "linearly",
       "shift",
-      "move",
-      "offset",
+      "frequency",
+      "freqshift",
       "roll",
       "score"
     ],
     "seealso": [
-      "cage.rot",
+      "cage.transp",
       "cage.rev",
-      "cage.inv"
+      "cage.rot"
     ]
   },
-  "cage.slice": {
-    "digest": "Slice roll",
+  "cage.looper": {
+    "digest": "Loop a portion of a bach.roll",
     "module": "cage",
     "category": [
       "cage",
       "cage scores"
     ],
     "keywords": [
-      "slice",
-      "split",
-      "chunk",
-      "segment",
-      "roll"
+      "loop",
+      "roll",
+      "repeat",
+      "insert"
     ],
     "seealso": [
-      "cage.join"
+      "cage.repeat",
+      "cage.wedge",
+      "cage.spacer",
+      "cage.mix",
+      "cage.agogics"
+    ]
+  },
+  "cage.life": {
+    "digest": "Two-dimensional cellular automata",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage automata"
+    ],
+    "keywords": [
+      "cellular automata",
+      "Conway",
+      "Game of Life",
+      "rewrite",
+      "write",
+      "sequence",
+      "matrix",
+      "rule",
+      "system",
+      "lambda loop"
+    ],
+    "seealso": [
+      "cage.chain"
+    ]
+  },
+  "cage.chroma.tocentroid": {
+    "digest": "Find tonal centroid of a chroma vector",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage set theory"
+    ],
+    "keywords": [
+      "chroma",
+      "centroid",
+      "convert",
+      "vector",
+      "transform"
+    ],
+    "seealso": [
+      "cage.chroma.fromcentroid"
+    ]
+  },
+  "cage.fm": {
+    "digest": "Compute symbolic frequency modulation",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage electrospectral"
+    ],
+    "keywords": [
+      "frequency modulation",
+      "pitch",
+      "chord"
+    ],
+    "seealso": [
+      "cage.rm",
+      "cage.virtfund"
+    ]
+  },
+  "cage.profile.stretch": {
+    "digest": "Stretch pitch profiles",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage profiles"
+    ],
+    "keywords": [
+      "profile",
+      "stretch",
+      "pitch",
+      "melody",
+      "center",
+      "factor"
+    ],
+    "seealso": [
+      "cage.profile.gen",
+      "cage.profile.mirror",
+      "cage.profile.perturb",
+      "cage.profile.rectify",
+      "cage.profile.filter",
+      "cage.profile.snap"
+    ]
+  },
+  "cage.rollinterp": {
+    "digest": "Interpolate two <o>bach.roll</o> objects",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "interpolate",
+      "score",
+      "crossfade",
+      "random",
+      "probability",
+      "modify",
+      "velocity",
+      "threshold"
+    ],
+    "seealso": [
+      "bach.roll"
+    ]
+  },
+  "cage.chordinterp": {
+    "digest": "Interpolate between chords",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage transformation"
+    ],
+    "keywords": [
+      "pitch",
+      "interpolate",
+      "chord"
+    ],
+    "seealso": [
+      "cage.rhythminterp",
+      "cage.fm",
+      "cage.rm",
+      "cage.rollinterp"
+    ]
+  },
+  "cage.granulate": {
+    "digest": "Perform symbolic granulation",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage electrospectral"
+    ],
+    "keywords": [
+      "granulate",
+      "score",
+      "grain",
+      "size",
+      "region",
+      "interval",
+      "density"
+    ],
+    "seealso": [
+      "bach.roll",
+      "bach.score"
     ]
   },
   "cage.spacer": {
@@ -1534,99 +1537,97 @@
       "cage.looper"
     ]
   },
-  "cage.timestretch": {
-    "digest": "Perform temporal stretch",
+  "cage.weightbuilder": {
+    "digest": "Build probability weights",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage generation"
+    ],
+    "keywords": [
+      "build",
+      "probability",
+      "weight",
+      "density function",
+      "breakpoint function",
+      "gaussian",
+      "lognormal",
+      "uniform",
+      "pareto",
+      "parameter"
+    ],
+    "seealso": [
+      "cage.noterandom"
+    ]
+  },
+  "cage.rev": {
+    "digest": "Perform retrogrades",
     "module": "cage",
     "category": [
       "cage",
       "cage scores"
     ],
     "keywords": [
-      "stretch",
-      "roll",
-      "time",
-      "timestretch"
-    ],
-    "seealso": [
-      "cage.timewarp"
-    ]
-  },
-  "cage.timewarp": {
-    "digest": "Perform temporal distortion",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage transformation"
-    ],
-    "keywords": [
-      "time",
-      "tempo",
-      "marker",
-      "function",
-      "accelerando",
-      "rallentando",
-      "agogics"
-    ],
-    "seealso": [
-      "cage.agogics",
-      "cage.timestretch"
-    ]
-  },
-  "cage.tonnetz.flip": {
-    "digest": "Flip tonnetz coordinates",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage set theory"
-    ],
-    "keywords": [
-      "tonnetz",
-      "flip",
-      "horizontal",
-      "vertical",
-      "symmetry",
-      "coordinate"
-    ],
-    "seealso": [
-      "cage.tonnetz.rot"
-    ]
-  },
-  "cage.tonnetz.rot": {
-    "digest": "Rotate tonnetz coordinates",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage set theory"
-    ],
-    "keywords": [
-      "tonnetz",
-      "rotate",
-      "coordinate",
-      "step",
-      "degree",
-      "clockwise",
-      "counterclockwise"
-    ],
-    "seealso": [
-      "cage.tonnetz.flip"
-    ]
-  },
-  "cage.transp": {
-    "digest": "Transpose scores",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "transpose",
+      "retrograde",
+      "reverse",
       "roll",
       "score"
     ],
     "seealso": [
-      "cage.rev",
       "cage.rot",
-      "cage.freqshift"
+      "cage.inv",
+      "cage.shift"
+    ]
+  },
+  "cage.markov.synthesis": {
+    "digest": "Calculate Markov transitions",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage automata"
+    ],
+    "keywords": [
+      "rule",
+      "Markov",
+      "chain",
+      "sequence",
+      "probability",
+      "transition",
+      "matrix",
+      "calculate",
+      "extract",
+      "pick",
+      "random",
+      "synthesis"
+    ],
+    "seealso": [
+      "cage.markov.analysis",
+      "anal",
+      "prob"
+    ]
+  },
+  "cage.sdif.chordseq.unpack": {
+    "digest": "Unpack parameters of a chord sequence SDIF analysis",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage SDIF"
+    ],
+    "keywords": [
+      "SDIF file",
+      "analysis",
+      "chord sequence",
+      "chordseq",
+      "unpack",
+      "parse",
+      "separate",
+      "unjoin",
+      "stream"
+    ],
+    "seealso": [
+      "bach.readsdif",
+      "cage.sdif.chordseq.pack",
+      "cage.sdif.chordseq.toroll"
     ]
   },
   "cage.trim": {
@@ -1650,66 +1651,65 @@
       "cage.shift"
     ]
   },
-  "cage.virtfund": {
-    "digest": "Compute virtual fundamentals",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage electrospectral"
-    ],
-    "keywords": [
-      "virtual fundamental",
-      "pitch",
-      "score",
-      "chord"
-    ],
-    "seealso": [
-      "cage.fm",
-      "cage.rm",
-      "cage.timewarp"
-    ]
-  },
-  "cage.wedge": {
-    "digest": "Insert a roll in another roll",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "insert",
-      "space",
-      "roll",
-      "split"
-    ],
-    "seealso": [
-      "cage.mix",
-      "cage.spacer",
-      "cage.mix",
-      "cage.glue"
-    ]
-  },
-  "cage.weightbuilder": {
-    "digest": "Build probability weights",
+  "cage.noterandom": {
+    "digest": "Output random MIDI notes",
     "module": "cage",
     "category": [
       "cage",
       "cage generation"
     ],
     "keywords": [
-      "build",
+      "pick",
+      "note",
+      "random",
+      "output",
+      "pitch",
+      "grid",
       "probability",
       "weight",
-      "density function",
-      "breakpoint function",
-      "gaussian",
-      "lognormal",
-      "uniform",
-      "pareto",
-      "parameter"
+      "lambda loop",
+      "validate"
     ],
     "seealso": [
-      "cage.noterandom"
+      "cage.notewalk",
+      "cage.weightbuilder"
+    ]
+  },
+  "cage.chroma.frompcset": {
+    "digest": "Convert a pitch-class set into a chroma vector",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage set theory"
+    ],
+    "keywords": [
+      "chroma",
+      "pitch-class",
+      "convert",
+      "vector",
+      "velocity"
+    ],
+    "seealso": [
+      "cage.chroma.topcset"
+    ]
+  },
+  "cage.meta.header": {
+    "digest": "Header for patches used in meta-scores",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage meta"
+    ],
+    "keywords": [
+      "score",
+      "meta",
+      "metascore",
+      "header",
+      "maquette",
+      "patch"
+    ],
+    "seealso": [
+      "cage.meta.engine"
     ]
   }
 }
