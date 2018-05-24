@@ -68,8 +68,8 @@ void main_foo() {
 
 llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 
-CLASS_ATTR_DOUBLE(c, "tuning", 0, t_freqshift, tuning);
-CLASS_ATTR_STYLE(c, "tuning", 0, "Tuning");	
+CLASS_ATTR_DOUBLE(c, "diapason", 0, t_freqshift, diapason);
+CLASS_ATTR_STYLE_LABEL(c,"diapason",0,"text","Reference Tuning Pitch");
 // @description Sets the tuning for the reference diapason A. Defaults to 440.
 
 
