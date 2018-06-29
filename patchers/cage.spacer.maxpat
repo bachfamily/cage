@@ -1061,36 +1061,30 @@
 , 			{
 				"box" : 				{
 					"bwcompatibility" : 70904,
-					"clefs" : [ "G", "G" ],
 					"defaultnoteslots" : [ "null" ],
 					"embed" : 0,
-					"enharmonictable" : [ "default", "default" ],
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"hidevoices" : [ 0, 0 ],
 					"highlightplay" : 0,
 					"id" : "obj-6",
-					"keys" : [ "CM", "CM" ],
 					"legend" : 0,
 					"linkdynamicstoslot" : 0,
 					"loop" : [ 0.0, 0.0 ],
 					"maxclass" : "bach.roll",
 					"maxundosteps" : 0,
-					"midichannels" : [ 1, 2 ],
 					"numinlets" : 6,
 					"numoutlets" : 8,
-					"numparts" : [ 1, 1 ],
-					"numvoices" : 2,
+					"numvoices" : 1,
 					"out" : "nnnnnnn",
 					"outlettype" : [ "", "", "", "", "", "", "", "bang" ],
 					"patching_rect" : [ 120.5, 554.0, 175.0, 53.0 ],
 					"pitcheditrange" : [ "null" ],
-					"stafflines" : [ 5, 5 ],
+					"stafflines" : [ 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"versionnumber" : 80001,
-					"voicenames" : [ "(", ")", "(", ")" ],
-					"voicespacing" : [ 0.0, 17.0, 17.0 ],
+					"voicenames" : [ "(", ")" ],
+					"voicespacing" : [ 0.0, 17.0 ],
 					"vzoom" : 50.0
 				}
 
@@ -1099,7 +1093,7 @@
 				"box" : 				{
 					"comment" : "llll: roll",
 					"id" : "obj-52",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1113,7 +1107,7 @@
 				"box" : 				{
 					"comment" : "llll: Times - Lengths Couples",
 					"id" : "obj-53",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1127,7 +1121,7 @@
 				"box" : 				{
 					"comment" : "llll: roll",
 					"id" : "obj-55",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1205,6 +1199,15 @@
 					"destination" : [ "obj-14", 1 ],
 					"midpoints" : [ 68.0, 133.0, 291.5, 133.0 ],
 					"order" : 0,
+					"source" : [ "obj-15", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"midpoints" : [ 68.0, 133.0, 336.0, 133.0, 336.0, 621.0, 130.0, 621.0 ],
+					"order" : 2,
 					"source" : [ "obj-15", 2 ]
 				}
 
@@ -1427,120 +1430,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "bach.+.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cage.inferheadersyms.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/cage/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.sliceheader.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.filternull.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cage.checkbachversion.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/cage/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.roll.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.join.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.portal.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.iter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.sort.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.reg.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.pick.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.expr.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.args.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.wrap.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.depth.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.print.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.is.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.flat.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.eq.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.slice.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.mapelem.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.nth.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.keys.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
