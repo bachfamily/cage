@@ -12,6 +12,7 @@ max oblist "cage abstractions" cage.chroma.fromcentroid;
 max oblist "cage abstractions" cage.sdif.markers.fromroll;
 max oblist "cage abstractions" cage.shift;
 max oblist "cage abstractions" cage.envelopes;
+max oblist "cage abstractions" cage.length;
 max oblist "cage abstractions" cage.tonnetz.flip;
 max oblist "cage abstractions" cage.rot;
 max oblist "cage abstractions" cage.transp;

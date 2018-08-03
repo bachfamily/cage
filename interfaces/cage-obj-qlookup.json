@@ -307,6 +307,25 @@
       "bach.slot"
     ]
   },
+  "cage.length": {
+    "digest": "Get score duration",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "length",
+      "duration",
+      "measures",
+      "units",
+      "roll",
+      "score"
+    ],
+    "seealso": [
+      "cage.repeat"
+    ]
+  },
   "cage.tonnetz.flip": {
     "digest": "Flip tonnetz coordinates",
     "module": "cage",
