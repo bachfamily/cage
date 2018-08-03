@@ -1,10 +1,23 @@
 v. 0.5.1
 
+*************************
+*** IMPORTANT CHANGES ***
+*************************
+These might break compatibility with older patches
+
+- cage.transp			@tail attribute no longer exists. 
+					Duration lines are always precessed, unless disabled via the new @dl attribute. 
+					Please update your patches
+
+
 ***********************
 *** VERSION CHANGES ***
 ***********************
 
 - cage.length			New module
+
+- cage.volume			New module 
+				(for changing velocities as gains, and applying windowing)
 
 
 

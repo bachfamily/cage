@@ -53,8 +53,10 @@
 // The amount of transposition is set via the right inlet (defaults to 0 Hz), and an llll in such 
 // inlet is converted into a <m>float</m>.
 
-// @method float @digest Set shift amount
+// @method float @digest Set shift amount (fixed or lambda)
 // @description Any number in the right inlet sets the shift amount in Hertz.
+// If a lambda loop is in place, the shift is expected to be given for every incoming onset.
+// The lambda loop will receive an onset (in milliseconds) and output the corresponding shift in Hertz.
 
 // @method bang @digest Output shifted roll
 // @description Outputs result of the last frequency shift.
@@ -80,7 +82,7 @@ CLASS_ATTR_STYLE_LABEL(c,"diapason",0,"text","Reference Tuning Pitch");
 // ---------------
 
 // @in 0 @type llll @digest Original score
-// @in 1 @type float @digest Shift amount (Hz)
+// @in 1 @type float @digest Shift amount in Hertz (fixed or lambda)
 
 
 
@@ -89,6 +91,7 @@ CLASS_ATTR_STYLE_LABEL(c,"diapason",0,"text","Reference Tuning Pitch");
 // ---------------
 
 // @out 0 @type llll @digest Shifted score
+// @out 1 @type llll @digest Lambda outlet
 
 
 

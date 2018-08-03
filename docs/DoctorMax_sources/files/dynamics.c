@@ -33,7 +33,7 @@
 	velocity, compress, limiter, gain
  
 	@seealso
-	cage.envelopes	
+	cage.volume, cage.envelopes
 	
 	@owner
 	Andrea Agostini
