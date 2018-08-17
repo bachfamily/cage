@@ -22,6 +22,7 @@ max oblist "cage abstractions" cage.sdif.chordseq.pack;
 max oblist "cage abstractions" cage.chroma.topcset;
 max oblist "cage abstractions" cage.profile.perturb;
 max oblist "cage abstractions" cage.arpeggio;
+max oblist "cage abstractions" cage.volume;
 max oblist "cage abstractions" cage.sdif.fzero.toroll;
 max oblist "cage abstractions" cage.dynamics;
 max oblist "cage abstractions" cage.rm;

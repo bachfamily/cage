@@ -100,7 +100,7 @@ CLASS_ATTR_LONG(c, "sampling", 0, t_agogics, sampling);
 CLASS_ATTR_STYLE_LABEL(c,"sampling",0,"text","Sampling Rate");
 CLASS_ATTR_BASIC(c,"sampling",0);
 // @description Sets the sampling rate (in samples per second) to process the agogics.
-// Higher values will result in improved precision but slower calculation. Defaults to 50.
+// Higher values will result in improved precision but slower calculation. Defaults to 100.
 
 CLASS_ATTR_LONG(c, "niter", 0, t_agogics, niter); 
 CLASS_ATTR_STYLE_LABEL(c,"niter",0,"text","Number of Iterations");

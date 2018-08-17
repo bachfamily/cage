@@ -24,6 +24,7 @@
 <refpage name='cage.chroma.topcset.maxref.xml'/>
 <refpage name='cage.profile.perturb.maxref.xml'/>
 <refpage name='cage.arpeggio.maxref.xml'/>
+<refpage name='cage.volume.maxref.xml'/>
 <refpage name='cage.sdif.fzero.toroll.maxref.xml'/>
 <refpage name='cage.dynamics.maxref.xml'/>
 <refpage name='cage.rm.maxref.xml'/>

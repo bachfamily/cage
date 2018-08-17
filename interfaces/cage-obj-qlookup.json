@@ -516,6 +516,29 @@
       "cage.scale"
     ]
   },
+  "cage.volume": {
+    "digest": "Change velocities",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "velocity",
+      "velocities",
+      "roll",
+      "score",
+      "window",
+      "windowing",
+      "gain",
+      "volume",
+      "intensity",
+      "change"
+    ],
+    "seealso": [
+      "cage.dynamics"
+    ]
+  },
   "cage.sdif.fzero.toroll": {
     "digest": "Import a fundamental frequency SDIF analysis into a <o>bach.roll</o>",
     "module": "cage",
@@ -555,6 +578,7 @@
       "gain"
     ],
     "seealso": [
+      "cage.volume",
       "cage.envelopes"
     ]
   },

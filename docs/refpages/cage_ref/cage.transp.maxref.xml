@@ -31,7 +31,7 @@
 		</inlet>
 		<inlet id="1" type="INLET_TYPE">
 			<digest>
-				Transposition amount or interval
+				Transposition amount or interval (fixed or lambda)
 			</digest>
 			<description>
 			</description>
@@ -43,6 +43,13 @@
 		<outlet id="0" type="INLET_TYPE">
 			<digest>
 				Transposed score
+			</digest>
+			<description>
+			</description>
+		</outlet>
+		<outlet id="1" type="INLET_TYPE">
+			<digest>
+				Lambda outlet
 			</digest>
 			<description>
 			</description>
@@ -66,7 +73,7 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				Output transposed roll
+				Output transposed score
 			</digest>
 			<description>
 				Outputs result of the last transposition.
@@ -75,10 +82,12 @@
 		<method name="float">
 			<arglist />
 			<digest>
-				Set transposition amount
+				Set transposition amount (fixed or lambda)
 			</digest>
 			<description>
 				Any number in the right inlet sets the transposition amount in Cents.
+				If a lambda loop is in place, the transposition is expected to be given for every incoming onset.
+				The lambda loop will receive an onset (in milliseconds) and output the corresponding transposition amount.
 			</description>
 		</method>
 		<method name="llll">
@@ -98,16 +107,45 @@
 		<method name="pitch">
 			<arglist />
 			<digest>
-				Set transposition interval
+				Set transposition interval (fixed or lambda)
 			</digest>
 			<description>
 				Any pitch in the right inlet sets the transposition interval.
+				If a lambda loop is in place, the transposition is expected to be given for every incoming onset.
+				The lambda loop will receive an onset (in milliseconds) and output the corresponding transposition interval.
 			</description>
 		</method>
 	</methodlist>
 
 	<!--ATTRIBUTES-->
 	<attributelist>
+		<attribute name="dl" get="1" set="1" type="int" size="1">
+			<digest>
+				Process Duration Lines
+			</digest>
+			<description>
+				Toggles the ability to also process duration
+				lines (breakpoints and tails).
+				By default this is on.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Process Duration Lines" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="normalize" get="1" set="1" type="int" size="1">
+			<digest>
+				Time Coordinate Is Between 0 And 1
+			</digest>
+			<description>
+				Toggles the ability to normalize the time coordinate
+				between 0 (beginninng of score) and 1 (end of score).
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Time Coordinate Is Between 0 And 1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
 		<attribute name="out" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Outlet Types
@@ -155,7 +193,7 @@
 		</entry>
 		<entry name ="Inlet 2 (float/pitch)">
 			<description>
-				Transposition amount or interval.
+				Transposition amount or interval (fixed or lambda).
 			</description>
 		</entry>
 	</misc>
@@ -164,6 +202,11 @@
 		<entry name ="Outlet 1 (llll)">
 			<description>
 				Transposed score.
+			</description>
+		</entry>
+		<entry name ="Outlet 2 (llll)">
+			<description>
+				Lambda outlet.
 			</description>
 		</entry>
 	</misc>

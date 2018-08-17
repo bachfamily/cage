@@ -19,6 +19,8 @@ These might break compatibility with older patches
 - cage.volume			New module 
 				(for changing velocities as gains, and applying windowing)
 
+- cage.agogics			New default for "sampling" attribute is 100
+
 
 
 

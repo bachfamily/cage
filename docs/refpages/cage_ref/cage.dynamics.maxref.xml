@@ -257,6 +257,7 @@
 
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name="cage.volume" />
 		<seealso name="cage.envelopes" />
 	</seealsolist>
 
