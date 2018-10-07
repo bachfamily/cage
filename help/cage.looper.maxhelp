@@ -189,7 +189,7 @@
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 136.0, 289.0, 49.0 ],
 													"style" : "",
-													"text" : "select all, cents (100 minus), onset (1.2 times), duration (1.2 times), velocity (0.75 times), clearselection, dump body"
+													"text" : "select all, cents [100 minus], onset [1.2 times], duration [1.2 times], velocity [0.75 times], clearselection, dump body"
 												}
 
 											}

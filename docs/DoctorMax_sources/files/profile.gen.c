@@ -49,7 +49,7 @@
 // setting the sampling grid or the number of sampling points. <br />
 // An <m>llll</m> in the second inlet contains the information about the pitch breakpoint function,
 // and is expected to be in the form <b><m>BPT1</m> <m>BPT2</m>
-// <m>BPT3</m>...</b>, where each <m>BPT</m> has the form <b>(<m>x</m> <m>y</m> <m>slope</m>)</b>.
+// <m>BPT3</m>...</b>, where each <m>BPT</m> has the form <b>[<m>x</m> <m>y</m> <m>slope</m>]</b>.
 // The <m>y</m> values must be in midicents, the <m>x</m> values can lie in any chosen interval
 
 // @method list @digest Set sampling grid, output result 

@@ -59,7 +59,7 @@
 // An <m>llll</m> in the second inlet represents the domain of the search,
 // and is composed of sublists each representing a family of elements (which, once again,
 // can be any kind of data) in turn enclosed in a sublist, and a weight associated to that family.
-// For example, the llll <b>((a b) 20) ((c) 80)</b> indicates that two families are present,
+// For example, the llll <b>[[a b] 20] [[c] 80]</b> indicates that two families are present,
 // the first containing the elements <b>a</b> and b, and having a weight of 20;
 // the second containing only the element <b>c</b>, and having a weight of 80.
 // The weights, which don't have to be normalized, represent an indicative probability of appearance

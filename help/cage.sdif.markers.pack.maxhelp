@@ -166,7 +166,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 329.0, 291.709137, 99.0, 19.0 ],
-									"text" : "((0 1) (0.1 0.2))"
+									"text" : "[[0 1] [0.1 0.2]]"
 								}
 
 							}
@@ -180,7 +180,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 266.75, 269.0, 50.0, 19.0 ],
-									"text" : "(foo ())"
+									"text" : "[foo []]"
 								}
 
 							}
@@ -194,7 +194,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 205.5, 231.5, 84.0, 19.0 ],
-									"text" : "(0 () 2100 ())"
+									"text" : "[0 [] 2100 []]"
 								}
 
 							}
@@ -208,7 +208,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 143.25, 199.790863, 125.0, 19.0 ],
-									"text" : "(0 1000 2000 3000)"
+									"text" : "[0 1000 2000 3000]"
 								}
 
 							}

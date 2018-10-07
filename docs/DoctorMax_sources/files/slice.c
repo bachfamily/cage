@@ -46,7 +46,7 @@
 // @method llll @digest Slice roll
 // @description An <m>llll</m> in the first inlet is considered as the gathered syntax of the original roll. 
 // Such roll is cut at the given slice points (time instants, see infra) into a sequence of other rolls, whose
-// gathered syntax is collected and output through the outlet in the form: <b>(<m>ROLL1</m>) (<m>ROLL2</m>)...</b>.
+// gathered syntax is collected and output through the outlet in the form: <b>[<m>ROLL1</m>] [<m>ROLL2</m>]...</b>.
 // The output header content is the same as the input header content. <br />
 // An <m>llll</m> in the second inlet sets the time instants at which the roll content has to be sliced.
 // If such <m>llll</m> is <b>null</b> (default), the existing markers (if any) will be used for slicing.

@@ -46,7 +46,7 @@
 
 // @method llll @digest Rotate tonnetz coordinates, output result
 // @description An <m>llll</m> in the first inlet is expected to contain a sequence
-// of wrapped coordinates, in the form <b>(<m>c1</m> <m>c2</m>) (<m>c1</m> <m>c2</m>)...</b>.
+// of wrapped coordinates, in the form <b>[<m>c1</m> <m>c2</m>] [<m>c1</m> <m>c2</m>]...</b>.
 // Such coordinates are all rotated by the number of steps (each step corresponding
 // to a 60 degrees clockwise rotation) defined as argument or via the second inlet. Rotations
 // are performed with respect to the tonnetz center. <br />

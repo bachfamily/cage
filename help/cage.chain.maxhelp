@@ -154,7 +154,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 128.333344, 206.0, 32.5, 23.0 ],
 									"style" : "",
-									"text" : "(E)"
+									"text" : "[E]"
 								}
 
 							}
@@ -169,7 +169,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 233.666672, 206.0, 223.0, 23.0 ],
 									"style" : "",
-									"text" : "(((E)) ((E) (F) (E))) (((F)) ((F) (F) (F)))"
+									"text" : "[[[E]] [[E] [F] [E]]] [[[F]] [[F] [F] [F]]]"
 								}
 
 							}
@@ -1392,7 +1392,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 220.666672, 128.0, 136.0, 23.0 ],
 									"style" : "",
-									"text" : "((E) E F E) ((F) F F F)"
+									"text" : "[[E] E F E] [[F] F F F]"
 								}
 
 							}
@@ -1796,7 +1796,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 172.0, 405.0, 122.0, 23.0 ],
 									"style" : "",
-									"text" : "((x x x) x) ((x z y) y)"
+									"text" : "[[x x x] x] [[x z y] y]"
 								}
 
 							}
@@ -1888,7 +1888,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 407.0, 246.0, 114.0, 38.0 ],
 									"style" : "",
-									"text" : "((x x) x) ((x y) y) ((y x) y) ((y y) x x)"
+									"text" : "[[x x] x] [[x y] y] [[y x] y] [[y y] x x]"
 								}
 
 							}
@@ -1998,7 +1998,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 135.0, 188.0, 137.0, 23.0 ],
 									"style" : "",
-									"text" : "((E) E F E) ((F) F F F)"
+									"text" : "[[E] E F E] [[F] F F F]"
 								}
 
 							}
@@ -4118,7 +4118,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 564.0, 394.5, 80.0, 38.0 ],
 									"style" : "",
-									"text" : "((E) E F E) ((F) F F F)"
+									"text" : "[[E] E F E] [[F] F F F]"
 								}
 
 							}
@@ -4301,7 +4301,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 132.0, 237.0, 136.0, 23.0 ],
 									"style" : "",
-									"text" : "((E) E F E) ((F) F F F)"
+									"text" : "[[E] E F E] [[F] F F F]"
 								}
 
 							}

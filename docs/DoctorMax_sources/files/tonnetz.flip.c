@@ -45,7 +45,7 @@
 
 // @method llll @digest Flip tonnetz coordinates, output result
 // @description An <m>llll</m> in the first inlet is expected to contain a sequence
-// of wrapped coordinates, in the form <b>(<m>c1</m> <m>c2</m>) (<m>c1</m> <m>c2</m>)...</b>.
+// of wrapped coordinates, in the form <b>[<m>c1</m> <m>c2</m>] [<m>c1</m> <m>c2</m>]...</b>.
 // Such coordinates are all flipped horizontally or vertically (with respect to the horizontal and
 // vertical axis passing by the tonnetz center), depending on the <m> dim </m> attribute. <br />
 // @copy BACH_DOC_SETTHEORY_TONNETZ_COORDINATES

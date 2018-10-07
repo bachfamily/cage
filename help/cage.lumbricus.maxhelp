@@ -960,7 +960,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 96.0, 208.0, 168.0, 38.0 ],
 									"style" : "",
-									"text" : "(C4 E4 G4 C5) (F4 A4 C5) (G4 B4 D5) (F#2 A#2 C#3)"
+									"text" : "[C4 E4 G4 C5] [F4 A4 C5] [G4 B4 D5] [F#2 A#2 C#3]"
 								}
 
 							}

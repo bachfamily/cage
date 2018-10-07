@@ -52,8 +52,8 @@
 // Moreover, for each marker there are two transition coefficients,
 // which constitute thus a further sublist level in the llll output from the rightmost outlet.
 // The end range onset is a numeric value if the marker is a range marker (with a beginning and an end),
-// otherwise a <b>()</b> is returned instead of the numeric value. If a marker has no marker name,
-// <b>()</b> is also returned.
+// otherwise a <b>[]</b> is returned instead of the numeric value. If a marker has no marker name,
+// <b>[]</b> is also returned.
 
 // @method bang @digest Output last unpacked analysis information
 // @description Output the unpacked information obtained from the most recently input analysis <m>llll</m>.

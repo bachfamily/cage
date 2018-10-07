@@ -70,11 +70,11 @@
 // A symbol in the third inlet is interpreted as a chord name, defining the arpeggio, such as <b>CM</b>
 // or <b>F#maj7</b>. Each chord name is composed by the juxtaposition of the note name (in latin or 
 // anglosaxon style, e.g. <b>C</b>, <b>re#</b>, <b>Fb</b>...) and a suffix, determining the chord type.
-// Allowed suffixes are: <b>M</b> (major chord), <b>m</b> (minor chord), <b>7</b> (dominant seventh chord),
-// <b>9</b> (dominant 9th chord), <b>11</b> (dominant 11th chord),
-// <b>13</b> (dominant 13th chord), <b>min7</b> or <b>m7</b> (minor chord with added minor seventh),
-// <b>maj7</b> or <b>M7</b> (major chord with added major seventh), <b>aug</b> (augmented triad), 
-// <b>dim</b> (diminished triad), <b>dim7</b> (diminshed seventh chord).
+// Allowed suffixes are: <b>M</b> [major chord], <b>m</b> [minor chord], <b>7</b> (dominant seventh chord),
+// <b>9</b> [dominant 9th chord], <b>11</b> (dominant 11th chord),
+// <b>13</b> [dominant 13th chord], <b>min7</b> or <b>m7</b> (minor chord with added minor seventh),
+// <b>maj7</b> or <b>M7</b> [major chord with added major seventh], <b>aug</b> (augmented triad), 
+// <b>dim</b> [diminished triad], <b>dim7</b> (diminshed seventh chord).
 // Some symbols (such as <b>C7</b> also coincide with pitch names, but they are accounted for as chord symbols.
 // Any other chord can be obtained by setting a custom pattern (see the <m>llll</m> method).
 

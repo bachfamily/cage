@@ -263,7 +263,7 @@
 					"stafflines" : [ 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"versionnumber" : 80001,
-					"voicenames" : [ "(", ")" ],
+					"voicenames" : [ "[", "]" ],
 					"voicespacing" : [ -4.8, 11.0 ]
 				}
 
@@ -277,7 +277,7 @@
 					"outlettype" : [ "", "int", "" ],
 					"patching_rect" : [ 463.0, 189.0, 223.0, 23.0 ],
 					"style" : "",
-					"text" : "cage.notewalk 100 1 (1 -1) 6300"
+					"text" : "cage.notewalk 100 1 [1 -1] 6300"
 				}
 
 			}
@@ -411,7 +411,7 @@
 					"stafflines" : [ 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"versionnumber" : 80001,
-					"voicenames" : [ "(", ")" ],
+					"voicenames" : [ "[", "]" ],
 					"voicespacing" : [ -4.8, 11.0 ]
 				}
 
@@ -730,6 +730,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "cage.checkbachversion.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/cage/patchers",
+				"patcherrelativepath" : "../../../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "cage.scale.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/cage/patchers",
 				"patcherrelativepath" : "../../../patchers",
@@ -868,6 +875,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "bach.contains.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "bach.collect.mxo",
 				"type" : "iLaX"
 			}
@@ -904,15 +915,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "bach.print.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "bach.roll.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "bach.playkeys.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.print.mxo",
 				"type" : "iLaX"
 			}
 , 			{

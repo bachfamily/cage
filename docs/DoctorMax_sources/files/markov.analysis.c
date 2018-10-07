@@ -55,7 +55,7 @@
 // @method bang @digest Output transition matrix
 // @description A <m>bang</m> forces the transition matrix to be output.
 // The transition matrix is output in sparse form, i.e. as a list of
-// <b>(<m>state1</m> <m>state2</m> ... <m>stateK</m> <m>number_of_occurrences</m>)</b>
+// <b>[<m>state1</m> <m>state2</m> ... <m>stateK</m> <m>number_of_occurrences</m>]</b>
 // where the number of states correspond to the order of the Markov chain plus one.
 
 

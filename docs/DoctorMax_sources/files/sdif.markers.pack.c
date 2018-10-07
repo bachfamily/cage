@@ -54,8 +54,8 @@
 // Moreover, for each marker there can be two transition coefficients,
 // which constitute thus a further sublist level in the llll output from the rightmost outlet.
 // The end range onset is a numeric value if the marker is a range marker (with a beginning and an end),
-// otherwise a <b>()</b> should be given instead of the numeric value. If a marker has no marker name,
-// <b>()</b> should be used.
+// otherwise a <b>[]</b> should be given instead of the numeric value. If a marker has no marker name,
+// <b>[]</b> should be used.
 // If less parameters than needed are input, default values will be used.
 // When the <m>llll</m> comes in from the leftmost inlet, the parameters are packed in a SDIF llll, as the 
 // ones received by <o>bach.writesdif</o>.
