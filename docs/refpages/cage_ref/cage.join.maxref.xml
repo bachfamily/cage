@@ -74,7 +74,7 @@
 			<description>
 				An <m>llll</m> in the first inlet is considered as a wrapped list of gathered syntax of the <o>bach.roll</o>s or
 				<o>bach.scores</o>s,
-				in the form: <b>(<m>ROLL_OR_SCORE1</m>) (<m>ROLL_OR_SCORE2</m>)...</b>.
+				in the form: <b>[<m>ROLL_OR_SCORE1</m>] [<m>ROLL_OR_SCORE2</m>]...</b>.
 				All the rolls or scores are glued together to form a single <o>bach.roll</o> or <o>bach.score</o> object, whose gathered syntax is output through
 				the outlet.
 				The output header content is the same as the header content of the first input (except for markers, all preserved). <br />

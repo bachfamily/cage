@@ -110,7 +110,7 @@
 				in which case the list is supposed to contain the higher-level representation.
 				Finally, if the llll has depth 3, it is supposed to represent a dynamic sequence of filters,
 				which will be interpolated according to the different positions in the score. In this case, the
-				syntax must be: <b>(<m>t1</m> (<m>FILTER1</m>)) (<m>t2</m> (<m>FILTER1</m>))...</b>,
+				syntax must be: <b>[<m>t1</m> [<m>FILTER1</m>]] [<m>t2</m> [<m>FILTER1</m>]]...</b>,
 				with <m>t_i</m> being increasing floating numbers from 0 to 1 (0 being the beginning of the
 				<o>bach.roll</o> or <o>bach.score</o>, 1 being the end), and each <m>FILTER</m> being
 				represented by its higher-level representation (and in no case by its biquad coefficients, for

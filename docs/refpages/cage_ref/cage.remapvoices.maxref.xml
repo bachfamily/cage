@@ -102,7 +102,7 @@
 				of the resulting score will be empty; and the fourth voice
 				of the original score will become
 				the third voice of the resulting score. <br />
-				On the other hand, <b>(1 4) (4 2)</b> means that the first voice
+				On the other hand, <b>[1 4] [4 2]</b> means that the first voice
 				of the original score will become the fourth voice of the resulting score,
 				and the fourth voice of the original score will become
 				the second voice of the resulting score.

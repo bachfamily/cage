@@ -140,7 +140,7 @@
 				A symbol in the third inlet is interpreted as a scale name, such as <b>CM</b>
 				or <b>F#m</b>. Each scale name is composed by the juxtaposition of the note name (in
 				anglosaxon style, e.g. <b>C</b>, <b>Fb</b>...) and a suffix, determining the scale type:
-				either <b>M</b> (major) or <b>m</b> (minor). Any other scale can be obtained by
+				either <b>M</b> [major] or <b>m</b> (minor). Any other scale can be obtained by
 				setting a custom pattern (see the <m>llll</m> method).
 			</description>
 		</method>

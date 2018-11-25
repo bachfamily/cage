@@ -140,7 +140,7 @@
 				region for the rectification. If a single mirror is defined (see
 				<m>float</m>) this symbol should either be <b>up</b> or <b>down</b>.
 				If two mirrors are defined (see <m>list</m>) this symbol should
-				be either <b>inside</b> or <b>outside</b> (<b>in</b>, <b>out</b>,
+				be either <b>inside</b> or <b>outside</b> [<b>in</b>, <b>out</b>,
 				<b>inner</b> and <b>outer</b> being also accepted).
 			</description>
 		</method>

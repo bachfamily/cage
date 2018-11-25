@@ -93,16 +93,16 @@
 				Such function can be given in one of the following syntaxes: <br />
 				- an <m>llll</m> of depth 1 is considered to be an interleaved list of <m>x</m> and <m>y</m> values,
 				as the ones coming from the <m>listdump</m> of a <m>function</m> object; <br />
-				- an <m>llll</m> of depth 2 is considered to be a sequence of wrapped couples <b>(<m>x</m> <m>y</m>)</b>
-				or of wrapped triplets <b>(<m>x</m> <m>y</m> <m>slope</m>)</b>, as the ones used by a bach function slot
+				- an <m>llll</m> of depth 2 is considered to be a sequence of wrapped couples <b>[<m>x</m> <m>y</m>]</b>
+				or of wrapped triplets <b>[<m>x</m> <m>y</m> <m>slope</m>]</b>, as the ones used by a bach function slot
 				(see for instance <o>bach.slot</o>), where the slope is a float value from -1 to 1 (0 being linear, default); <br />
 				- an <m>llll</m> of depth 3 is considered to be a dynamic sequence of breakpoint functions, in the form
-				<b>(<m>t1</m> (<m>x11</m> <m>y11</m> <m>x12</m> <m>y12</m>...)) (<m>t2</m> (<m>x21</m> <m>y21</m> <m>x22</m> <m>y22</m>...))...</b>,
+				<b>[<m>t1</m> [<m>x11</m> <m>y11</m> <m>x12</m> <m>y12</m>...]] [<m>t2</m> [<m>x21</m> <m>y21</m> <m>x22</m> <m>y22</m>...]]...</b>,
 				with <m>t_i</m> being increasing floating numbers from 0 to 1 (0 being the beginning of the
 				<o>bach.roll</o> or <o>bach.score</o>, 1 being the end), and in the inner parentheses levels are
 				the interleaved lllls as in the case of depth 1; <br />
 				- an <m>llll</m> of depth 3 is considered to be a dynamic sequence of breakpoint functions, in the form
-				<b>(<m>t1</m> ((<m>x11</m> <m>y11</m> <m>slope11</m>) (<m>x12</m> <m>y12</m> <m>slope12</m>)...)) (<m>t2</m> ((<m>x21</m> <m>y21</m> <m>slope21</m>) (<m>x22</m> <m>y22</m> <m>slope22</m>)...))...</b>,
+				<b>[<m>t1</m> [[<m>x11</m> <m>y11</m> <m>slope11</m>] [<m>x12</m> <m>y12</m> <m>slope12</m>]...]] [<m>t2</m> [[<m>x21</m> <m>y21</m> <m>slope21</m>] [<m>x22</m> <m>y22</m> <m>slope22</m>]...]]...</b>,
 				with <m>t_i</m> being increasing floating numbers from 0 to 1 (0 being the beginning of the
 				<o>bach.roll</o> or <o>bach.score</o>, 1 being the end), and in the inner parentheses levels are
 				the lllls as in the case of depth 2, where the <m>slope</m> elements can be dropped. <br />

@@ -150,10 +150,10 @@
 				sequence of symbols (or "axiom") for the rewriting system. <br />
 				An <m>llll</m> in third inlet sets the rules for the rewriting.
 				Such <m>llll</m> must be in the form: <b><m>RULE1</m> <m>RULE2</m>...</b>,
-				where each <m>RULE</m> is an llll of the form <b>((<m>ORIG_SEQ</m>) <m>MODIF_SEQ</m>)</b>,
+				where each <m>RULE</m> is an llll of the form <b>[[<m>ORIG_SEQ</m>] <m>MODIF_SEQ</m>]</b>,
 				where in turns <m>ORIG_SEQ</m> are the chunk of elements to be matched and
 				<m>MODIF_SEQ</m> is the element(s) to be substituted. <br />
-				For instance, with rules <b>((a a) a) ((a b) b) ((b a) b) ((b b) a)</b>,
+				For instance, with rules <b>[[a a] a] [[a b] b] [[b a] b] [[b b] a]</b>,
 				with default padding and with right pad alignment, the sequence <b>a a b a</b> will be converted into
 				<b>a b b a</b>. To clarify the steps, given the input rules, the order is detected to be 2,
 				then the elements of the original sequence are taken as couples <b>a a</b>, <b>a b</b>,
