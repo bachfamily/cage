@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 225.0, 164.0, 791.0, 585.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -43,7 +44,6 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 509.0, 44.0, 136.0, 22.0 ],
-					"style" : "",
 					"text" : "cage.checkbachversion"
 				}
 
@@ -58,7 +58,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 35.0, 161.0, 32.5, 22.0 ],
-					"style" : "",
 					"text" : "t l l"
 				}
 
@@ -75,7 +74,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.expr $f2 + ($f1 - $f2) * $f3 @scalarmode 1"
 				}
 
@@ -90,7 +88,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 406.0, 402.0, 66.0, 22.0 ],
-					"style" : "",
 					"text" : "bach.f2mc"
 				}
 
@@ -103,7 +100,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 476.0, 107.0, 29.5, 22.0 ],
-					"style" : "",
 					"text" : "+ 1"
 				}
 
@@ -116,7 +112,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 35.0, 370.0, 390.0, 22.0 ],
-					"style" : "",
 					"text" : "gate 2 1"
 				}
 
@@ -131,7 +126,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 476.0, 75.0, 107.0, 22.0 ],
-					"style" : "",
 					"text" : "route stretchmode"
 				}
 
@@ -150,7 +144,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.p2mc"
 				}
 
@@ -170,7 +163,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.reg C5"
 				}
 
@@ -185,7 +177,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 35.0, 217.0, 32.5, 22.0 ],
-					"style" : "",
 					"text" : "t l l"
 				}
 
@@ -204,7 +195,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.expr $f2 + ($f1 - $f2)*$x3 @scalarmode 1"
 				}
 
@@ -223,7 +213,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.pick 1 2 3"
 				}
 
@@ -231,14 +220,14 @@
 , 			{
 				"box" : 				{
 					"comment" : "llll: Stretch Factor",
+					"cool" : 1,
 					"id" : "obj-4",
 					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 329.0, 14.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 329.0, 14.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -256,7 +245,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.portal @out p"
 				}
 
@@ -271,7 +259,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
 					"patching_rect" : [ 61.0, 268.0, 67.5, 22.0 ],
-					"style" : "",
 					"text" : "t 1 l"
 				}
 
@@ -286,7 +273,10 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "bang", "", "", "", "", "" ],
 					"patching_rect" : [ 35.0, 44.0, 460.0, 22.0 ],
-					"style" : "",
+					"saved_object_attributes" : 					{
+						"versionnumber" : 80002
+					}
+,
 					"text" : "bach.args C5 16 1. @ins 3 @out nnt @attrs stretchmode @mode 1"
 				}
 
@@ -294,14 +284,14 @@
 , 			{
 				"box" : 				{
 					"comment" : "llll: Number of Harmonics",
+					"cool" : 1,
 					"id" : "obj-1",
 					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 182.0, 14.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 182.0, 14.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -315,7 +305,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 35.0, 431.0, 66.0, 22.0 ],
-					"style" : "",
 					"text" : "bach.f2mc"
 				}
 
@@ -330,7 +319,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 35.0, 329.0, 45.0, 22.0 ],
-					"style" : "",
 					"text" : "bach.*"
 				}
 
@@ -345,7 +333,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 35.0, 191.0, 66.0, 22.0 ],
-					"style" : "",
 					"text" : "bach.mc2f"
 				}
 
@@ -364,7 +351,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.arithmser 1 20"
 				}
 
@@ -378,8 +364,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 14.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 35.0, 14.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -391,8 +376,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 239.0, 521.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 239.0, 521.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -635,22 +619,22 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "bach.mc2f.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.times.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.f2mc.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -663,8 +647,8 @@
 			}
 , 			{
 				"name" : "bach.filternull.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}

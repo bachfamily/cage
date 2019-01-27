@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 34.0, 79.0, 877.0, 630.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -42,8 +43,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 674.099976, 42.0, 136.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 674.09997599999997, 42.0, 136.0, 22.0 ],
 					"text" : "cage.checkbachversion"
 				}
 
@@ -62,7 +62,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.portal @out t"
 				}
 
@@ -77,7 +76,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 159.0, 362.0, 222.0, 22.0 ],
-					"style" : "",
 					"text" : "if ($f1 - $f2)*$f3 < 0 then out2 0 else $f1"
 				}
 
@@ -97,7 +95,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.reg"
 				}
 
@@ -116,7 +113,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.portal @out t"
 				}
 
@@ -131,7 +127,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "clear" ],
 					"patching_rect" : [ 726.0, 360.0, 66.0, 22.0 ],
-					"style" : "",
 					"text" : "t l clear"
 				}
 
@@ -146,22 +141,20 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 726.0, 385.0, 49.0, 22.0 ],
-					"style" : "",
 					"text" : "zl iter 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"addpoints" : [ 4900.0, 0.0, 0, 5151.162598, 1.0, 0, 5506.976562, 0.0, 0, 6720.930176, 0.0, 0, 7223.255859, 0.581818, 0, 7851.162598, 0.309091, 0, 8600.0, 1.0, 0 ],
+					"addpoints" : [ 4900.0, 0.0, 0, 5151.162597999999889, 1.0, 0, 5506.976561999999831, 0.0, 0, 6720.930175999999847, 0.0, 0, 7223.255858999999873, 0.581818, 0, 7851.162597999999889, 0.309091, 0, 8600.0, 1.0, 0 ],
 					"id" : "obj-49",
 					"maxclass" : "function",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "float", "", "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 726.0, 412.0, 100.0, 50.0 ],
-					"style" : ""
+					"patching_rect" : [ 726.0, 412.0, 100.0, 50.0 ]
 				}
 
 			}
@@ -175,7 +168,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
 					"patching_rect" : [ 712.0, 175.0, 32.5, 22.0 ],
-					"style" : "",
 					"text" : "t 5 l"
 				}
 
@@ -190,7 +182,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 712.0, 150.0, 80.0, 22.0 ],
-					"style" : "",
 					"text" : "route custom"
 				}
 
@@ -204,7 +195,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 597.0, 442.0, 128.0, 20.0 ],
-					"style" : "",
 					"text" : "custom distribution >>"
 				}
 
@@ -218,7 +208,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 511.0, 413.0, 150.0, 20.0 ],
-					"style" : "",
 					"text" : "<< lognormal distribution"
 				}
 
@@ -237,7 +226,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.expr \"exp(-0.5 * pow(((log($f1) - log($f2))/$f3), 2))\""
 				}
 
@@ -251,7 +239,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 403.0, 372.0, 150.0, 20.0 ],
-					"style" : "",
 					"text" : "<< pareto distribution"
 				}
 
@@ -270,7 +257,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.expr \"pow($f2, $f3)/pow($f1, $f3 + 1)\""
 				}
 
@@ -284,7 +270,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 382.0, 310.0, 150.0, 20.0 ],
-					"style" : "",
 					"text" : "<< normal distribution"
 				}
 
@@ -298,7 +283,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 239.0, 536.0, 172.0, 20.0 ],
-					"style" : "",
 					"text" : "<< normalizing all distributions"
 				}
 
@@ -317,7 +301,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.expr \"exp(-0.5 * pow((($f1 - $f2)/$f3), 2))\""
 				}
 
@@ -330,8 +313,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.0, 587.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 46.0, 587.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -349,7 +331,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.portal @out p"
 				}
 
@@ -368,7 +349,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.expr $f1/$f2 @scalarmode 1"
 				}
 
@@ -383,7 +363,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
 					"patching_rect" : [ 218.0, 506.0, 63.0, 22.0 ],
-					"style" : "",
 					"text" : "bach.sum"
 				}
 
@@ -397,7 +376,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 108.0, 285.0, 150.0, 20.0 ],
-					"style" : "",
 					"text" : "<< uniform distribution"
 				}
 
@@ -416,7 +394,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.collect"
 				}
 
@@ -431,7 +408,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 71.0, 284.0, 32.5, 22.0 ],
-					"style" : "",
 					"text" : "1"
 				}
 
@@ -446,7 +422,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 317.0, 99.0, 290.0, 87.0 ],
-					"style" : "",
 					"text" : "allowed distribution syntaxes are:\n- uniform/unif\n- gaussian/gauss/normal/norm <mean> <stdev>\n- pareto <pareto_wall> <exponent>\n- lognormal/lognorm <mean> <stdev>\n- custom <list of x y points>"
 				}
 
@@ -461,7 +436,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "float", "float" ],
 					"patching_rect" : [ 773.0, 176.0, 72.0, 22.0 ],
-					"style" : "",
 					"text" : "unpack s f f"
 				}
 
@@ -525,7 +499,6 @@
 						"embed" : 1
 					}
 ,
-					"style" : "",
 					"text" : "coll names 1"
 				}
 
@@ -539,8 +512,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 492.0, 11.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 492.0, 11.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -554,7 +526,10 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "bang", "", "", "", "" ],
 					"patching_rect" : [ 492.0, 42.0, 150.0, 22.0 ],
-					"style" : "",
+					"saved_object_attributes" : 					{
+						"versionnumber" : 80002
+					}
+,
 					"text" : "bach.args @ins 2 @out nt"
 				}
 
@@ -569,7 +544,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 712.0, 124.0, 83.0, 22.0 ],
-					"style" : "",
 					"text" : "zl reg uniform"
 				}
 
@@ -577,14 +551,14 @@
 , 			{
 				"box" : 				{
 					"comment" : "Probability Distribution",
+					"cool" : 1,
 					"id" : "obj-69",
 					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 558.0, 12.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 558.0, 12.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -598,7 +572,6 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 71.0, 257.0, 194.0, 22.0 ],
-					"style" : "",
 					"text" : "gate 5 1"
 				}
 
@@ -613,7 +586,6 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "", "", "clear" ],
 					"patching_rect" : [ 43.0, 105.0, 65.0, 22.0 ],
-					"style" : "",
 					"text" : "t b l l clear"
 				}
 
@@ -632,7 +604,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.iter @maxdepth 1"
 				}
 
@@ -992,15 +963,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "bach.sum.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.filter.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1013,8 +984,8 @@
 			}
 , 			{
 				"name" : "bach.filternull.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1056,6 +1027,10 @@
 			}
 , 			{
 				"name" : "bach.pick.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.contains.mxo",
 				"type" : "iLaX"
 			}
 , 			{

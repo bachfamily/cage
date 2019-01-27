@@ -345,6 +345,28 @@
       "cage.tonnetz.rot"
     ]
   },
+  "cage.combinevoices": {
+    "digest": "Combine voices into a new bach.roll or bach.score",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "join",
+      "combine",
+      "voice",
+      "measured",
+      "proportional"
+    ],
+    "seealso": [
+      "cage.mix",
+      "cage.join",
+      "bach.roll",
+      "bach.score",
+      "bach.join"
+    ]
+  },
   "cage.rot": {
     "digest": "Circularly rotate rolls",
     "module": "cage",
@@ -822,6 +844,29 @@
       "bach.roll",
       "cage.sdif.markers.pack",
       "cage.sdif.markers.unpack"
+    ]
+  },
+  "cage.stretch": {
+    "digest": "Stretch pitches",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage electrospectral"
+    ],
+    "keywords": [
+      "stretch",
+      "compress",
+      "linear",
+      "linearly",
+      "pitch",
+      "frequency",
+      "domain",
+      "roll",
+      "score"
+    ],
+    "seealso": [
+      "cage.transp",
+      "cage.freqshift"
     ]
   },
   "cage.sdif.peaks.pack": {

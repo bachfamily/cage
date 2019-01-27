@@ -58,7 +58,7 @@
 // If a lambda loop is in place, the shift is expected to be given for every incoming onset.
 // The lambda loop will receive an onset (in milliseconds) and output the corresponding shift in Hertz.
 
-// @method bang @digest Output shifted roll
+// @method bang @digest Output shifted score
 // @description Outputs result of the last frequency shift.
 
 

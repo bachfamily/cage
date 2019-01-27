@@ -16,6 +16,7 @@
 <refpage name='cage.envelopes.maxref.xml'/>
 <refpage name='cage.length.maxref.xml'/>
 <refpage name='cage.tonnetz.flip.maxref.xml'/>
+<refpage name='cage.combinevoices.maxref.xml'/>
 <refpage name='cage.rot.maxref.xml'/>
 <refpage name='cage.transp.maxref.xml'/>
 <refpage name='cage.sdif.chordseq.toroll.maxref.xml'/>
@@ -38,6 +39,7 @@
 <refpage name='cage.sdif.ptrack.resolve.maxref.xml'/>
 <refpage name='cage.cascade~.maxref.xml'/>
 <refpage name='cage.sdif.markers.toroll.maxref.xml'/>
+<refpage name='cage.stretch.maxref.xml'/>
 <refpage name='cage.sdif.peaks.pack.maxref.xml'/>
 <refpage name='cage.sdif.fzero.pack.maxref.xml'/>
 <refpage name='cage.sdif.fzero.unpack.maxref.xml'/>

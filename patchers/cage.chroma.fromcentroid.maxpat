@@ -2,14 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 571.0, 87.0, 435.0, 498.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 220.0, 81.0, 435.0, 498.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,7 +44,6 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 233.0, 41.0, 136.0, 22.0 ],
-					"style" : "",
 					"text" : "cage.checkbachversion"
 				}
 
@@ -58,7 +58,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 240.0, 108.0, 174.0, 33.0 ],
-					"style" : "",
 					"text" : "Pseudoinverse of the centroid transformation matrix"
 				}
 
@@ -77,7 +76,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.portal @out p"
 				}
 
@@ -92,7 +90,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "float", "float", "float" ],
 					"patching_rect" : [ 129.0, 70.0, 69.0, 22.0 ],
-					"style" : "",
 					"text" : "unpack f f f"
 				}
 
@@ -100,14 +97,14 @@
 , 			{
 				"box" : 				{
 					"comment" : "llll: Radii for: Fifths, Major Thirds, Minor Thirds",
+					"cool" : 1,
 					"id" : "obj-15",
 					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.0, 7.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 116.0, 7.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -121,7 +118,10 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "bang", "", "", "", "" ],
 					"patching_rect" : [ 39.0, 41.0, 180.0, 22.0 ],
-					"style" : "",
+					"saved_object_attributes" : 					{
+						"versionnumber" : 80002
+					}
+,
 					"text" : "bach.args 1 1 1 @ins 2 @out nt"
 				}
 
@@ -136,7 +136,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 273.0, 272.0, 43.0, 22.0 ],
-					"style" : "",
 					"text" : "bach./"
 				}
 
@@ -151,7 +150,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 223.0, 272.0, 43.0, 22.0 ],
-					"style" : "",
 					"text" : "bach./"
 				}
 
@@ -166,7 +164,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 172.0, 272.0, 43.0, 22.0 ],
-					"style" : "",
 					"text" : "bach./"
 				}
 
@@ -181,7 +178,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 122.0, 272.0, 43.0, 22.0 ],
-					"style" : "",
 					"text" : "bach./"
 				}
 
@@ -196,7 +192,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 71.0, 272.0, 43.0, 22.0 ],
-					"style" : "",
 					"text" : "bach./"
 				}
 
@@ -211,7 +206,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 272.0, 43.0, 22.0 ],
-					"style" : "",
 					"text" : "bach./"
 				}
 
@@ -230,7 +224,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.join 6 @inwrap 1"
 				}
 
@@ -249,7 +242,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.pick 1 2 3 4 5 6"
 				}
 
@@ -268,7 +260,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.trans"
 				}
 
@@ -287,7 +278,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.trans"
 				}
 
@@ -302,7 +292,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 21.0, 79.0, 32.5, 22.0 ],
-					"style" : "",
 					"text" : "t b l"
 				}
 
@@ -316,12 +305,11 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 361.965088, 79.0, 22.0 ],
+					"patching_rect" : [ 21.0, 361.96508799999998, 79.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.mtimes"
 				}
 
@@ -337,7 +325,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 109.0, 218.0, 98.0 ],
-					"style" : "",
 					"text" : "( -0. 0.1667 -0. 0.1667 -0. 0.1667 ) ( -0.0833 -0.1443 -0.1667 -0. 0.1443 -0.0833 ) ( 0.1443 0.0833 0. -0.1667 -0.1443 -0.0833 ) ( -0.1667 -0. 0.1667 0. -0. 0.1667 ) ( 0.1443 -0.0833 -0. 0.1667 0.1443 -0.0833 ) ( -0.0833 0.1443 -0.1667 -0. -0.1443 -0.0833 ) ( 0. -0.1667 0. -0.1667 -0. 0.1667 ) ( 0.0833 0.1443 0.1667 0. 0.1443 -0.0833 ) ( -0.1443 -0.0833 -0. 0.1667 -0.1443 -0.0833 ) ( 0.1667 0. -0.1667 -0. -0. 0.1667 ) ( -0.1443 0.0833 0. -0.1667 0.1443 -0.0833 ) ( 0.0833 -0.1443 0.1667 0. -0.1443 -0.0833 )"
 				}
 
@@ -351,8 +338,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 39.0, 7.0, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 39.0, 7.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -364,8 +350,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 426.965088, 25.0, 25.0 ],
-					"style" : ""
+					"patching_rect" : [ 21.0, 426.96508799999998, 25.0, 25.0 ]
 				}
 
 			}
@@ -598,8 +583,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "bach.div.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -612,8 +597,8 @@
 			}
 , 			{
 				"name" : "bach.filternull.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/bach_new/patchers",
-				"patcherrelativepath" : "../../bach_new/patchers",
+				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
+				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
