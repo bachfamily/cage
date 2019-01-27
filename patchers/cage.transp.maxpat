@@ -1828,7 +1828,7 @@
 													"id" : "obj-26",
 													"linkdynamicstoslot" : 0,
 													"linklyricstoslot" : 7,
-													"loop" : [ "(", 1, 1, 0, ")", "(", 1, 2, 0, ")" ],
+													"loop" : [ "[", 1, 1, 0, "]", "[", 1, 2, 0, "]" ],
 													"maxclass" : "bach.score",
 													"numinlets" : 7,
 													"numoutlets" : 9,
@@ -1839,8 +1839,8 @@
 													"pitcheditrange" : [ "null" ],
 													"stafflines" : [ 5 ],
 													"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-													"versionnumber" : 80001,
-													"voicenames" : [ "(", ")" ],
+													"versionnumber" : 80002,
+													"voicenames" : [ "[", "]" ],
 													"voicespacing" : [ 0.0, 26.0 ],
 													"vzoom" : 50.0
 												}
@@ -2042,7 +2042,7 @@
 									"id" : "obj-29",
 									"linkdynamicstoslot" : 0,
 									"linklyricstoslot" : 7,
-									"loop" : [ "(", 1, 1, 0, ")", "(", 1, 2, 0, ")" ],
+									"loop" : [ "[", 1, 1, 0, "]", "[", 1, 2, 0, "]" ],
 									"maxclass" : "bach.score",
 									"numinlets" : 7,
 									"numoutlets" : 9,
@@ -2051,10 +2051,13 @@
 									"outlettype" : [ "", "", "", "", "", "", "", "", "bang" ],
 									"patching_rect" : [ 707.25, 355.916656, 145.0, 84.166664 ],
 									"pitcheditrange" : [ "null" ],
+									"snappitch" : 0,
+									"snappitchtogridondrag" : 0,
+									"snappitchtogridwhenediting" : 0,
 									"stafflines" : [ 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80001,
-									"voicenames" : [ "(", ")" ],
+									"versionnumber" : 80002,
+									"voicenames" : [ "[", "]" ],
 									"voicespacing" : [ 0.0, 26.0 ],
 									"vzoom" : 50.0
 								}
@@ -2171,8 +2174,8 @@
 													"pitcheditrange" : [ "null" ],
 													"stafflines" : [ 5 ],
 													"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-													"versionnumber" : 80001,
-													"voicenames" : [ "(", ")" ],
+													"versionnumber" : 80002,
+													"voicenames" : [ "[", "]" ],
 													"voicespacing" : [ 0.0, 17.0 ],
 													"vzoom" : 50.0
 												}
@@ -3200,7 +3203,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 84.0, 129.0, 640.0, 480.0 ],
+						"rect" : [ 508.0, 139.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3378,7 +3381,7 @@
 									"keys" : [ "CM", "CM" ],
 									"linkdynamicstoslot" : 0,
 									"linklyricstoslot" : 7,
-									"loop" : [ "(", 1, 1, 0, ")", "(", 1, 1, 0, ")" ],
+									"loop" : [ "[", 1, 1, 0, "]", "[", 1, 1, 0, "]" ],
 									"maxclass" : "bach.score",
 									"midichannels" : [ 1, 2 ],
 									"numinlets" : 7,
@@ -3390,10 +3393,13 @@
 									"patching_rect" : [ 461.25, 313.833344, 145.0, 84.166664 ],
 									"pitcheditrange" : [ "null" ],
 									"showmeasurenumbers" : [ 1, 1 ],
+									"snappitch" : 0,
+									"snappitchtogridondrag" : 0,
+									"snappitchtogridwhenediting" : 0,
 									"stafflines" : [ 5, 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80001,
-									"voicenames" : [ "(", ")", "(", ")" ],
+									"versionnumber" : 80002,
+									"voicenames" : [ "[", "]", "[", "]" ],
 									"voicespacing" : [ 0.0, 26.0, 26.0 ],
 									"vzoom" : 50.0
 								}
@@ -3477,7 +3483,6 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-4",
-									"keys" : [ "C" ],
 									"linkdynamicstoslot" : 0,
 									"linklyricstoslot" : 7,
 									"loop" : [ 0.0, 1000.0 ],
@@ -3487,12 +3492,15 @@
 									"numvoices" : 1,
 									"out" : "nnnnnnn",
 									"outlettype" : [ "", "", "", "", "", "", "", "bang" ],
-									"patching_rect" : [ 142.25, 314.833344, 155.0, 84.166664 ],
+									"patching_rect" : [ 122.25, 339.833344, 202.0, 83.166664 ],
 									"pitcheditrange" : [ "null" ],
+									"snappitch" : 0,
+									"snappitchtogridondrag" : 0,
+									"snappitchtogridwhenediting" : 0,
 									"stafflines" : [ 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80001,
-									"voicenames" : [ "(", ")" ],
+									"versionnumber" : 80002,
+									"voicenames" : [ "[", "]" ],
 									"voicespacing" : [ 0.0, 17.0 ],
 									"vzoom" : 50.0
 								}
@@ -3746,7 +3754,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 150.5, 11.0, 25.0, 25.0 ],
 					"style" : ""
 				}
@@ -3762,6 +3770,10 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "bang", "", "", "", "" ],
 					"patching_rect" : [ 16.5, 54.0, 275.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"versionnumber" : 80002
+					}
+,
 					"style" : "",
 					"text" : "bach.args C0 @ins 2 @out nt @attrs normalize dl"
 				}
