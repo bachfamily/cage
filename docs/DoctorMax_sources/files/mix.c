@@ -18,7 +18,7 @@
 	cageproject
 	
 	@digest 
-	Mix rolls
+	Mix scores
 	
 	@description
 	<o>cage.mix</o> allows mixing together several scores, expressed as sublists of an llll.
@@ -60,4 +60,4 @@
 // OUTLETS
 // ---------------
 
-// @out 0 @type roll @digest Mix
+// @out 0 @type roll/score @digest Mixed score
