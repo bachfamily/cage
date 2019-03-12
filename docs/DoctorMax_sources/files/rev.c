@@ -60,6 +60,13 @@ void main_foo() {
 
 llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 
+CLASS_ATTR_LONG(c, "dl", 0, t_rev, dl); 
+CLASS_ATTR_STYLE_LABEL(c,"dl",0,"onoff","Reverse Duration Lines");
+CLASS_ATTR_BASIC(c,"dl",0);
+// @description Toggles the reversal of duration lines. By default it is on;
+// if you turn it off (setting it to 0), then only onsets are reversed.
+
+
 }
 
 // ---------------
