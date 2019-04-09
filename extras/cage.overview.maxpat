@@ -2,15 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
+			"major" : 8,
+			"minor" : 0,
 			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 43.0, 79.0, 937.0, 598.0 ],
-		"bgcolor" : [ 0.941176, 0.941176, 0.941176, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -66,7 +66,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 15.0, 10.0, 232.0, 47.35082 ],
+					"patching_rect" : [ 15.0, 10.0, 232.0, 47.350819672131145 ],
 					"pic" : "/Users/danieleghisi/max-sdk-7.0.3/source/bach_additionalstuff/graphics/WebSite/images/cage_logo_web_h.png"
 				}
 
@@ -80,8 +80,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 243.0, 11.0, 120.0, 19.0 ],
-					"style" : "",
-					"text" : "v0.5.0.1 beta",
+					"text" : "v0.5.1 beta",
 					"textcolor" : [ 0.109804, 0.109804, 0.109804, 1.0 ],
 					"varname" : "autohelp_top_digest[3]"
 				}
@@ -99,7 +98,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1027.0, 232.0, 181.0, 49.0 ],
-					"style" : "",
 					"text" : ";\rmax launchbrowser http://www.bachproject.net/cage"
 				}
 
@@ -115,7 +113,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ -244.0, 57.0, 72.0, 22.0 ],
-					"style" : "",
 					"text" : "loadmess 0"
 				}
 
@@ -123,15 +120,14 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.595187,
+					"fontsize" : 11.595186999999999,
 					"hidden" : 1,
 					"id" : "obj-4",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ -408.571442, 330.0, 81.0, 21.0 ],
-					"style" : "",
+					"patching_rect" : [ -408.57144199999999, 330.0, 81.0, 21.0 ],
 					"text" : "offset 0 -3785"
 				}
 
@@ -139,7 +135,7 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.595187,
+					"fontsize" : 11.595186999999999,
 					"hidden" : 1,
 					"id" : "obj-44",
 					"maxclass" : "newobj",
@@ -147,7 +143,6 @@
 					"numoutlets" : 8,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "" ],
 					"patching_rect" : [ -480.0, 245.0, 449.0, 21.0 ],
-					"style" : "",
 					"text" : "sel 0 1 2 3 4 5 6"
 				}
 
@@ -155,15 +150,14 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.595187,
+					"fontsize" : 11.595186999999999,
 					"hidden" : 1,
 					"id" : "obj-50",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ -262.571442, 295.0, 81.0, 21.0 ],
-					"style" : "",
+					"patching_rect" : [ -262.57144199999999, 295.0, 81.0, 21.0 ],
 					"text" : "offset 0 -3272"
 				}
 
@@ -171,15 +165,14 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.595187,
+					"fontsize" : 11.595186999999999,
 					"hidden" : 1,
 					"id" : "obj-51",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ -337.571442, 295.0, 81.0, 21.0 ],
-					"style" : "",
+					"patching_rect" : [ -337.57144199999999, 295.0, 81.0, 21.0 ],
 					"text" : "offset 0 -2628"
 				}
 
@@ -187,7 +180,7 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.595187,
+					"fontsize" : 11.595186999999999,
 					"hidden" : 1,
 					"id" : "obj-52",
 					"maxclass" : "message",
@@ -195,7 +188,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ -480.0, 295.0, 81.0, 21.0 ],
-					"style" : "",
 					"text" : "offset 0 -4856"
 				}
 
@@ -218,7 +210,6 @@
 					"rounded" : 0.0,
 					"spacing_x" : 10.0,
 					"spacing_y" : 0.0,
-					"style" : "",
 					"tabcolor" : [ 0.337255, 0.45098, 0.156863, 0.058824 ],
 					"tabs" : [ "Explorer", "Tutorials", "Feedback", "Acknowledgments and licence" ],
 					"textcolor" : [ 0.2, 0.2, 0.2, 1.0 ],
@@ -245,15 +236,15 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
+							"major" : 8,
+							"minor" : 0,
 							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
+						"classnamespace" : "box",
 						"rect" : [ 301.0, 79.0, 929.0, 476.0 ],
-						"bgcolor" : [ 0.94, 0.94, 0.94, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -289,7 +280,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 380.0, 4386.0, 163.0, 22.0 ],
-									"style" : "",
 									"text" : "bach.replace 8226 45 @out t"
 								}
 
@@ -307,13 +297,14 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 3,
+											"major" : 8,
+											"minor" : 0,
 											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
+										"classnamespace" : "box",
 										"rect" : [ 34.0, 79.0, 640.0, 509.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -352,7 +343,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.print"
 												}
 
@@ -368,7 +358,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.print"
 												}
 
@@ -383,7 +372,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 15.0, 379.0, 54.0, 22.0 ],
-													"style" : "",
 													"text" : "gate 2 1"
 												}
 
@@ -398,7 +386,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 201.0, 340.0, 32.5, 22.0 ],
-													"style" : "",
 													"text" : "1"
 												}
 
@@ -413,7 +400,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 141.0, 340.0, 32.5, 22.0 ],
-													"style" : "",
 													"text" : "2"
 												}
 
@@ -428,7 +414,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 93.5, 303.0, 81.0, 22.0 ],
-													"style" : "",
 													"text" : "bach.filternull"
 												}
 
@@ -443,7 +428,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 100.0, 32.5, 22.0 ],
-													"style" : "",
 													"text" : "t l l"
 												}
 
@@ -462,7 +446,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.sort"
 												}
 
@@ -481,7 +464,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.join"
 												}
 
@@ -496,7 +478,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 141.0, 209.0, 57.0, 22.0 ],
-													"style" : "",
 													"text" : "bach.+ 1"
 												}
 
@@ -515,7 +496,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.flat"
 												}
 
@@ -534,7 +514,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.subs @multi 1"
 												}
 
@@ -553,7 +532,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.find 194 160"
 												}
 
@@ -567,8 +545,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ],
-													"style" : ""
+													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -580,8 +557,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 58.5, 450.0, 25.0, 25.0 ],
-													"style" : ""
+													"patching_rect" : [ 58.5, 450.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -726,11 +702,9 @@
 										"description" : "",
 										"digest" : "",
 										"globalpatchername" : "",
-										"style" : "",
 										"tags" : ""
 									}
 ,
-									"style" : "",
 									"text" : "p remove_hard_spaces_Max7style"
 								}
 
@@ -744,7 +718,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 380.0, 4317.0, 171.0, 22.0 ],
-									"style" : "",
 									"text" : "bach.sieve 160 @op != @out t"
 								}
 
@@ -758,7 +731,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 380.0, 4284.0, 132.0, 22.0 ],
-									"style" : "",
 									"text" : "bach.sieve 194 @op !="
 								}
 
@@ -792,13 +764,14 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 3,
+											"major" : 8,
+											"minor" : 0,
 											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
+										"classnamespace" : "box",
 										"rect" : [ 34.0, 79.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -834,7 +807,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 112.0, 147.0, 79.0, 22.0 ],
-													"style" : "",
 													"text" : "bach.filternull"
 												}
 
@@ -847,7 +819,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 171.75, 178.0, 29.5, 22.0 ],
-													"style" : "",
 													"text" : "2"
 												}
 
@@ -860,7 +831,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 23.0, 230.0, 52.0, 22.0 ],
-													"style" : "",
 													"text" : "gate 2 1"
 												}
 
@@ -875,7 +845,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 210.0, 308.0, 147.0, 22.0 ],
-													"style" : "",
 													"text" : "loadmess (45) (null) (null)"
 												}
 
@@ -890,7 +859,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 223.0, 246.0, 57.0, 22.0 ],
-													"style" : "",
 													"text" : "bach.+ 2"
 												}
 
@@ -905,7 +873,6 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "int" ],
 													"patching_rect" : [ 50.0, 75.0, 40.0, 22.0 ],
-													"style" : "",
 													"text" : "t l l 1"
 												}
 
@@ -924,7 +891,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.sort"
 												}
 
@@ -943,7 +909,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.join 3"
 												}
 
@@ -958,7 +923,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 158.0, 246.0, 57.0, 22.0 ],
-													"style" : "",
 													"text" : "bach.+ 1"
 												}
 
@@ -977,7 +941,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.flat"
 												}
 
@@ -996,7 +959,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.subs @multi 1 @out t"
 												}
 
@@ -1015,7 +977,6 @@
 														"versionnumber" : 80001
 													}
 ,
-													"style" : "",
 													"text" : "bach.find 226 128 162"
 												}
 
@@ -1029,8 +990,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ],
-													"style" : ""
+													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -1042,8 +1002,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 41.0, 432.0, 25.0, 25.0 ],
-													"style" : ""
+													"patching_rect" : [ 41.0, 432.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -1194,11 +1153,9 @@
 										"description" : "",
 										"digest" : "",
 										"globalpatchername" : "",
-										"style" : "",
 										"tags" : ""
 									}
 ,
-									"style" : "",
 									"text" : "p change_dot_to_dash"
 								}
 
@@ -1232,7 +1189,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 4029.0, 104.0, 22.0 ],
-									"style" : "",
 									"text" : "Transformation",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1268,7 +1224,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 4082.0, 104.0, 22.0 ],
-									"style" : "",
 									"text" : "Automata",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1303,7 +1258,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 3898.0, 104.0, 22.0 ],
-									"style" : "",
 									"text" : "Profiles",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1320,7 +1274,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 380.0, 4436.0, 46.0, 22.0 ],
-									"style" : "",
 									"text" : "itoa"
 								}
 
@@ -1336,7 +1289,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
 									"patching_rect" : [ 380.0, 4258.0, 46.0, 22.0 ],
-									"style" : "",
 									"text" : "atoi"
 								}
 
@@ -1371,7 +1323,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 3829.0, 104.0, 22.0 ],
-									"style" : "",
 									"text" : "Generation",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1407,7 +1358,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 3950.0, 104.0, 22.0 ],
-									"style" : "",
 									"text" : "Electrospectral",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1424,7 +1374,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 380.0, 4481.0, 167.0, 22.0 ],
-									"style" : "",
 									"text" : "sprintf symout %s.maxtut.xml"
 								}
 
@@ -1441,7 +1390,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 380.0, 4520.0, 101.0, 35.0 ],
-									"style" : "",
 									"text" : ";\rmax showdoc $1"
 								}
 
@@ -1456,7 +1404,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 3442.0, 880.0, 79.0 ],
-									"style" : "",
 									"text" : "The cage project has a strong pedagogical connotation: all the modules of the library are abstractions, lending themselves to be easily analyzed and modified. In this regards, all the tools in the library are intrinsically ‘open source’: although each implemented process is conceived for a typical, somehow standard usage, the advanced user will easily start from these abstractions and modify their behavior.\n\n© 2014-2017 • Andrea Agostini and Daniele Ghisi",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1491,7 +1438,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 2.0, 3795.0, 80.0, 23.0 ],
-									"style" : "",
 									"text" : "Tutorials"
 								}
 
@@ -1506,15 +1452,14 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 308.0, -126.375, 25.0, 25.0 ],
-									"style" : ""
+									"patching_rect" : [ 308.0, -126.375, 25.0, 25.0 ]
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 11.595187,
+									"fontsize" : 11.595186999999999,
 									"hidden" : 1,
 									"id" : "obj-8",
 									"maxclass" : "newobj",
@@ -1523,7 +1468,6 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 308.0, -97.375, 67.0, 21.0 ],
 									"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-									"style" : "",
 									"text" : "thispatcher"
 								}
 
@@ -1539,7 +1483,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 53.0, -30.375, 140.0, 23.0 ],
-									"style" : "",
 									"text" : "loadmess all @defer 1"
 								}
 
@@ -1555,8 +1498,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 525.727234, 2927.09082, 264.0, 35.0 ],
-									"style" : "",
+									"patching_rect" : [ 525.727233999999953, 2927.090819999999894, 264.0, 35.0 ],
 									"text" : ";\rmax launchbrowser http://forum.bachproject.net"
 								}
 
@@ -1574,7 +1516,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 465.090942, 2640.0, 136.0, 21.0 ],
+									"patching_rect" : [ 465.090941999999984, 2640.0, 136.0, 21.0 ],
 									"text" : "forum.bachproject.net"
 								}
 
@@ -1608,8 +1550,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.54541, 2964.272705, 273.0, 35.0 ],
-									"style" : "",
+									"patching_rect" : [ 69.545410000000004, 2964.27270499999986, 273.0, 35.0 ],
 									"text" : ";\rmax launchbrowser mailto:cage@bachproject.net"
 								}
 
@@ -1624,7 +1565,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 3373.0, 880.0, 65.0 ],
-									"style" : "",
 									"text" : "cage is a research project taking place within the center of electroacoustic music of the Haute École de Musique in Geneva, supported by the music and arts domain of the scene of the Haute École Specialisée of Western Switzerland. The name \"cage\", which in the context of German note names represents the famous expansion of \"bach\", is also an acronym acknowledging this support: composition assistée Genève (Geneva computer-aided composition).",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1640,7 +1580,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 2640.0, 890.0, 311.0 ],
-									"style" : "",
 									"text" : "If you use cage, you might find really useful to join the dedicated cage forum at                                  .  .\nIn this community you can discuss topics concerning the cage environment, as well as report bugs and submit features requests. This is the most appropriate context for all these things, since all users can benefit from everyone's experiences. Still, if you want to contact us privately, you can do it at\n                                    .\n\nThe ideal bug report should contain:\n- the sequence of operation after which the bug has happened - have you been able to reproduce the bug by repeating the same sequence?\n- the exact nature of the bug: what would have been the expected behaviour, and what you have obtained instead.\n- if there has been a crash, a copy of the contents of the crash report window - don't send it to Apple, it's our problem, not theirs.\n- if possible, a copy of the patch in which the bug has happened.\n- if possible, the exact input data that have caused the bug.\n\nIf you want to submit a feature request, please consider the fact that this doesn't necessarily mean that the feature will be implemented. It can be technically impossible, it could require major changes to the overall architecture of the work, it could disrupt another functionality, it could be obtained by patching with some workaround, it could be to difficult for us to implement or we could simply not like it. But be assured that even the craziest feature request will be seriously considered and reflected upon!\n\nGeneral commentaries about the work are also welcome - especially if positive ;) - we need your advice to know in which direction the development should be pushed.\n\nThank you for your feedback!",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
@@ -1658,8 +1597,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 3282.0, 297.0, 85.0 ],
 									"proportion" : 0.39,
-									"rounded" : 0,
-									"style" : ""
+									"rounded" : 0
 								}
 
 							}
@@ -1784,12 +1722,13 @@
 								}
 
 							}
- ]
+ ],
+						"bgcolor" : [ 0.94, 0.94, 0.94, 1.0 ]
 					}
 ,
 					"patching_rect" : [ 7.0, 117.0, 929.0, 476.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 113.274521, 128.0, 143.0, 93.0 ],
+					"presentation_rect" : [ 113.274520999999993, 128.0, 143.0, 93.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -1826,7 +1765,6 @@
 					"patching_rect" : [ 6.0, 6.0, 930.0, 57.0 ],
 					"proportion" : 0.39,
 					"prototypename" : "bach",
-					"style" : "",
 					"varname" : "autohelp_top_panel"
 				}
 
@@ -1922,13 +1860,6 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "cage.overviewswitch.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/cage/help",
-				"patcherrelativepath" : "../help",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "cage.explorer.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/cage/help",
 				"patcherrelativepath" : "../help",
@@ -2029,7 +1960,7 @@
 				"name" : "cage_logo_web_h.png",
 				"bootpath" : "~/max-sdk-7.0.3/source/bach_additionalstuff/graphics/WebSite/images",
 				"patcherrelativepath" : "../../../../../max-sdk-7.0.3/source/bach_additionalstuff/graphics/WebSite/images",
-				"type" : "PNG ",
+				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
@@ -2177,7 +2108,8 @@
 				"type" : "iLaX"
 			}
  ],
-		"autosave" : 0
+		"autosave" : 0,
+		"bgcolor" : [ 0.941176, 0.941176, 0.941176, 1.0 ]
 	}
 
 }

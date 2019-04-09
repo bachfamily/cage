@@ -437,7 +437,7 @@
 									"numvoices" : 2,
 									"out" : "nnnnnnn",
 									"outlettype" : [ "", "", "", "", "", "", "", "bang" ],
-									"patching_rect" : [ 10.0, 412.0, 473.0, 168.333328247070312 ],
+									"patching_rect" : [ 10.0, 412.0, 473.0, 168.333333333333343 ],
 									"pitcheditrange" : [ "null" ],
 									"stafflines" : [ 5, 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
@@ -997,6 +997,10 @@
 			}
 , 			{
 				"name" : "bach.print.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.minmax.mxo",
 				"type" : "iLaX"
 			}
  ],

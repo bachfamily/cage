@@ -6,7 +6,7 @@
 <c74object name="cage.mix" module="cage" kind="patcher">
 
 	<digest>
-		Mix rolls
+		Mix scores
 	</digest>
 
 	<description>
@@ -35,7 +35,7 @@
 	<outletlist>
 		<outlet id="0" type="INLET_TYPE">
 			<digest>
-				Mix
+				Mixed score
 			</digest>
 			<description>
 			</description>
@@ -89,9 +89,9 @@
 	</misc>
 
 	<misc name = "Output">
-		<entry name ="Outlet 1 (roll)">
+		<entry name ="Outlet 1 (roll/score)">
 			<description>
-				Mix.
+				Mixed score.
 			</description>
 		</entry>
 	</misc>

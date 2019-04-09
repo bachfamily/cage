@@ -72,6 +72,19 @@
 
 	<!--ATTRIBUTES-->
 	<attributelist>
+		<attribute name="dl" get="1" set="1" type="int" size="1">
+			<digest>
+				Reverse Duration Lines
+			</digest>
+			<description>
+				Toggles the reversal of duration lines. By default it is on;
+				if you turn it off (setting it to 0), then only onsets are reversed.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Reverse Duration Lines" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
 		<attribute name="out" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Outlet Types

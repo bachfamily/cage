@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -112,6 +112,7 @@
 					"linklyricstoslot" : 7,
 					"loop" : [ 0.0, 0.0 ],
 					"maxclass" : "bach.roll",
+					"maxundosteps" : 0,
 					"numinlets" : 6,
 					"numoutlets" : 8,
 					"numvoices" : 1,
@@ -121,7 +122,7 @@
 					"pitcheditrange" : [ "null" ],
 					"stafflines" : [ 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"versionnumber" : 80002,
+					"versionnumber" : 80005,
 					"voicenames" : [ "[", "]" ],
 					"voicespacing" : [ -10.800000000000001, 17.0 ],
 					"vzoom" : 75.0
