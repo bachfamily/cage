@@ -50,6 +50,7 @@
 
 // @method int @digest Set number of harmonics
 // @description An integer in the second inlet sets the number of harmonics to be output.
+// If the integer provided is negative, then subharmonics are output instead.
 
 // @method number @digest Function depends on inlet
 // @description A number in the first inlet sets the pitch of the fundamental note in midicents, 
