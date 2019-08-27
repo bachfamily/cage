@@ -50,6 +50,7 @@
 
 // @method int @digest Set number of harmonics
 // @description An integer in the second inlet sets the number of harmonics to be output.
+// If the integer provided is negative, then subharmonics are output instead.
 
 // @method number @digest Function depends on inlet
 // @description A number in the first inlet sets the pitch of the fundamental note in midicents, 
@@ -75,9 +76,10 @@ void main_foo() {
 
 llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 
-CLASS_ATTR_LONG(c, "middlecoctave", 0, t_harmser, middle_c_octave); 
-CLASS_ATTR_STYLE_LABEL(c,"middlecoctave",0,"text","Middle C Octave");
-// @description @copy BACH_DOC_MIDDLECOCTAVE
+CLASS_ATTR_LONG(c, "numpartial", 0, t_harmser, numpartial); 
+CLASS_ATTR_STYLE_LABEL(c,"numpartial",0,"text","Index of Introduce Partial");
+// @description Sets the index of the introduced partial. It defaults to 1, so that it expects the fundamental
+// of the harmonic series.
 
 CLASS_ATTR_CHAR(c, "stretchmode", 0, t_harmser, stretch_mode); 
 CLASS_ATTR_STYLE_LABEL(c,"stretchmode",0,"text","Stretch Mode");
