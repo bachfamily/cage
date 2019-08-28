@@ -106,6 +106,7 @@
 			</digest>
 			<description>
 				An integer in the second inlet sets the number of harmonics to be output.
+				If the integer provided is negative, then subharmonics are output instead.
 			</description>
 		</method>
 		<method name="llll">
@@ -146,17 +147,16 @@
 
 	<!--ATTRIBUTES-->
 	<attributelist>
-		<attribute name="middlecoctave" get="1" set="1" type="int" size="1">
+		<attribute name="numpartial" get="1" set="1" type="int" size="1">
 			<digest>
-				Middle C Octave
+				Index of Introduce Partial
 			</digest>
 			<description>
-				The octave number corresponding to the octave where the middle C is. It is usually either 4 or 3, depending
-				on the musical culture. By default, in bach, this is 4, i.e. C4 is the middle C.
-				<br /> <br />
+				Sets the index of the introduced partial. It defaults to 1, so that it expects the fundamental
+				of the harmonic series.
 			</description>
 			<attributelist>
-				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Middle C Octave" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Index of Introduce Partial" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>

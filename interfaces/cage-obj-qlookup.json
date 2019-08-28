@@ -1,4 +1,24 @@
 {
+  "cage.crop": {
+    "digest": "Extract portion of roll or score",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "crop",
+      "extract",
+      "subroll",
+      "roll",
+      "subscore",
+      "score",
+      "portion"
+    ],
+    "seealso": [
+      "cage.slice"
+    ]
+  },
   "cage.sdif.ptrack.assemble": {
     "digest": "Assemble partials into a partial tracking SDIF llll",
     "module": "cage",
@@ -131,26 +151,6 @@
       "cage.timewarp"
     ]
   },
-  "cage.extract": {
-    "digest": "Extract portion of roll or score",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "extract",
-      "subroll",
-      "roll",
-      "subscore",
-      "score",
-      "crop",
-      "portion"
-    ],
-    "seealso": [
-      "cage.slice"
-    ]
-  },
   "cage.sdif.markers.pack": {
     "digest": "Pack parameters of a markers SDIF analysis",
     "module": "cage",
@@ -261,26 +261,6 @@
       "bach.roll",
       "cage.sdif.markers.pack",
       "cage.sdif.markers.unpack"
-    ]
-  },
-  "cage.shift": {
-    "digest": "Insert or delete time at the beginning of a score",
-    "module": "cage",
-    "category": [
-      "cage",
-      "cage scores"
-    ],
-    "keywords": [
-      "shift",
-      "move",
-      "offset",
-      "roll",
-      "score"
-    ],
-    "seealso": [
-      "cage.rot",
-      "cage.rev",
-      "cage.inv"
     ]
   },
   "cage.envelopes": {
@@ -1342,6 +1322,26 @@
     ],
     "seealso": [
       "cage.meta.header"
+    ]
+  },
+  "cage.offset": {
+    "digest": "Insert or delete time at the beginning of a score",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "shift",
+      "move",
+      "offset",
+      "roll",
+      "score"
+    ],
+    "seealso": [
+      "cage.rot",
+      "cage.rev",
+      "cage.inv"
     ]
   },
   "cage.rhythminterp": {

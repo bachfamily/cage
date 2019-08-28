@@ -14,8 +14,6 @@
 <body>In this tutorial, we will study an interesting example built around the <o>cage.lumbricus</o> abstraction, and suggested by composer Michael Jarrell. As we shall see, the goal of the patch is constructing melodic sequences according to certain specific rules.</body>
 
 
-<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
-
 <subhead>The earthworm</subhead>
 
 <body>Constraint- and rule-based approaches to problems are fascinating, because they reflect the way we think. If I have to do a car trip, the first thing I want to know is where I'm going and how much time I have, rather than follow a dumb sequence of petty instruction such as "turn left at the third traffic light" or "go straight 152.36 km". This is quite the opposite of what usually happens with computer programming: we all have been taught that computers are stupid and they need to be painstakingly told every single detail about how we want them to do stuff for us. Indeed, some very elegant programming paradigms exist to help us express problems in more intelligent ways, such as "find a result within this set of rules", or "let this structure evolve for some time according to these rules": the <o>bach.constraints</o> and <o>cage.chain</o> modules exemplify some of them, the former doing constraints-based searches, the latter building chains of elements through generative grammars. Unfortunately, life is not always elegant. For example, composers are used to think in terms of constraints, but they also often need to build sequences of things happening in time. They often need something in between the two approaches. <o>cage.lumbricus</o> is a tentative solution to this hybrid category of problems.</body>

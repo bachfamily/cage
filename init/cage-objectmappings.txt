@@ -1,0 +1,2 @@
+max objectfile cage.extract cage.crop;
+max objectfile cage.shift cage.offset;

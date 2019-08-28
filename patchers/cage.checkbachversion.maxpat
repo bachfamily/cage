@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 59.0, 104.0, 809.0, 505.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -45,7 +46,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 556.0, 200.0, 214.0, 49.0 ],
-					"style" : "",
 					"text" : "You have installed an older version of bach. Please update bach in order for cage to work properly."
 				}
 
@@ -58,7 +58,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 556.0, 153.5, 34.0, 22.0 ],
-					"style" : "",
 					"text" : "t b b"
 				}
 
@@ -71,7 +70,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 30.0, 81.0, 34.0, 22.0 ],
-					"style" : "",
 					"text" : "t b b"
 				}
 
@@ -84,7 +82,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 321.0, 120.0, 254.0, 22.0 ],
-					"style" : "",
 					"text" : "bach.filternull @out t"
 				}
 
@@ -102,7 +99,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.reg"
 				}
 
@@ -114,8 +110,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 299.5, 280.0, 24.0, 24.0 ],
-					"style" : ""
+					"parameter_enable" : 0,
+					"patching_rect" : [ 299.5, 280.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -128,7 +124,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 299.5, 357.0, 316.0, 35.0 ],
-					"style" : "",
 					"text" : "sprintf Your version of bach is %s. Please update bach in order for cage to work properly."
 				}
 
@@ -141,7 +136,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 299.5, 321.0, 152.5, 22.0 ],
-					"style" : "",
 					"text" : "zl.reg"
 				}
 
@@ -154,7 +148,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 433.0, 159.5, 49.0, 22.0 ],
-					"style" : "",
 					"text" : "zl.nth 1"
 				}
 
@@ -167,9 +160,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 351.0, 280.0, 280.0, 35.0 ],
-					"style" : "",
-					"text" : "\"The version of cage you have installed requires a version of bach greater or equal to 0.8.\""
+					"patching_rect" : [ 351.0, 280.0, 318.0, 35.0 ],
+					"presentation_linecount" : 2,
+					"text" : "\"The version of cage you have installed requires a version of bach greater or equal to 0.8.0.8\""
 				}
 
 			}
@@ -184,7 +177,6 @@
 						"versionnumber" : 80001
 					}
 ,
-					"style" : "",
 					"text" : "bach.print @error 1"
 				}
 
@@ -197,7 +189,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 321.0, 238.0, 36.0, 22.0 ],
-					"style" : "",
 					"text" : "sel 0"
 				}
 
@@ -210,22 +201,20 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 173.5, 182.5, 150.0, 47.0 ],
-					"style" : "",
-					"text" : "this version of cage requires at least bach 8.0.0"
+					"text" : "this version of cage requires at least bach 0.8.0.8"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 22.418045,
+					"fontsize" : 22.418044999999999,
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 321.0, 189.229507, 105.0, 34.0 ],
-					"style" : "",
-					"text" : ">= 80000"
+					"patching_rect" : [ 321.0, 189.229507000000012, 105.0, 34.0 ],
+					"text" : ">= 80008"
 				}
 
 			}
@@ -237,7 +226,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 321.0, 153.5, 49.0, 22.0 ],
-					"style" : "",
 					"text" : "zl.nth 2"
 				}
 
@@ -250,8 +238,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 140.5, 259.0, 35.0 ],
-					"style" : "",
+					"patching_rect" : [ 30.0, 140.5, 267.0, 35.0 ],
 					"text" : ";\rbach sendversion #0_cage_bach_getversion"
 				}
 
@@ -264,7 +251,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 30.0, 43.0, 60.0, 22.0 ],
-					"style" : "",
 					"text" : "loadbang"
 				}
 
@@ -276,8 +262,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 359.0, 43.0, 169.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 359.0, 43.0, 177.0, 22.0 ],
 					"text" : "r #0_cage_bach_getversion"
 				}
 

@@ -1,0 +1,2 @@
+max db.addvirtual alias cage.extract cage.crop;
+max db.addvirtual alias cage.shift cage.offset;

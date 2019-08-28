@@ -9,6 +9,13 @@ These might break compatibility with older patches
 					Duration lines are always precessed, unless disabled via the new @dl attribute. 
 					Please update your patches
 
+- cage.extract is now cage.crop	This should not break compatibility with older patches, as cage.extract still remains as hidden alias
+
+- cage.shift and cage.offset are merged into simply cage.offset
+				cage.shift remains as hidden alias of cage.offset, but you should use cage.offset instead
+				Verify your patches, since the two patches differ slightly
+
+
 
 ***********************
 *** VERSION CHANGES ***

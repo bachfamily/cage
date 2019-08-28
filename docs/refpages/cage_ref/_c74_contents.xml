@@ -1,18 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <root>
+<refpage name='cage.crop.maxref.xml'/>
 <refpage name='cage.sdif.ptrack.assemble.maxref.xml'/>
 <refpage name='cage.markov.analysis.maxref.xml'/>
 <refpage name='cage.timewarp.maxref.xml'/>
 <refpage name='cage.ezptrack.maxref.xml'/>
 <refpage name='cage.join.maxref.xml'/>
 <refpage name='cage.timestretch.maxref.xml'/>
-<refpage name='cage.extract.maxref.xml'/>
 <refpage name='cage.sdif.markers.pack.maxref.xml'/>
 <refpage name='cage.profile.gen.maxref.xml'/>
 <refpage name='cage.sdif.ptrack.unpack.maxref.xml'/>
 <refpage name='cage.chroma.fromcentroid.maxref.xml'/>
 <refpage name='cage.sdif.markers.fromroll.maxref.xml'/>
-<refpage name='cage.shift.maxref.xml'/>
 <refpage name='cage.envelopes.maxref.xml'/>
 <refpage name='cage.length.maxref.xml'/>
 <refpage name='cage.tonnetz.flip.maxref.xml'/>
@@ -62,6 +61,7 @@
 <refpage name='cage.remapvoices.maxref.xml'/>
 <refpage name='cage.slice.maxref.xml'/>
 <refpage name='cage.meta.engine.maxref.xml'/>
+<refpage name='cage.offset.maxref.xml'/>
 <refpage name='cage.rhythminterp.maxref.xml'/>
 <refpage name='cage.sdif.ptrack.toroll.maxref.xml'/>
 <refpage name='cage.profile.rectify.maxref.xml'/>

@@ -6,11 +6,11 @@
 <c74object name="cage.offset" module="cage" kind="patcher">
 
 	<digest>
-		Insert time at the beginning of a score
+		Insert or delete time at the beginning of a score
 	</digest>
 
 	<description>
-		<o>cage.offset</o> allows inserting time at the beginning of a roll or score.
+		Perform a time-wise shift of all the content in a <o>bach.roll</o> or <o>bach.score</o>
 	</description>
 
 	<!--METADATA-->
@@ -24,18 +24,9 @@
 	<inletlist>
 		<inlet id="0" type="INLET_TYPE">
 			<digest>
-				Roll or score which will be offset
+				Original score
 			</digest>
 			<description>
-			</description>
-		</inlet>
-		<inlet id="1" type="INLET_TYPE">
-			<digest>
-				Offset time
-			</digest>
-			<description>
-				The offset time is in milliseconds for <o>bach.roll</o>,
-				in measures, or measures and symbolic units, for <o>bach.score</o>.
 			</description>
 		</inlet>
 	</inletlist>
@@ -44,7 +35,7 @@
 	<outletlist>
 		<outlet id="0" type="INLET_TYPE">
 			<digest>
-				Resulting roll or score
+				Shifted score
 			</digest>
 			<description>
 			</description>
@@ -55,12 +46,12 @@
 	<objarglist>
 		<objarg name="offset" optional="1" type="number">
 			<digest>
-				Initial offset
+				Offset
 			</digest>
 			<description>
-				The optional argument sets the initial offset.
-				The offset time is in milliseconds for <o>bach.roll</o>,
-				in measures, or measures and symbolic units, for <o>bach.score</o>.
+				The optional argument sets the shift offset in milliseconds (for <o>bach.roll</o>) or in
+				number of measures (for <o>bach.score</o>), or even in the form <b><m>num_measures</m> <m>symbolic_offset</m></b>
+				(for <o>bach.score</o>, see message <m>list</m>).
 			</description>
 		</objarg>
 	</objarglist>
@@ -70,10 +61,33 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				Output result
+				Output shifted score
 			</digest>
 			<description>
-				Output the score obtained from the most recently received input data.
+				Outputs result of the last shift.
+			</description>
+		</method>
+		<method name="int">
+			<arglist />
+			<digest>
+				Set offset
+			</digest>
+			<description>
+				An <m>int</m> in the second inlet sets the time shift amount in milliseconds (for <o>bach.roll</o>)
+				or in measures (for <o>bach.score</o>)
+			</description>
+		</method>
+		<method name="list">
+			<arglist />
+			<digest>
+				Set offset
+			</digest>
+			<description>
+				A <m>list</m> in the second inlet sets the time shift amount for <o>bach.score</o> in the form
+				<b><m>num_measures</m> <m>symbolic_offset</m></b>. For instance, a shift of <b>2 17/8</b> will add 2 empty
+				measure at the beginning and then also shift everything by 17/8. The added measures will receive the
+				same time signature as the first measure, whereas the further symbolic offset will be simply processed
+				without changing time signatures.
 			</description>
 		</method>
 		<method name="llll">
@@ -82,23 +96,11 @@
 				Function depends on inlet
 			</digest>
 			<description>
-				<o>cage.offset</o> expects a roll or score gathered syntax
-				in the first inlet, which will be offset. The offset amount is specified
-				by the <m>llll</m> received in the second inlet (in milliseconds for
-				<o>bach.roll</o>; in measure for <o>bach.score</o> if it is a single integer,
-				in <m>measures</m> <m>symbolic_units</m> if it is a list of 2 elements).
-				For instance, if the <m>llll</m> in the second inlet is <m>3 1/4</m> the offset will
-				be 3 measures and then a 1/4 rest; if the second inlet receives <m>0 716/16</m>, the
-				offset will be <m>716/16</m> (no matter how many measures this will span).
-				The roll or score with offset will then be output. <br />
-			</description>
-		</method>
-		<method name="number">
-			<arglist />
-			<digest>
-				In second inlet: sets the offset amount (in milliseconds for
-			</digest>
-			<description>
+				An <m>llll</m> in the first inlet is considered as
+				the <o>bach.roll</o> or <o>bach.score</o> gathered syntax. The shift
+				operation is performed and the modified gathered syntax is output through the outlet.
+				The output header content is the same as the input header content. <br />
+				An <m>llll</m> in the second inlet is converted to <m>int</m> or <m>list</m> (see corresponding messages)
 			</description>
 		</method>
 	</methodlist>
@@ -110,6 +112,23 @@
 				Outlet Types
 			</digest>
 			<description>
+				The <m>out</m> attribute is a sequence of characters identifying the outlet types (one character for each llll outlet). Characters can be one of the following: <br />
+				<m>n</m> (default): 'native' output: faster and more precise between bach objects, but unreadable by standard Max objects (an "bach.llll" message appears instead). <br />
+				<m>t</m>: 'text' output: slower and limited in size, but readable by standard Max objects. A plain llll in text format is a generic Max message.
+				To keep the representation invertible (i.e., to allow a bach object receiving a text-format llll to interpret it exactly as if it was native format,
+				except for the size limitation), some specific kinds of symbols are preceded by a backtick: namely, symbols containing parens, or containing textual
+				representations of numbers or pitches, or beginning with a backtick, plus the symbols "null" and "nil" (distinct from the reserved words
+				"null" and "nil" representing the empty list and the empty sublist) are preceded by a backtick. Moreover, the symbols "int", "float" or "list"
+				are preceded by a backtick only if they are the first element of an llll, to distinguish them from the corresponding reserved messages of Max. <br />
+				<m>m</m>: 'max' output: mostly equivalent to the "t" specifier, but no symbol is backticket except "int", "float" and "list" at the beginning of an llll.
+				It is important to notice that, differently from text-format lllls proper, Max-format lllls might not be invertible even if they do not reach the size
+				limit for Max message. This means that a bach object receiving a Max-format llll output from another bach object might interpret it differently
+				from the original, or in some cases might even reject it. <br />
+				<m>x</m>: disabled output (nothing is output) <br />
+				<m>p</m>: 'portal' output: only used by bach.portal to intercept the @out attribute specified while creating the abstraction (see bach.portal). <br />
+				The native output is recommended, unless communication with standard Max messages is needed.
+				Disabling unused outputs can be useful if extreme optimization of the patch is needed.
+				<br /> <br />
 			</description>
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="symbol" size="1" value="Behavior" />
@@ -122,29 +141,23 @@
 
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="cage.spacer" />
-		<seealso name="cage.wedge" />
+		<seealso name="cage.rot" />
+		<seealso name="cage.rev" />
+		<seealso name="cage.inv" />
 	</seealsolist>
 
 	<misc name = "Input">
-		<entry name ="Inlet 1 (score)">
+		<entry name ="Inlet 1 (llll)">
 			<description>
-				Roll or score which will be offset.
-			</description>
-		</entry>
-		<entry name ="Inlet 2 (number)">
-			<description>
-				Offset time.
-				The offset time is in milliseconds for <o>bach.roll</o>,
-				in measures, or measures and symbolic units, for <o>bach.score</o>.
+				Original score.
 			</description>
 		</entry>
 	</misc>
 
 	<misc name = "Output">
-		<entry name ="Outlet 1 (score)">
+		<entry name ="Outlet 1 (llll)">
 			<description>
-				Resulting roll or score.
+				Shifted score.
 			</description>
 		</entry>
 	</misc>
