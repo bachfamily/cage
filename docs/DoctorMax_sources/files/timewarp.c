@@ -45,7 +45,7 @@
 // ---------------
 
 // @method llll @digest In first inlet: roll to distort temporally
-// @description The first inlet of <o>bach.timewarp</o> accepts
+// @description The first inlet of <o>cage.timewarp</o> accepts
 // the contents of the gathered syntax of a <o>bach.roll</o> object,
 // which will be temporally distorted according either to a lambda loop,
 // or its own markers which will be respaced equally in time.
