@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 313.0, 106.0, 894.0, 657.0 ],
+		"rect" : [ 77.0, 83.0, 1158.0, 685.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -14697,7 +14697,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "llll: Entire roll / chord",
+					"comment" : "llll: Entire score / roll / chord",
 					"id" : "obj-6",
 					"index" : 1,
 					"maxclass" : "outlet",
@@ -14740,7 +14740,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "llll: Carrier roll or chord",
+					"comment" : "llll: Carrier score / roll / chord",
 					"id" : "obj-3",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -14753,7 +14753,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "llll: Modulating roll or chord",
+					"comment" : "llll: Modulating score / roll / chord",
 					"cool" : 1,
 					"id" : "obj-2",
 					"index" : 2,
