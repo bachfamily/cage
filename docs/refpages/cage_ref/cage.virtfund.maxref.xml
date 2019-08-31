@@ -10,7 +10,7 @@
 	</digest>
 
 	<description>
-		<o>cage.virtfund</o> compute one or more virtual fundamentals for a chord,
+		<o>cage.virtfund</o> computes one or more virtual fundamentals for a chord,
 		or a sequence of virtual fundamentals (or multiple virtual fundamentals) for a roll or a score.
 	</description>
 
@@ -21,16 +21,270 @@
 		<metadata name="tag">cage electrospectral</metadata>
 	</metadatalist>
 
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+				Chord, roll or score to found the virtual fundamentals of
+			</digest>
+			<description>
+			</description>
+		</inlet>
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="INLET_TYPE">
+			<digest>
+				Resulting chord, roll or score
+			</digest>
+			<description>
+			</description>
+		</outlet>
+	</outletlist>
+
 	<!--ARGUMENTS-->
 	<objarglist>
 	</objarglist>
 
 	<!--MESSAGES-->
 	<methodlist>
+		<method name="bang">
+			<arglist />
+			<digest>
+				In first inlet: Recalculate
+			</digest>
+			<description>
+				A <m>bang</m> in the first inlet causes the virtual fundamentals
+				to be recalculated, according to the current values of the attributes.
+			</description>
+		</method>
+		<method name="llll">
+			<arglist />
+			<digest>
+				Roll, score or chord
+			</digest>
+			<description>
+				The first inlet of <o>cage.timewarp</o> accets
+				a chord expressed as a flat list of midicents or hertz
+				(according to the <m>raw</m> attribute), or the contents
+				of the gathered syntax of a roll or a score.
+				If a chord is provided, an llll composed of three sublists is returned:
+				the first sublist contains a list of proposed virtual fundamentals, expressed
+				in midicents or hertz accordingly to the input format
+				and sorted from highest- to lowest-scored;
+				the second sublist contains the scores assigned to each fundamental
+				according to the <m>distanceweight</m> and <m>partialweight</m> attributes;
+				the third sublists contains one further "details" sublist per proposed solution,
+				each containing a sublist per note of the original chord,
+				each containing a pair of values
+				representing respectively the index of the partial the corresponding note
+				approximately matches with respect to the virtual fundamental,
+				and the deviation (in midicents or hertz) of the exact partial of the
+				proposed virtual fundamental from the corresponding note of the original chord.
+				It is possible that no fundamental is found, in which case nothing is returned.<br/>
+				If a roll or a score is provided, a corresponding roll is returned,
+				containing a chord of virtual fundamentals for each chord of the original,
+				at the corresponding time position and in the corresponding voice.
+				In the score case, if no fundamental can be found for a given chord
+				a rest is inserted at its place.
+				According to the value of the <m>detailsslot</m> attribute,
+				a slot of each note of the resulting roll or score can be set
+				to the values of the corresponding "details" sublist,
+				as it would be returned for the corresponding simple chord input.
+			</description>
+		</method>
 	</methodlist>
 
 	<!--ATTRIBUTES-->
 	<attributelist>
+		<attribute name="detailsslot" get="1" set="1" type="int" size="1">
+			<digest>
+				Maximum Distance Threshold
+			</digest>
+			<description>
+				The <m>detailsslot</m> attribute sets an llll slot number
+				in which the details of each virtual fundamental are inserted
+				if the input data are in the form of a roll or a score.
+				The default is 0 (no slot).
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Distance Threshold" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="distanceweight" get="1" set="1" type="float" size="1">
+			<digest>
+				Influence Of Distance On Score
+			</digest>
+			<description>
+				The <m>distanceweight</m> attribute sets the influence
+				of the exactness of each virtual fundamental on its score,
+				which is then used to sort the proposed fundamentals from best to worst,
+				retaining only the <m>maxcount</m> best ones,
+				and is returned in the "details" sublist or slot.
+				The weight is expressed as a number from 0 (no influence) to 1 (maximum influence),
+				and it defaults to 1.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Influence Of Distance On Score" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="maxcount" get="1" set="1" type="int" size="1">
+			<digest>
+				Maximum Number Of Fundamentals
+			</digest>
+			<description>
+				The <m>maxcount</m> attribute sets
+				the maximum number of virtual fundamentals to be returned for each chord.
+				The returned fundamentals are the ones with the highest scores.
+				If it is set to 0, all the found fundamentals are returned.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Number Of Fundamentals" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="maxmaxdist" get="1" set="1" type="float" size="1">
+			<digest>
+				Maximum Distance Threshold
+			</digest>
+			<description>
+				Given a potential virtual fundamental,
+				if the distance of at least one of the original chord notes
+				from the corresponding harmonic of the virtual fundamental
+				is greater than <m>maxmaxdist</m>, the fundamental is discarded.
+				The distance is expressed in midicents or hertz, according to the <m>raw</m> attribute.
+				The default is 50 midicents.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Distance Threshold" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="maxmeandist" get="1" set="1" type="float" size="1">
+			<digest>
+				Mean Distance Threshold
+			</digest>
+			<description>
+				Given a potential virtual fundamental,
+				if the mean distance of the original chord notes
+				from the corresponding harmonics of the virtual fundamental
+				is greater than <m>maxmeandist</m>, the fundamental is discarded.
+				The distance is expressed in midicents or hertz, according to the <m>raw</m> attribute.
+				The default is 25 midicents.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Mean Distance Threshold" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="minfund" get="1" set="1" type="float" size="1">
+			<digest>
+				Lowest Virtual Fundamental Threshold
+			</digest>
+			<description>
+				The <m>minminfund</m> attribute sets a minimum threshold
+				for the proposed virtual fundamentals, expressed in midicents or hertz
+				according to the <m>raw</m> attribute. The default is 1200 midicents.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Lowest Virtual Fundamental Threshold" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="out" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Outlet Types
+			</digest>
+			<description>
+				The <m>out</m> attribute is a sequence of characters identifying the outlet types (one character for each llll outlet). Characters can be one of the following: <br />
+				<m>n</m> (default): 'native' output: faster and more precise between bach objects, but unreadable by standard Max objects (an "bach.llll" message appears instead). <br />
+				<m>t</m>: 'text' output: slower and limited in size, but readable by standard Max objects. A plain llll in text format is a generic Max message.
+				To keep the representation invertible (i.e., to allow a bach object receiving a text-format llll to interpret it exactly as if it was native format,
+				except for the size limitation), some specific kinds of symbols are preceded by a backtick: namely, symbols containing parens, or containing textual
+				representations of numbers or pitches, or beginning with a backtick, plus the symbols "null" and "nil" (distinct from the reserved words
+				"null" and "nil" representing the empty list and the empty sublist) are preceded by a backtick. Moreover, the symbols "int", "float" or "list"
+				are preceded by a backtick only if they are the first element of an llll, to distinguish them from the corresponding reserved messages of Max. <br />
+				<m>m</m>: 'max' output: mostly equivalent to the "t" specifier, but no symbol is backticket except "int", "float" and "list" at the beginning of an llll.
+				It is important to notice that, differently from text-format lllls proper, Max-format lllls might not be invertible even if they do not reach the size
+				limit for Max message. This means that a bach object receiving a Max-format llll output from another bach object might interpret it differently
+				from the original, or in some cases might even reject it. <br />
+				<m>x</m>: disabled output (nothing is output) <br />
+				<m>p</m>: 'portal' output: only used by bach.portal to intercept the @out attribute specified while creating the abstraction (see bach.portal). <br />
+				The native output is recommended, unless communication with standard Max messages is needed.
+				Disabling unused outputs can be useful if extreme optimization of the patch is needed.
+				<br /> <br />
+			</description>
+			<attributelist>
+				<attribute name="category" get="1" set="1" type="symbol" size="1" value="Behavior" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Outlet Types" />
+				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="partialweight" get="1" set="1" type="float" size="1">
+			<digest>
+				Influence Of Pitch On Score
+			</digest>
+			<description>
+				The <m>partialweight</m> attribute sets the influence
+				of the pitch of each virtual fundamental on its score,
+				which is then used to sort the proposed fundamentals from best to worst,
+				retaining only the <m>maxcount</m> best ones,
+				and is returned in the "details" sublist or slot.
+				Generally speaking, a higher fundamental will receive a higher score.
+				The influence of pitch is expressed as a number
+				from 0 (no influence) to 1 (maximum influence), and it defaults to 1.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Influence Of Pitch On Score" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="raw" get="1" set="1" type="int" size="1">
+			<digest>
+				Maximum Distance Threshold
+			</digest>
+			<description>
+				If the <m>raw</m> attribute is set to 0 (as it is by default),
+				the incoming chord notes, the <m>minfund</m>, <m>maxmaxdist</m>,
+				<m>maxmeandist</m> and <m>ultmeandist</m> attributes,
+				the resulting virtual fundamentals and their deviations
+				in the "details" llll are all expressed in midicents.<br/>
+				If it is set to 1, the incoming chord notes, the <m>minfund</m> attribute and
+				the resulting virtual fundamentals are expressed in hertz,
+				whereas the <m>maxmaxdist</m>, <m>maxmeandist</m> and <m>ultmeandist</m> attributes
+				and their deviations in the "details" sublist or slot are expressed as frequency ratios.<br/>
+				Setting <m>raw</m> to 0 makes <o>cage.virtfund</o> a general computation tool,
+				calculating a sort of "approximate greatest common divisor" of a list of numbers.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Distance Threshold" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="ultmeandist" get="1" set="1" type="float" size="1">
+			<digest>
+				Immediately Satisfying Distance Threshold
+			</digest>
+			<description>
+				If, during the search, a fundamental whose partials
+				have a mean distance not greater than <m>ultmeandist</m> is encountered,
+				it is considered immediately satisfying and the search stops.
+				As the search is performed from the highest possible fundamental to the lowest,
+				<m>ultmeandist</m> allows to avoid useless calculations
+				by immediately detecting "undisputably good" results,
+				especially when a single fundamental is needed.
+				The distance is expressed in midicents or hertz, according to the <m>raw</m> attribute.
+				The default is 12.5 midicents.
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Immediately Satisfying Distance Threshold" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
 	</attributelist>
 
 	<!--DISCUSSION-->
@@ -48,6 +302,22 @@
 		<seealso name="cage.rm" />
 		<seealso name="cage.timewarp" />
 	</seealsolist>
+
+	<misc name = "Input">
+		<entry name ="Inlet 1 (llll)">
+			<description>
+				Chord, roll or score to found the virtual fundamentals of.
+			</description>
+		</entry>
+	</misc>
+
+	<misc name = "Output">
+		<entry name ="Outlet 1 (llll)">
+			<description>
+				Resulting chord, roll or score.
+			</description>
+		</entry>
+	</misc>
 
 	<misc name = "Discussion">
 		<entry name ="More details">
