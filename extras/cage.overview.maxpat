@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 0,
+			"minor" : 0,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 43.0, 79.0, 937.0, 598.0 ],
+		"rect" : [ 228.0, 79.0, 937.0, 598.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -237,8 +237,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 0,
+							"minor" : 0,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -298,8 +298,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 1,
-											"revision" : 0,
+											"minor" : 0,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -765,8 +765,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 1,
-											"revision" : 0,
+											"minor" : 0,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1404,7 +1404,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 3442.0, 880.0, 79.0 ],
-									"text" : "The cage project has a strong pedagogical connotation: all the modules of the library are abstractions, lending themselves to be easily analyzed and modified. In this regards, all the tools in the library are intrinsically ‘open source’: although each implemented process is conceived for a typical, somehow standard usage, the advanced user will easily start from these abstractions and modify their behavior.\n\n© 2014-2017 • Andrea Agostini and Daniele Ghisi",
+									"text" : "The cage project has a strong pedagogical connotation: all the modules of the library are abstractions, lending themselves to be easily analyzed and modified. In this regards, all the tools in the library are intrinsically ‘open source’: although each implemented process is conceived for a typical, somehow standard usage, the advanced user will easily start from these abstractions and modify their behavior.\n\n© 2014-2019 • Andrea Agostini and Daniele Ghisi",
 									"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 								}
 
@@ -1954,6 +1954,13 @@
 				"bootpath" : "~/Documents/Max 7/Packages/bach/patchers",
 				"patcherrelativepath" : "../../bach/patchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cage_logo_web_h.png",
+				"bootpath" : "~/max-sdk-7.0.3/source/bach_additionalstuff/graphics/WebSite/images",
+				"patcherrelativepath" : "../../../../../max-sdk-7.0.3/source/bach_additionalstuff/graphics/WebSite/images",
+				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
