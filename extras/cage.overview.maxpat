@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 508.0, 266.0, 937.0, 598.0 ],
+		"rect" : [ 224.0, 150.0, 937.0, 598.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -237,8 +237,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -298,8 +298,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 5,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -765,8 +765,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 5,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1957,14 +1957,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "cage_logo_web_h.png",
-				"bootpath" : "~/max-sdk-7.0.3/source/bach_additionalstuff/graphics/WebSite/images",
-				"patcherrelativepath" : "../../../../../max-sdk-7.0.3/source/bach_additionalstuff/graphics/WebSite/images",
-				"type" : "PNG",
-				"implicit" : 1
+				"name" : "bach.hypercomment.mxo",
+				"type" : "iLaX"
 			}
 , 			{
-				"name" : "bach.hypercomment.mxo",
+				"name" : "bach.roll.mxo",
 				"type" : "iLaX"
 			}
 , 			{
