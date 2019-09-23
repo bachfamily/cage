@@ -63,14 +63,6 @@
 				Lambda inlet: modified chord
 			</digest>
 			<description>
-				A lambda inlet is an inlet receiving the answer from a test or modification performed on elements sent out the lambda outlets. <br />
-				In this case, the answer is expected to be a modification of the elements which had been sent out:
-				the element output via the lambda outlet can be customly modified and then plugged in into this lambda inlet:
-				such modification will be accounted for by the algorithm. <br />
-				The lambda inlet also accepts the result in llll form, so you can sometimes avoid the explicit @out t. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</inlet>
 	</inletlist>
@@ -103,14 +95,6 @@
 				Lambda outlet: current chord in gathered syntax
 			</digest>
 			<description>
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet may be customly modified, so that such modification will be taken into
-				account by the algorithm. To modify each element, just use patching and then plug into the lambda inlet the
-				modified version of the element. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</outlet>
 		<outlet id="4" type="INLET_TYPE">
@@ -120,14 +104,6 @@
 			<description>
 				For each lambda-output chord, all the function are sampled at its onset,
 				and the result are listed and output. <br />
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet may be customly modified, so that such modification will be taken into
-				account by the algorithm. To modify each element, just use patching and then plug into the lambda inlet the
-				modified version of the element. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</outlet>
 		<outlet id="5" type="INLET_TYPE">
@@ -138,14 +114,6 @@
 				If the original object was a <o>bach.roll</o>, for each lambda-output chord, its voice number
 				is output; if the original object was a <o>bach.score</o>, for each lambda-output chord its voice number
 				and measure number are output. <br />
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet may be customly modified, so that such modification will be taken into
-				account by the algorithm. To modify each element, just use patching and then plug into the lambda inlet the
-				modified version of the element. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</outlet>
 	</outletlist>
@@ -227,14 +195,6 @@
 		<entry name ="Inlet 6 (llll)">
 			<description>
 				Lambda inlet: modified chord.
-				A lambda inlet is an inlet receiving the answer from a test or modification performed on elements sent out the lambda outlets. <br />
-				In this case, the answer is expected to be a modification of the elements which had been sent out:
-				the element output via the lambda outlet can be customly modified and then plugged in into this lambda inlet:
-				such modification will be accounted for by the algorithm. <br />
-				The lambda inlet also accepts the result in llll form, so you can sometimes avoid the explicit @out t. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</entry>
 	</misc>
@@ -258,14 +218,6 @@
 		<entry name ="Outlet 4 (llll)">
 			<description>
 				Lambda outlet: current chord in gathered syntax.
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet may be customly modified, so that such modification will be taken into
-				account by the algorithm. To modify each element, just use patching and then plug into the lambda inlet the
-				modified version of the element. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</entry>
 		<entry name ="Outlet 5 (llll)">
@@ -273,14 +225,6 @@
 				Lambda outlet: current function values in gathered syntax.
 				For each lambda-output chord, all the function are sampled at its onset,
 				and the result are listed and output. <br />
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet may be customly modified, so that such modification will be taken into
-				account by the algorithm. To modify each element, just use patching and then plug into the lambda inlet the
-				modified version of the element. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</entry>
 		<entry name ="Outlet 6 (llll)">
@@ -289,14 +233,6 @@
 				If the original object was a <o>bach.roll</o>, for each lambda-output chord, its voice number
 				is output; if the original object was a <o>bach.score</o>, for each lambda-output chord its voice number
 				and measure number are output. <br />
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet may be customly modified, so that such modification will be taken into
-				account by the algorithm. To modify each element, just use patching and then plug into the lambda inlet the
-				modified version of the element. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</entry>
 	</misc>

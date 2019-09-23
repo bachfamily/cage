@@ -384,7 +384,7 @@
     ]
   },
   "cage.sdif.chordseq.toroll": {
-    "digest": "Import a partial tracking SDIF analysis into a <o>bach.roll</o>",
+    "digest": "Import a chord sequence SDIF analysis into a <o>bach.roll</o>",
     "module": "cage",
     "category": [
       "cage",

@@ -18,7 +18,7 @@
 	cageproject
 	
 	@digest 
-	Import a partial tracking SDIF analysis into a <o>bach.roll</o> 
+	Import a chord sequence SDIF analysis into a <o>bach.roll</o> 
 	
 	@description
 	Imports and displays a chord sequence SDIF analysis into a <o>bach.roll</o> object. 
