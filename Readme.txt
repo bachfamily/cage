@@ -23,6 +23,8 @@ You should install cage directly from the Max Package Manager.
 
 Alternatively, you can copy the "cage" folder inside the "Packages" folder in your Max folder. The Max packages folder is under "Documents/Max 7" (for Max 7) or "Documents/Max 8" (for Max 8).
 
+You can obtain cage from Github, at the URL https://github.com/bachfamily/cage
+
 You also should install the bach package, also from the Max Package Manager.
 
 
@@ -48,7 +50,7 @@ ACKNOWLEDGMENTS
 
 This project has been conceived and developed within the framework of a research residency at the Haute École de Musique in Geneva, a branch of the HES-SO (Haute École Specialisée de la Suisse Occidentale).
 
-cage is dedicated to the memory of Éric Daubresse, the very initiator of this project, whom we miss achingly.
+cage is dedicated to the memory of Éric Daubresse, the very initiator of this project, whom we miss so much.
 
 
 ===================================================

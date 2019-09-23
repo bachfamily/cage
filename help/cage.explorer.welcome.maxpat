@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -49,7 +49,7 @@
 					"id" : "obj-2",
 					"legend" : 0,
 					"lockcolor" : [ 0.701960784313725, 0.031372549019608, 0.031372549019608, 1.0 ],
-					"loop" : [ 0, 1000 ],
+					"loop" : [ 0.0, 1000.0 ],
 					"maxclass" : "bach.roll",
 					"notecolor" : [ 0.5, 0.5, 0.5, 1.0 ],
 					"numinlets" : 6,
@@ -85,7 +85,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 302.0, 290.5, 206.0, 65.0 ],
-					"text" : "cage is dedicated \nto the memory of Éric Daubresse, \nthe very initiator of this project, \nwhom we miss achingly",
+					"text" : "cage is dedicated \nto the memory of Éric Daubresse, \nthe very initiator of this project, \nwhom we miss so much",
 					"textcolor" : [ 0.5, 0.5, 0.5, 1.0 ],
 					"textjustification" : 2
 				}
