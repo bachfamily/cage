@@ -83,6 +83,7 @@ These might break compatibility with older patches
 			dynamic transposition and freqshift added, but NOT dynamic freqshift for scores, nor transposition for tails support
 
 - cage.spacer		now accepts null
+			multiple insertion points are dealt correctly with
 
 - cage.granulate	now accepts "grain" message
 
