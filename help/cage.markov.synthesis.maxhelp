@@ -794,6 +794,21 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"id" : "obj-5",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 488.5, 446.5, 216.5, 36.0 ],
+									"text" : "You can send the \"clear\" message either in the first or in the third inlet",
+									"textcolor" : [ 0.5, 0.5, 0.5, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"bubble" : 1,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
@@ -801,8 +816,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 425.5, 516.0, 158.0, 25.0 ],
-									"presentation_linecount" : 4,
+									"patching_rect" : [ 425.5, 486.0, 158.0, 25.0 ],
 									"text" : "Set sequence of states"
 								}
 
@@ -814,8 +828,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 346.0, 516.0, 76.0, 23.0 ],
-									"presentation_linecount" : 2,
+									"patching_rect" : [ 346.0, 486.0, 76.0, 23.0 ],
 									"text" : "clear, 60 62"
 								}
 
@@ -829,7 +842,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 409.5, 482.0, 77.0, 25.0 ],
+									"patching_rect" : [ 409.5, 452.0, 77.0, 25.0 ],
 									"text" : "Set state"
 								}
 
@@ -841,7 +854,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 346.0, 482.0, 58.0, 23.0 ],
+									"patching_rect" : [ 346.0, 452.0, 58.0, 23.0 ],
 									"text" : "clear, 60"
 								}
 
@@ -855,7 +868,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 393.0, 444.0, 150.0, 25.0 ],
+									"patching_rect" : [ 393.0, 419.0, 150.0, 25.0 ],
 									"text" : "Restart from scratch"
 								}
 
@@ -869,7 +882,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 346.0, 444.0, 39.0, 23.0 ],
+									"patching_rect" : [ 346.0, 419.0, 39.0, 23.0 ],
 									"text" : "clear"
 								}
 
@@ -1213,7 +1226,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-19", 2 ],
+									"destination" : [ "obj-19", 0 ],
+									"midpoints" : [ 355.5, 448.0, 31.0, 448.0 ],
 									"source" : [ "obj-4", 0 ]
 								}
 
