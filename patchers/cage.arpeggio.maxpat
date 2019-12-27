@@ -430,7 +430,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 306.0, 206.0, 57.0, 22.0 ],
+									"patching_rect" : [ 315.75, 223.0, 57.0, 22.0 ],
 									"text" : "zl slice 1"
 								}
 
@@ -440,12 +440,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-9",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 238.0, 179.0, 342.0, 22.0 ],
-									"text" : "regexp (7jam|7nim|7mid|mid|7m|7M|7|9|11|31|m|M|gua)([\\\\S]+)"
+									"patching_rect" : [ 238.0, 179.0, 330.0, 35.0 ],
+									"text" : "regexp (7jam|7nim|7mid|7gua|mid|7m|7M|7|9|11|31|m|M|gua)([\\\\S]+)"
 								}
 
 							}
