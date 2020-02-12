@@ -70,11 +70,20 @@ void main_foo() {
 
 llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 
-CLASS_ATTR_DOUBLE(c, "diapason", 0, t_freqshift, diapason);
-CLASS_ATTR_STYLE_LABEL(c,"diapason",0,"text","Reference Tuning Pitch");
-// @description Sets the tuning for the reference diapason A. Defaults to 440.
+	CLASS_ATTR_DOUBLE(c, "diapason", 0, t_freqshift, diapason);
+	CLASS_ATTR_STYLE_LABEL(c,"diapason",0,"text","Reference Tuning Pitch");
+	// @description Sets the tuning for the reference diapason A. Defaults to 440.
 
+	CLASS_ATTR_LONG(c, "normalize", 0, t_freqshift, normalize);
+	CLASS_ATTR_LABEL(c,"normalize",0,"Time Coordinate Is Between 0 And 1");
+	CLASS_ATTR_BASIC(c,"normalize",0);
+	// @description Toggles the ability to normalize the time coordinate 
+	// between 0 (beginninng of score) and 1 (end of score).
 
+	CLASS_ATTR_LONG(c, "tails", 0, t_freqshift, dl);
+	CLASS_ATTR_LABEL(c,"tails",0,"Process Duration Lines");
+	CLASS_ATTR_BASIC(c,"tails",0);
+	// @description Toggles the ability to also process tails for notes without breakpoints
 }
 
 // ---------------

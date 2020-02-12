@@ -122,6 +122,19 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
+		<attribute name="normalize" get="1" set="1" type="int" size="1">
+			<digest>
+				Time Coordinate Is Between 0 And 1
+			</digest>
+			<description>
+				Toggles the ability to normalize the time coordinate
+				between 0 (beginninng of score) and 1 (end of score).
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Time Coordinate Is Between 0 And 1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
 		<attribute name="out" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Outlet Types
@@ -132,6 +145,18 @@
 				<attribute name="category" get="1" set="1" type="symbol" size="1" value="Behavior" />
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Outlet Types" />
 				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
+			</attributelist>
+		</attribute>
+		<attribute name="tails" get="1" set="1" type="int" size="1">
+			<digest>
+				Process Duration Lines
+			</digest>
+			<description>
+				Toggles the ability to also process tails for notes without breakpoints
+			</description>
+			<attributelist>
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Process Duration Lines" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
