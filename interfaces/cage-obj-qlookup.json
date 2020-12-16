@@ -112,7 +112,7 @@
     ]
   },
   "cage.join": {
-    "digest": "Join rolls",
+    "digest": "Join scores",
     "module": "cage",
     "category": [
       "cage",
