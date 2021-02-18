@@ -36,7 +36,7 @@
 	join, combine, voice, measured, proportional
 
 	@seealso
-	cage.mix, cage.join, bach.roll, bach.score, bach.join
+	cage.separatevoices, cage.mix, cage.join, bach.roll, bach.score, bach.join
 	
 	@owner
 	Daniele Ghisi
@@ -87,7 +87,7 @@ CLASS_ATTR_BASIC(c,"    ",0);
 // ---------------
 
 // @in 0 @type llll @digest List of bach.score's or bach.roll's gathered syntaxes 
-// @description The llll musc contain the bach.roll's or bach.score's gathered syntax,
+// @description The llll must contain the bach.roll's or bach.score's gathered syntax,
 // one level of parenthesis for each one of them (so, for instance, you can append their dump 
 // output via a <o>bach.join</o> with <m>inwrap</m> 1).
 
