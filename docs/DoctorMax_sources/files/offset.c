@@ -8,6 +8,9 @@
 	@realname 
 	cage.offset
 
+	@hiddenalias
+	cage.shift
+
 	@type
 	abstraction
 	
@@ -18,29 +21,25 @@
 	cageproject
 	
 	@digest 
-	Insert time at the beginning of a score
+	Insert or delete time at the beginning of a score
 	
 	@description
-	<o>cage.offset</o> allows inserting time at the beginning of a roll or score.
-
+	Perform a time-wise shift of all the content in a <o>bach.roll</o> or <o>bach.score</o>
+ 
 	@discussion
-
-	@status
-	deprecated
-
+ 
 	@category
 	cage, cage scores
 
 	@keywords
-	silence, insert, offset, beginning, score, space, roll, split
+	shift, move, offset, roll, score
  
 	@seealso
-	cage.spacer, cage.wedge
+	cage.rot, cage.rev, cage.inv	
 	
 	@owner
 	Daniele Ghisi
 */
-
 
 
 // ---------------
@@ -48,52 +47,58 @@
 // ---------------
 
 // @method llll @digest Function depends on inlet
-// @description <o>cage.offset</o> expects a roll or score gathered syntax
-// in the first inlet, which will be offset. The offset amount is specified
-// by the <m>llll</m> received in the second inlet (in milliseconds for 
-// <o>bach.roll</o>; in measure for <o>bach.score</o> if it is a single integer,
-// in <m>measures</m> <m>symbolic_units</m> if it is a list of 2 elements).
-// For instance, if the <m>llll</m> in the second inlet is <m>3 1/4</m> the offset will
-// be 3 measures and then a 1/4 rest; if the second inlet receives <m>0 716/16</m>, the
-// offset will be <m>716/16</m> (no matter how many measures this will span).
-// The roll or score with offset will then be output. <br />
+// @description An <m>llll</m> in the first inlet is considered as 
+// the <o>bach.roll</o> or <o>bach.score</o> gathered syntax. The shift
+// operation is performed and the modified gathered syntax is output through the outlet.
+// The output header content is the same as the input header content. <br />
+// An <m>llll</m> in the second inlet is converted to <m>int</m> or <m>list</m> (see corresponding messages)
 
-// @method number @digest In second inlet: sets the offset amount (in milliseconds for 
-// <o>bach.roll</o>; in measures for <o>bach.score</o>, more possibilities are
-// given via the <m>llll</m> method).
+// @method int @digest Set offset
+// @description An <m>int</m> in the second inlet sets the time shift amount in milliseconds (for <o>bach.roll</o>)
+// or in measures (for <o>bach.score</o>)
 
-// @method bang @digest Output result
-// @description Output the score obtained from the most recently received input data.
+// @method list @digest Set offset
+// @description A <m>list</m> in the second inlet sets the time shift amount for <o>bach.score</o> in the form
+// <b><m>num_measures</m> <m>symbolic_offset</m></b>. For instance, a shift of <b>2 17/8</b> will add 2 empty
+// measure at the beginning and then also shift everything by 17/8. The added measures will receive the 
+// same time signature as the first measure, whereas the further symbolic offset will be simply processed
+// without changing time signatures.
 
+// @method bang @digest Output shifted score
+// @description Outputs result of the last shift.
+
+
+// ---------------
+// ATTRIBUTES
+// ---------------
 
 void main_foo() {
-	
-	llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
+
+llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 
 }
-
 
 // ---------------
 // INLETS
 // ---------------
 
-// @in 0 @type score @digest Roll or score which will be offset
-// @in 1 @type number @digest Offset time 
-// @description The offset time is in milliseconds for <o>bach.roll</o>, 
-// in measures, or measures and symbolic units, for <o>bach.score</o>.
+// @in 0 @type llll @digest Original score
+
+
 
 // ---------------
 // OUTLETS
 // ---------------
 
-// @out 0 @type score @digest Resulting roll or score
+// @out 0 @type llll @digest Shifted score
+
 
 
 // ---------------
 // ARGUMENTS
 // ---------------
 
-// @arg 0 @name offset @optional 1 @type number @digest Initial offset
-// @description The optional argument sets the initial offset.
-// The offset time is in milliseconds for <o>bach.roll</o>, 
-// in measures, or measures and symbolic units, for <o>bach.score</o>.
+// @arg 0 @name offset @optional 1 @type number @digest Offset  
+// @description The optional argument sets the shift offset in milliseconds (for <o>bach.roll</o>) or in 
+// number of measures (for <o>bach.score</o>), or even in the form <b><m>num_measures</m> <m>symbolic_offset</m></b> 
+// (for <o>bach.score</o>, see message <m>list</m>).

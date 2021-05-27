@@ -1,5 +1,5 @@
 {
 	"maxdb" : {
-		"exclusions" : ["cage.fm.core","cage.rm.core","cage.virtfund.core","cage.ezsynth_poly","cage.ezsampler_poly","cage.meta.autoinstance_poly", "cage.meta.help.patch1.maxpat", "cage.meta.help.patch2.maxpat", "cage.meta.help.patch3.maxpat", "cage.inferheadersyms", "cage.checkbachversion", "cage.offset"]
+		"exclusions" : ["cage.fm.core","cage.rm.core","cage.virtfund.core","cage.ezsynth_poly","cage.ezsampler_poly","cage.meta.autoinstance_poly", "cage.meta.help.patch1.maxpat", "cage.meta.help.patch2.maxpat", "cage.meta.help.patch3.maxpat", "cage.inferheadersyms", "cage.checkbachversion", "cage.shift", "cage.extract"]
 	}
 }

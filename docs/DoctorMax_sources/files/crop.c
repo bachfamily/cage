@@ -1,11 +1,14 @@
 /**
 	@file
-	extract.c
+	crop.c
 	
 	@name 
-	cage.extract
+	cage.crop
 	
 	@realname 
+	cage.crop
+
+	@hiddenalias
 	cage.extract
 
 	@type
@@ -31,7 +34,7 @@
 	cage, cage scores
 
 	@keywords
-	extract, subroll, roll, subscore, score, crop, portion
+	crop, extract, subroll, roll, subscore, score, portion
  
 	@seealso
 	cage.slice
@@ -71,17 +74,17 @@ void main_foo() {
 
 llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 
-CLASS_ATTR_CHAR(c, "startmarker", 0, t_extract, startmarker); 
+CLASS_ATTR_CHAR(c, "startmarker", 0, t_crop, startmarker); 
 CLASS_ATTR_STYLE_LABEL(c,"startmarker",0,"text","Add Start Marker");
 CLASS_ATTR_BASIC(c,"startmarker",0);
 // @description Add a starting marker for the cropped portion (only for <o>bach.roll</o> content). By default it is off.
 
-CLASS_ATTR_CHAR(c, "endmarker", 0, t_extract, endmarker); 
+CLASS_ATTR_CHAR(c, "endmarker", 0, t_crop, endmarker); 
 CLASS_ATTR_STYLE_LABEL(c,"endmarker",0,"text","Add End Marker");
 CLASS_ATTR_BASIC(c,"endmarker",0);
 // @description Add an ending marker for the cropped portion (only for <o>bach.roll</o> content). By default it is off.
 
-CLASS_ATTR_CHAR(c, "ceilmeasures", 0, t_extract, ceilmeasures); 
+CLASS_ATTR_CHAR(c, "ceilmeasures", 0, t_crop, ceilmeasures); 
 CLASS_ATTR_STYLE_LABEL(c,"ceilmeasures",0,"text","Ceil Measures To Crop Length");
 CLASS_ATTR_BASIC(c,"ceilmeasures",0);
 // @description Force ending score to have the length given by the region extremes (if both extremes are positive).

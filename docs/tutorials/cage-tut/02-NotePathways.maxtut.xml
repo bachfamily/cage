@@ -12,7 +12,6 @@
 <header>Tutorial 2: Note Pathways</header>
 
 <body>In this tutorial, we will learn how to randomly produce note walks in real-time, where notes are taken from a given harmonic reservoir.</body>
-<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
 
 
 <subhead>Real-time or off-line generation?</subhead>

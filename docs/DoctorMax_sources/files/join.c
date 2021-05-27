@@ -18,7 +18,7 @@
 	cageproject
 	
 	@digest 
-	Join rolls
+	Join scores
 	
 	@description
 	Concatenates a sequence of <o>bach.roll</o> (possibly glueing boundary notes) or <o>bach.score</o> together

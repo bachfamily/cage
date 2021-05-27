@@ -13,8 +13,6 @@
 
 <body>In this tutorial, we will build a more advanced example of L-system, constructing a fractal-like rhythmic figure, via <o>cage.chain</o>. In order to follow this tutorial you should be familiar with the L-systems tutorial, which introduces the usage of <o>cage.chain</o>.</body>
 
-<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
-
 
 <subhead>Fractals and L-systems</subhead>
 

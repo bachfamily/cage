@@ -13,7 +13,6 @@
 
 <body>In this tutorial, we will learn how to calculate the virtual fundamental of a chord, or the sequence of virtual fundamentals of all the chords in a score. We will also see that the algorithm that calculates a virtual fundamental can come handy in other, seemingly unrelated cases as well.
 </body>
-<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
 
 <subhead>Fundamentals</subhead>
 

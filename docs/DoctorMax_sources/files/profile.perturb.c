@@ -92,6 +92,6 @@ llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 // ARGUMENTS
 // ---------------
 
-// @arg 0 @name max_perturbation @optional 1 @type float @digest Maximum perturbation
+// @arg 0 @name max_perturbation @optional 1 @type int @digest Maximum perturbation
 // @description The optional argument sets the initial maximum 
-// perturbation (in midicents).
+// perturbation (in cents). The perturbation must be an integer number.

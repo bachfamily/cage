@@ -18,7 +18,7 @@
 	cageproject
 	
 	@digest 
-	Remap the voices of a roll
+	Remap the voices of a score
 	
 	@description
 	<o>cage.remapvoices</o> allows remapping the voices of a roll or a score,

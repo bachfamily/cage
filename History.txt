@@ -1,3 +1,107 @@
+v 0.6
+
+*********************
+*** COMPATIBILITY ***
+*********************
+
+cage 0.6 requires bach 0.8.1.
+
+
+**********************
+*** LICENSE CHANGE ***
+**********************
+
+cage 0.6 is distributed under the GPLv3 license.
+
+
+*************************
+*** IMPORTANT CHANGES ***
+*************************
+
+These might break compatibility with older patches
+
+- cage.agogics		the sample attribute now defaults to 100
+
+
+
+***********************
+*** VERSION CHANGES ***
+***********************
+
+- cage.combinevoices, cage.stretch, cage.length, cage.volume
+			new modules
+
+- all modules		added check for consistency of bach version
+
+- most modules		disabled undo in contained bach.roll and bach.score objects
+			cold inlets appear blue
+			uniformed @tuning attribute added where relevant (backward compatibility preserved)
+			changed bach.mcapprox dependencies to bach.approx
+
+- documentation		fixed Max8 issue in tutorials overview causing broken links to tutorials
+			updated documentation, help and tutorials for square brackets
+			fixed mistakes and typos in tutorials
+
+- cage.shift		still existing but deprecated: should be replaced by cage.offset
+
+- cage.extract		still existing but deprecated: should be replaced by cage.crop
+
+- cage.timewarp		rewritten integration mechanism: solved several issues with @order 1
+			now works with empty voices
+			now retains voice flags
+
+- cage.rm, cage.fm	fixed score-score case
+			updated assist
+
+- cage.rhythminterp	now can return rationals
+			fixed documentation
+
+- cage.remapvoices	now remaps clefs, keys and names too
+			unused voices are removed from rolls
+
+- cage.dynamics		no more spurious notes appearing when a chord is partially deleted
+
+- cage.agogics		the sample attribute now defaults to 100
+
+- cage.virtfund		completed documentation
+			now impossible chords from bach.score are returned as rests rather than random notes
+
+- cage.ezsynth~		fixed bug ausing wrong playback of breakpoints with velocities
+
+- cage.arpeggio		fixed bug causing wrong arpeggi
+			downwards arpeggios are supported
+
+- cage.scale 		now makes downward scales when start note > end note
+
+- cage.harmser		added @numpartial attribute
+
+- cage.transp		fixed subpatch opening
+			fixed various issues
+			now works correctly on breakpoints and tails in bach.roll
+
+- cage.freqshift	now works correctly on breakpoints and tails in bach.roll
+			dynamic transposition and freqshift added, but NOT dynamic freqshift for scores, nor transposition for tails support
+
+- cage.spacer		now accepts null
+			multiple insertion points are dealt correctly with
+
+- cage.granulate	now accepts "grain" message
+
+- cage.rev		added @dl attribute
+			now works with the new temporalmode of bach slots
+
+- cage.life		updated documentation for new matrix slot syntax, without additional llll level
+
+- cage.mix		added documentation
+
+- cage.meta.engine	fixed quirk with the new bach version: now outputs some messages as plain text and not in native form
+
+- Earthworms tutorial	now melodic profile function is correctly imported at each run
+
+
+
+
+
 v. 0.5.1
 
 *************************
@@ -8,6 +112,13 @@ These might break compatibility with older patches
 - cage.transp			@tail attribute no longer exists. 
 					Duration lines are always precessed, unless disabled via the new @dl attribute. 
 					Please update your patches
+
+- cage.extract is now cage.crop	This should not break compatibility with older patches, as cage.extract still remains as hidden alias
+
+- cage.shift and cage.offset are merged into simply cage.offset
+				cage.shift remains as hidden alias of cage.offset, but you should use cage.offset instead
+				Verify your patches, since the two patches differ slightly
+
 
 
 ***********************

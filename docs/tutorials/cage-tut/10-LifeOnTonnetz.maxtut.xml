@@ -13,8 +13,6 @@
 
 <body>In this tutorial, we will build a 2D cellular automata whose cells will coincide with the vertex of a tonnetz. You might want to follow the L-systems tutorial (covering the 1D case) before approaching this subject: such tutorial will also explain some intricacies (as padding), which also apply in the 2D case.</body>
 
-<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
-
 
 <subhead>The tonnetz</subhead>
 

@@ -56,14 +56,6 @@
 				Lambda inlet
 			</digest>
 			<description>
-				A lambda inlet is an inlet receiving the answer from a test or modification performed on elements sent out the lambda outlets. <br />
-				In this case, the answer is in a 0/1 form: if the element output from the lambda outlet is accepted
-				(according to your needs, defined in the lambda loop),
-				this inlet should receive a 1; otherwise it should receive a 0. <br />
-				The lambda inlet also accepts the 0/1 result in a native llll form, so you can sometimes avoid the explicit @out t. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</inlet>
 	</inletlist>
@@ -95,13 +87,6 @@
 			<description>
 				Each pitch candidate is output through the lambda outlet, so that you can
 				define a patching criterium to accept or refuse such candidate.
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet have to be tested in order to know if they are accepted:
-				in the first case, you should return a 1 into the lambda inlet, in the second case you should return a 0. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</outlet>
 	</outletlist>
@@ -167,14 +152,6 @@
 				MIDI note is accepted, or 0 if another note should be randomly extracted.
 				Indeed, when a <m>bang</m> is received, the candidate pitch is output
 				through the lambda outlet (second outlet).
-				A lambda inlet is an inlet receiving the answer from a test or modification performed on elements sent out the lambda outlets. <br />
-				In this case, the answer is in a 0/1 form: if the element output from the lambda outlet is accepted
-				(according to your needs, defined in the lambda loop),
-				this inlet should receive a 1; otherwise it should receive a 0. <br />
-				The lambda inlet also accepts the 0/1 result in a native llll form, so you can sometimes avoid the explicit @out t. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</method>
 		<method name="llll">
@@ -285,14 +262,6 @@
 		<entry name ="Inlet 5 (int/llll)">
 			<description>
 				Lambda inlet.
-				A lambda inlet is an inlet receiving the answer from a test or modification performed on elements sent out the lambda outlets. <br />
-				In this case, the answer is in a 0/1 form: if the element output from the lambda outlet is accepted
-				(according to your needs, defined in the lambda loop),
-				this inlet should receive a 1; otherwise it should receive a 0. <br />
-				The lambda inlet also accepts the 0/1 result in a native llll form, so you can sometimes avoid the explicit @out t. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</entry>
 	</misc>
@@ -317,13 +286,6 @@
 				Lambda Outlet.
 				Each pitch candidate is output through the lambda outlet, so that you can
 				define a patching criterium to accept or refuse such candidate.
-				A lambda outlet is an outlet outputting an element on which some test or modification must be performed.
-				The result of the test or modification is then expected in a lambda inlet. <br />
-				In this case, the elements output from the lambda outlet have to be tested in order to know if they are accepted:
-				in the first case, you should return a 1 into the lambda inlet, in the second case you should return a 0. <br />
-				It is important to know that the evaluation chain inside the lambda loop must be direct: you can't use objects such as <o>delay</o>,
-				<o>pipe</o>, <o>defer</o>; nor store the value anywhere waiting for some other event to trigger it. Also see #lambda in the bach Help Center.
-				<br /> <br />
 			</description>
 		</entry>
 	</misc>

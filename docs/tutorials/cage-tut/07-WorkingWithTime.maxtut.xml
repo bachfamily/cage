@@ -13,8 +13,6 @@
 
 <body>In this tutorial, we will learn how to alter the temporal aspect of the score contained in a <o>bach.roll</o> objects with a variety of approaches.</body>
 
-<body><openpatchlink>Open the tutorial patch</openpatchlink></body>
-
 <subhead>Frameworks</subhead>
 
 <body>As we know, the <b>bach</b> library essentially provides two types of time representation: measured time, with measures, rests, tempi and note duration on one hand; and non-measured time, without all these notions, but rather a generic concept of "onset", that is, the moment in time at which a given event starts, and "duration". In fact, this latter representation is simpler but at the same time far more flexible, as it allows virtually any possible operation upon time, whereas the former - although almost ubiquitous in Western music - offers much more resistance to advanced manipulation. These two representations are then reflected in the opposition between the two score editors of <o>bach</o>: <o>bach.score</o> on one hand, for measured time, and <o>bach.roll</o> on the other, for non-measured time.</body>
