@@ -110,6 +110,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Distance Threshold" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -128,6 +129,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Influence Of Distance On Score" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -143,6 +145,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Number Of Fundamentals" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -160,6 +163,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Distance Threshold" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -177,6 +181,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Mean Distance Threshold" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -191,6 +196,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Lowest Virtual Fundamental Threshold" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -203,6 +209,7 @@
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="symbol" size="1" value="Behavior" />
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Outlet Types" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
@@ -223,6 +230,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Influence Of Pitch On Score" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -245,6 +253,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Maximum Distance Threshold" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -265,6 +274,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Immediately Satisfying Distance Threshold" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
