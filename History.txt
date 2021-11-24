@@ -20,6 +20,8 @@ multiple modules: fixed doc
 
 - cage.offset: now accepts rationals in second inlets
 
+- cage.ezsynth~: number of partials augmented with @zlmaxsize 32767
+
 
 v 0.6
 
