@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 47.0, 79.0, 704.0, 615.0 ],
+		"rect" : [ 373.0, 79.0, 704.0, 615.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -747,7 +747,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 47.0, 105.0, 704.0, 589.0 ],
+						"rect" : [ 373.0, 105.0, 704.0, 589.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -777,6 +777,21 @@
 						"showontab" : 1,
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 212.0, 392.0, 77.0, 23.0 ],
+									"saved_object_attributes" : 									{
+										"versionnumber" : 80104
+									}
+,
+									"text" : "bach.print A"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-3",
 									"linecount" : 3,
@@ -1001,7 +1016,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 145.0, 522.0, 347.5, 23.0 ],
-									"text" : "\" upy , sst , meyrasiney nesthinovelt u bot Tighe a\""
+									"text" : "\"sestbtb  ;dgngaahwsbat ush o  s neubpfrhen: unt ll\""
 								}
 
 							}
@@ -1265,6 +1280,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-10", 1 ],
+									"order" : 0,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"order" : 1,
 									"source" : [ "obj-6", 0 ]
 								}
 
