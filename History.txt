@@ -1,3 +1,28 @@
+v 0.6.5
+
+***********************
+*** VERSION CHANGES ***
+***********************
+
+- 'cage.arpeggio: fixed bug causing wrong behavior with aug7 chords
+
+
+
+v 0.6.4
+
+***********************
+*** VERSION CHANGES ***
+***********************
+
+multiple modules: fixed doc
+
+- cage.join: removed vestigial prints
+
+- cage.offset: now accepts rationals in second inlets
+
+- cage.ezsynth~: number of partials augmented with @zlmaxsize 32767
+
+
 v 0.6
 
 *********************

@@ -46,6 +46,7 @@ max oblist "cage abstractions" cage.profile.filter;
 max oblist "cage abstractions" cage.virtfund;
 max oblist "cage abstractions" cage.ezsampler~;
 max oblist "cage abstractions" cage.profile.snap;
+max oblist "cage abstractions" cage.separatevoices;
 max oblist "cage abstractions" cage.repeat;
 max oblist "cage abstractions" cage.chain;
 max oblist "cage abstractions" cage.sdif.ptrack.pack;
