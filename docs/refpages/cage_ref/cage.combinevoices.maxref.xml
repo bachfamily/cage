@@ -28,7 +28,7 @@
 				List of bach.score's or bach.roll's gathered syntaxes
 			</digest>
 			<description>
-				The llll musc contain the bach.roll's or bach.score's gathered syntax,
+				The llll must contain the bach.roll's or bach.score's gathered syntax,
 				one level of parenthesis for each one of them (so, for instance, you can append their dump
 				output via a <o>bach.join</o> with <m>inwrap</m> 1).
 			</description>
@@ -89,6 +89,7 @@
 				if you don't want to have any commands output.
 			</description>
 			<attributelist>
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -100,6 +101,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Preserve Commands" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -114,6 +116,7 @@
 			</description>
 			<attributelist>
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Preserve Slotinfo" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
 		</attribute>
@@ -128,6 +131,7 @@
 
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name="cage.separatevoices" />
 		<seealso name="cage.mix" />
 		<seealso name="cage.join" />
 		<seealso name="bach.roll" />
@@ -139,7 +143,7 @@
 		<entry name ="Inlet 1 (llll)">
 			<description>
 				List of bach.score's or bach.roll's gathered syntaxes.
-				The llll musc contain the bach.roll's or bach.score's gathered syntax,
+				The llll must contain the bach.roll's or bach.score's gathered syntax,
 				one level of parenthesis for each one of them (so, for instance, you can append their dump
 				output via a <o>bach.join</o> with <m>inwrap</m> 1).
 			</description>

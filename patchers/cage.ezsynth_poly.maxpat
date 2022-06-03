@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-31",
@@ -56,8 +57,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 122.916663999999997, 372.0, 51.0, 22.0 ],
-					"text" : "zl.group"
+					"patching_rect" : [ 122.916663999999997, 372.0, 156.0, 22.0 ],
+					"text" : "zl.group @zlmaxsize 32767"
 				}
 
 			}
@@ -536,8 +537,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -570,6 +571,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -1675,8 +1677,8 @@
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "int" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "int", "int" ],
 					"patching_rect" : [ 122.916663999999997, 114.0, 58.0, 22.0 ],
 					"text" : "thispoly~"
 				}
@@ -1854,7 +1856,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 1 ],
-					"midpoints" : [ 372.5, 227.0, 497.0, 227.0, 497.0, 388.0, 192.416655999999989, 388.0 ],
+					"midpoints" : [ 372.5, 227.0, 497.0, 227.0, 497.0, 398.0, 192.416655999999989, 398.0 ],
 					"source" : [ "obj-3", 1 ]
 				}
 
@@ -1862,7 +1864,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 1 ],
-					"midpoints" : [ 265.5, 227.0, 497.0, 227.0, 497.0, 387.0, 192.416655999999989, 387.0 ],
+					"midpoints" : [ 265.5, 227.0, 497.0, 227.0, 497.0, 399.0, 192.416655999999989, 399.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
