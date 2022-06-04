@@ -1,0 +1,46 @@
+# Binaries #
+############
+extensions/*
+externals/*
+*.mxo
+*.mxe
+*.mxe64
+*.a
+
+# Temp build locations #
+source/vs/vs_stuff/*
+source/vs/.vs/*
+**/macosxbuild/*
+
+
+# OS generated files #
+######################
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# XCode User Data #
+###################
+*.xcworkspace
+**/xcuserdata/*
+*.pbxuser
+*.mode*
+
+# Visual Studio User Data #
+###########################
+*.vcxproj.user
+UpgradeLog.htm
+*.aps
+
+# Emacs temp files for .gitignore and .gitattributes #
+######################################################
+.g*~
+
+
+# Folders #
+###########
+# docs/refpages/*
