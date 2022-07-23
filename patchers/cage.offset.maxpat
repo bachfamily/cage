@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 5,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 1217.0, 609.0 ],
+		"rect" : [ 34.0, 100.0, 1217.0, 609.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -108,8 +108,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -407,8 +407,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -766,8 +766,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1020,8 +1020,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1274,8 +1274,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1591,8 +1591,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1754,7 +1754,7 @@
 									"stafflines" : [ 5, 5, 5, 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"treehandling" : 0,
-									"versionnumber" : 80104,
+									"versionnumber" : 80105,
 									"voicenames" : [ "[", "]", "[", "]", "[", "]", "[", "]" ],
 									"voicespacing" : [ 0.0, 26.0, 26.0, 26.0, 26.0 ],
 									"vzoom" : 50.0
@@ -1934,8 +1934,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2472,7 +2472,7 @@
 					"stafflines" : [ 5, 5, 5, 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"treehandling" : 0,
-					"versionnumber" : 80104,
+					"versionnumber" : 80105,
 					"voicenames" : [ "[", "]", "[", "]", "[", "]", "[", "]" ],
 					"voicespacing" : [ 0.0, 26.0, 26.0, 26.0, 26.0 ],
 					"vzoom" : 50.0
@@ -2603,8 +2603,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2779,8 +2779,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2922,8 +2922,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3065,8 +3065,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3251,8 +3251,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 5,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3615,7 +3615,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "float: Transposition (Midicents)",
+					"comment" : "float/llll: Offset",
 					"cool" : 1,
 					"id" : "obj-64",
 					"index" : 2,
@@ -3692,7 +3692,7 @@
 					"pitcheditrange" : [ "null" ],
 					"stafflines" : [ 5, 5, 5, 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"versionnumber" : 80104,
+					"versionnumber" : 80105,
 					"voicenames" : [ "[", "]", "[", "]", "[", "]", "[", "]" ],
 					"voicespacing" : [ 0.0, 17.0, 17.0, 17.0, 17.0 ],
 					"vzoom" : 50.0
