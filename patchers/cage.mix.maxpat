@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 3,
-			"revision" : 1,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -166,7 +166,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 3,
-							"revision" : 1,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -473,7 +473,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 3,
-							"revision" : 1,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -937,30 +937,37 @@
 , 			{
 				"box" : 				{
 					"bwcompatibility" : 70904,
+					"clefs" : [ "G", "G", "G", "G", "G", "FG", "F", "F", "F" ],
 					"constraintbeamsinspaces" : 0,
 					"defaultnoteslots" : [ "null" ],
 					"embed" : 0,
+					"enharmonictable" : [ "default", "default", "default", "default", "default", "default", "default", "default", "default" ],
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"hidevoices" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 					"id" : "obj-79",
+					"keys" : [ "CM", "CM", "CM", "CM", "CM", "CM", "CM", "CM", "CM" ],
 					"legend" : 0,
 					"linkdynamicstoslot" : 0,
-					"loop" : [ "[", 1, 1, 0, "]", "[", 1, 1, 0, "]" ],
+					"loop" : [ "[", 1, 1, 0, "]", "[", 1, 2, 0, "]" ],
 					"maxclass" : "bach.score",
 					"maxundosteps" : 0,
+					"midichannels" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
 					"numinlets" : 7,
 					"numoutlets" : 9,
-					"numvoices" : 1,
+					"numparts" : [ 1, 1, 1, 1, 1, 2, 1, 1 ],
+					"numvoices" : 9,
 					"out" : "nnnnnnnn",
 					"outlettype" : [ "", "", "", "", "", "", "", "", "bang" ],
 					"patching_rect" : [ 938.0, 863.0, 322.0, 127.0 ],
 					"pitcheditrange" : [ "null" ],
-					"stafflines" : [ 5 ],
+					"showmeasurenumbers" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
+					"stafflines" : [ 5, 5, 5, 5, 5, 5, 5, 5, 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"versionnumber" : 80105,
-					"voicenames" : [ "[", "]" ],
-					"voicespacing" : [ -15.6, 16.399999999999999 ],
+					"voicenames" : [ "[", "A.", "Sax.", "]", "[", "T.", "Sax.", "]", "[", "B.", "Sax.", "]", "Tpt.", "Guitar", "Piano", "[", "]", "Bass", "[", "]" ],
+					"voicespacing" : [ 0.0, 26.0, 26.0, 26.0, 26.0, 26.0, 26.0, 26.0, 26.0, 26.0 ],
 					"vzoom" : 50.0
 				}
 
@@ -1012,37 +1019,37 @@
 , 			{
 				"box" : 				{
 					"bwcompatibility" : 70904,
-					"clefs" : [ "G", "G", "G" ],
+					"clefs" : [ "G", "G" ],
 					"constraintbeamsinspaces" : 0,
 					"defaultnoteslots" : [ "null" ],
 					"embed" : 0,
-					"enharmonictable" : [ "default", "default", "default" ],
+					"enharmonictable" : [ "default", "default" ],
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"hidevoices" : [ 0, 0, 0 ],
+					"hidevoices" : [ 0, 0 ],
 					"id" : "obj-43",
-					"keys" : [ "CM", "CM", "CM" ],
+					"keys" : [ "CM", "CM" ],
 					"legend" : 0,
 					"linkdynamicstoslot" : 0,
 					"loop" : [ "[", 1, 1, 0, "]", "[", 1, 1, 0, "]" ],
 					"maxclass" : "bach.score",
 					"maxundosteps" : 0,
-					"midichannels" : [ 1, 2, 3 ],
+					"midichannels" : [ 1, 2 ],
 					"numinlets" : 7,
 					"numoutlets" : 9,
-					"numparts" : [ 1, 1, 1 ],
-					"numvoices" : 3,
+					"numparts" : [ 1, 1 ],
+					"numvoices" : 2,
 					"out" : "nnnnnnnn",
 					"outlettype" : [ "", "", "", "", "", "", "", "", "bang" ],
 					"patching_rect" : [ 1343.0, 664.0, 186.0, 52.0 ],
 					"pitcheditrange" : [ "null" ],
-					"showmeasurenumbers" : [ 1, 1, 1 ],
-					"stafflines" : [ 5, 5, 5 ],
+					"showmeasurenumbers" : [ 1, 1 ],
+					"stafflines" : [ 5, 5 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"versionnumber" : 80105,
-					"voicenames" : [ "[", "]", "[", "]", "[", "]" ],
-					"voicespacing" : [ 0.0, 26.0, 26.0, 26.0 ],
+					"voicenames" : [ "[", "]", "[", "]" ],
+					"voicespacing" : [ 0.0, 26.0, 26.0 ],
 					"vzoom" : 50.0
 				}
 

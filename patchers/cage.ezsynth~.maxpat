@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 5,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 398.0, 79.0, 1008.0, 395.0 ],
+		"rect" : [ 633.0, 100.0, 1008.0, 395.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-13",
@@ -125,7 +126,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 205.000014999999991, 270.0, 71.0, 22.0 ],
+					"patching_rect" : [ 205.000014999999991, 268.0, 71.0, 22.0 ],
 					"text" : "target 0, $2"
 				}
 
@@ -154,7 +155,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 589.700012000000015, 218.0, 307.0, 76.0 ],
+					"patching_rect" : [ 589.700012000000015, 191.0, 307.0, 76.0 ],
 					"text" : "outputslotnames 1, ( slotinfo ( 1 ( name amplitude ) ( type function ) ( key a ) ( range -90. 10. ) ( slope -0.4 ) ( representation dB ) ( ysnap ( 0. ) ) ( domain 0. 1. ) ( domainslope 0. ) ( width temporal ) (background 1)) ) (commands (1 stopnote stopchord z))"
 				}
 
@@ -167,7 +168,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 589.700012000000015, 299.0, 25.0, 25.0 ]
+					"patching_rect" : [ 589.700012000000015, 272.0, 25.0, 25.0 ]
 				}
 
 			}

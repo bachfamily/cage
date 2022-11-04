@@ -73,6 +73,7 @@ max oblist "cage abstractions" cage.profile.stretch;
 max oblist "cage abstractions" cage.rollinterp;
 max oblist "cage abstractions" cage.chordinterp;
 max oblist "cage abstractions" cage.granulate;
+max oblist "cage abstractions" cage.rebar;
 max oblist "cage abstractions" cage.spacer;
 max oblist "cage abstractions" cage.weightbuilder;
 max oblist "cage abstractions" cage.rev;

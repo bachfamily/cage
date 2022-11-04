@@ -1624,6 +1624,25 @@
       "bach.score"
     ]
   },
+  "cage.rebar": {
+    "digest": "Rebar music",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "rebar",
+      "barlines",
+      "meter",
+      "measureinfo",
+      "score"
+    ],
+    "seealso": [
+      "cage.rev",
+      "cage.shift"
+    ]
+  },
   "cage.spacer": {
     "digest": "Insert time in a roll",
     "module": "cage",
