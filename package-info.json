@@ -14,12 +14,10 @@
 	"os" : 	{
 		"macintosh" : 		{
 			"min_version" : "10.7.x",
-			"platform" : [ "ia32", "x64" ]
 		}
 ,
 		"windows" : 		{
 			"min_version" : "XP",
-			"platform" : [ "ia32", "x64" ]
 		}
 
 	}
