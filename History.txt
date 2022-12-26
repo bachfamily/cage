@@ -1,10 +1,20 @@
 v 0.6.5
 
+*************************
+*** IMPORTANT CHANGES ***
+*************************
+
+These might break compatibility with older patches
+
+- cage.virtfund: null is output if no result is found
+
+
 ***********************
 *** VERSION CHANGES ***
 ***********************
 
-- 'cage.arpeggio: fixed bug causing wrong behavior with aug7 chords
+- cage.arpeggio: fixed bug causing wrong behavior with aug7 chords
+
 
 
 
@@ -21,6 +31,9 @@ multiple modules: fixed doc
 - cage.offset: now accepts rationals in second inlets
 
 - cage.ezsynth~: number of partials augmented with @zlmaxsize 32767
+
+
+
 
 
 v 0.6
