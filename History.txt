@@ -8,16 +8,6 @@ These might break compatibility with older patches
 
 - cage.sdif.ptrack.toroll		Now works with @noteoff 0 by default. Set @noteoff 1 in order to have it work as in the previous mode.
 
-
-
-v 0.6.5
-
-*************************
-*** IMPORTANT CHANGES ***
-*************************
-
-These might break compatibility with older patches
-
 - cage.virtfund: null is output if no result is found
 
 
@@ -25,10 +15,20 @@ These might break compatibility with older patches
 *** VERSION CHANGES ***
 ***********************
 
+multiple modules: fixed doc
+
 - cage.arpeggio: fixed bug causing wrong behavior with aug7 chords
 
 
 - cage.slice: now cage.slice with @endmarker 1 outputs the markers even if the incoming dumped roll has no markers
+
+- cage.chordinterp, cage.rhythminterp: "mode" attribute renamed to "interpmode", and now works ("mode" is preserved, albeit not working, for some future update)
+
+- cage.join: removed vestigial prints
+
+- cage.offset: now accepts rationals in second inlets
+
+- cage.ezsynth~: number of partials augmented with @zlmaxsize 32767
 
 
 v 0.6.4
@@ -37,13 +37,6 @@ v 0.6.4
 *** VERSION CHANGES ***
 ***********************
 
-multiple modules: fixed doc
-
-- cage.join: removed vestigial prints
-
-- cage.offset: now accepts rationals in second inlets
-
-- cage.ezsynth~: number of partials augmented with @zlmaxsize 32767
 
 
 
