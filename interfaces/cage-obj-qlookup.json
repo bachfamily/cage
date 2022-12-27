@@ -112,7 +112,7 @@
     ]
   },
   "cage.join": {
-    "digest": "Join rolls",
+    "digest": "Join scores",
     "module": "cage",
     "category": [
       "cage",
@@ -340,6 +340,7 @@
       "proportional"
     ],
     "seealso": [
+      "cage.separatevoices",
       "cage.mix",
       "cage.join",
       "bach.roll",
@@ -1051,6 +1052,25 @@
       "cage.profile.stretch"
     ]
   },
+  "cage.separatevoices": {
+    "digest": "Separate voices into new bach.roll or bach.score objects",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "separate",
+      "combine",
+      "voice",
+      "measured",
+      "proportional"
+    ],
+    "seealso": [
+      "cage.combinevoices",
+      "cage.explodevoices"
+    ]
+  },
   "cage.repeat": {
     "digest": "Repeat a roll or score",
     "module": "cage",
@@ -1267,7 +1287,7 @@
     ]
   },
   "cage.remapvoices": {
-    "digest": "Remap the voices of a roll",
+    "digest": "Remap the voices of a score",
     "module": "cage",
     "category": [
       "cage",
@@ -1602,6 +1622,25 @@
     "seealso": [
       "bach.roll",
       "bach.score"
+    ]
+  },
+  "cage.rebar": {
+    "digest": "Rebar music",
+    "module": "cage",
+    "category": [
+      "cage",
+      "cage scores"
+    ],
+    "keywords": [
+      "rebar",
+      "barlines",
+      "meter",
+      "measureinfo",
+      "score"
+    ],
+    "seealso": [
+      "cage.rev",
+      "cage.shift"
     ]
   },
   "cage.spacer": {

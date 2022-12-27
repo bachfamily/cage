@@ -67,10 +67,10 @@ void main_foo() {
 	
 	llllobj_class_add_out_attr(c, LLLL_OBJ_VANILLA);
 	
-	CLASS_ATTR_LONG(c, "mode", 0, t_rhythminterp, mode);
-	CLASS_ATTR_LABEL(c,"mode",0,"Mode");
-	CLASS_ATTR_BASIC(c,"mode",0);
-	// @description If the <m>mode</m> attribute is set to 0,
+    CLASS_ATTR_LONG(c, "interpmode", 0, t_chordinterp, mode);
+    CLASS_ATTR_LABEL(c,"interpmode",0,"Interpolation Mode");
+    CLASS_ATTR_BASIC(c,"interpmode",0);
+	// @description If the <m>interpmode</m> attribute is set to 0,
 	// interpolating between rhythms with different numbers of chords
 	// may produce a rhythm with more chords than any of its contributors.
 	// If it is set to 1, the number of notes of the resulting rhythm

@@ -12,7 +12,7 @@ cage for Max
 SYSTEM REQUIREMENTS
 ===================================================
 
-Intel-based Mac or Windows computer running Max 7.3.5 or higher and bach 0.8.1 or higher.
+Intel-based Mac or Windows computer running Max 8.2.0 or higher and bach 0.8.2 or higher.
 
 
 ===================================================
@@ -21,7 +21,7 @@ HOW TO INSTALL
 
 You should install cage directly from the Max Package Manager.
 
-Alternatively, you can copy the "cage" folder inside the "Packages" folder in your Max folder. The Max packages folder is under "Documents/Max 7" (for Max 7) or "Documents/Max 8" (for Max 8).
+Alternatively, you can copy the "cage" folder inside the "Packages" folder in your Max folder. The Max packages folder is under "Documents/Max 8".
 
 You can obtain cage from Github, at the URL https://github.com/bachfamily/cage
 

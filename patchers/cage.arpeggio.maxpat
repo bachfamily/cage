@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 664.0, 573.0 ],
+		"rect" : [ 445.0, 79.0, 664.0, 573.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-14",
@@ -200,8 +201,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -234,6 +235,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-3",
@@ -253,8 +255,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 117.0, 303.0, 326.0, 22.0 ],
-									"text" : "regexp (7|11|31|9)(?!mid|jam|min|m|M) @substitute %1mod"
+									"patching_rect" : [ 117.0, 303.0, 348.0, 22.0 ],
+									"text" : "regexp (7|11|31|9)(?!mid|jam|min|gua|m|M) @substitute %1mod"
 								}
 
 							}
@@ -372,7 +374,8 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 247.0, 454.0, 85.0, 22.0 ],
 									"saved_object_attributes" : 									{
-										"embed" : 1
+										"embed" : 1,
+										"precision" : 6
 									}
 ,
 									"text" : "coll patterns 1"
@@ -430,7 +433,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 306.0, 206.0, 57.0, 22.0 ],
+									"patching_rect" : [ 315.75, 223.0, 57.0, 22.0 ],
 									"text" : "zl slice 1"
 								}
 
@@ -440,12 +443,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-9",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 238.0, 179.0, 342.0, 22.0 ],
-									"text" : "regexp (7jam|7nim|7mid|mid|7m|7M|7|9|11|31|m|M|gua)([\\\\S]+)"
+									"patching_rect" : [ 238.0, 179.0, 330.0, 35.0 ],
+									"text" : "regexp (7jam|7nim|7mid|7gua|mid|7m|7M|7|9|11|31|m|M|gua)([\\\\S]+)"
 								}
 
 							}
@@ -917,7 +921,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 67.0, 10.0, 25.0, 25.0 ]
 				}
 
@@ -1111,7 +1115,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 461.0, 95.0, 97.0, 22.0 ],
+					"patching_rect" : [ 461.0, 94.0, 97.0, 22.0 ],
 					"text" : "route done base"
 				}
 

@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 4,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 457.0, 90.0, 508.0, 494.0 ],
+		"rect" : [ 457.0, 100.0, 508.0, 494.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,13 +37,14 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 320.100006000000008, 54.0, 136.0, 22.0 ],
+					"patching_rect" : [ 320.100006000000008, 66.0, 136.0, 22.0 ],
 					"text" : "cage.checkbachversion"
 				}
 
@@ -83,8 +84,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -117,6 +118,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -343,8 +345,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -377,6 +379,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-49",
@@ -462,8 +465,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 4,
+											"minor" : 3,
+											"revision" : 1,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -496,6 +499,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-63",
@@ -1668,8 +1672,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 4,
+											"minor" : 3,
+											"revision" : 1,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1702,6 +1706,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-30",
@@ -1767,7 +1772,7 @@
 													"pitcheditrange" : [ "null" ],
 													"stafflines" : [ 5 ],
 													"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-													"versionnumber" : 80005,
+													"versionnumber" : 80105,
 													"voicenames" : [ "[", "]" ],
 													"voicespacing" : [ 0.0, 26.0 ],
 													"vzoom" : 50.0
@@ -1957,6 +1962,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-29",
+									"legend" : 0,
 									"linkdynamicstoslot" : 0,
 									"linklyricstoslot" : 7,
 									"loop" : [ "[", 1, 1, 0, "]", "[", 1, 2, 0, "]" ],
@@ -1974,7 +1980,7 @@
 									"snappitchtogridwhenediting" : 0,
 									"stafflines" : [ 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80005,
+									"versionnumber" : 80105,
 									"voicenames" : [ "[", "]" ],
 									"voicespacing" : [ 0.0, 26.0 ],
 									"vzoom" : 50.0
@@ -1992,8 +1998,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 4,
+											"minor" : 3,
+											"revision" : 1,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2026,6 +2032,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-30",
@@ -2090,7 +2097,7 @@
 													"pitcheditrange" : [ "null" ],
 													"stafflines" : [ 5 ],
 													"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-													"versionnumber" : 80005,
+													"versionnumber" : 80105,
 													"voicenames" : [ "[", "]" ],
 													"voicespacing" : [ 0.0, 17.0 ],
 													"vzoom" : 50.0
@@ -3080,8 +3087,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3114,6 +3121,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -3295,40 +3303,34 @@
 , 							{
 								"box" : 								{
 									"bwcompatibility" : 70904,
-									"clefs" : [ "G", "G" ],
 									"constraintbeamsinspaces" : 0,
 									"defaultnoteslots" : [ "null" ],
 									"embed" : 0,
-									"enharmonictable" : [ "default", "default" ],
 									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"hidevoices" : [ 0, 0 ],
 									"id" : "obj-11",
-									"keys" : [ "CM", "CM" ],
+									"legend" : 0,
 									"linkdynamicstoslot" : 0,
 									"linklyricstoslot" : 7,
 									"loop" : [ "[", 1, 1, 0, "]", "[", 1, 1, 0, "]" ],
 									"maxclass" : "bach.score",
 									"maxundosteps" : 0,
-									"midichannels" : [ 1, 2 ],
 									"numinlets" : 7,
 									"numoutlets" : 9,
-									"numparts" : [ 1, 1 ],
-									"numvoices" : 2,
+									"numvoices" : 1,
 									"out" : "nnnnnnnn",
 									"outlettype" : [ "", "", "", "", "", "", "", "", "bang" ],
 									"patching_rect" : [ 461.25, 339.333343505859375, 145.0, 84.166664123535156 ],
 									"pitcheditrange" : [ "null" ],
-									"showmeasurenumbers" : [ 1, 1 ],
 									"snappitch" : 0,
 									"snappitchtogridondrag" : 0,
 									"snappitchtogridwhenediting" : 0,
-									"stafflines" : [ 5, 5 ],
+									"stafflines" : [ 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80005,
-									"voicenames" : [ "[", "]", "[", "]" ],
-									"voicespacing" : [ 0.0, 26.0, 26.0 ],
+									"versionnumber" : 80105,
+									"voicenames" : [ "[", "]" ],
+									"voicespacing" : [ 0.0, 26.0 ],
 									"vzoom" : 50.0
 								}
 
@@ -3407,6 +3409,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-4",
+									"legend" : 0,
 									"linkdynamicstoslot" : 0,
 									"linklyricstoslot" : 7,
 									"loop" : [ 0.0, 1000.0 ],
@@ -3424,7 +3427,7 @@
 									"snappitchtogridwhenediting" : 0,
 									"stafflines" : [ 5 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"versionnumber" : 80005,
+									"versionnumber" : 80105,
 									"voicenames" : [ "[", "]" ],
 									"voicespacing" : [ 0.0, 17.0 ],
 									"vzoom" : 50.0

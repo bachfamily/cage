@@ -51,13 +51,13 @@
 
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg name="max_perturbation" optional="1" type="float">
+		<objarg name="max_perturbation" optional="1" type="int">
 			<digest>
 				Maximum perturbation
 			</digest>
 			<description>
 				The optional argument sets the initial maximum
-				perturbation (in midicents).
+				perturbation (in cents). The perturbation must be an integer number.
 			</description>
 		</objarg>
 	</objarglist>
@@ -110,6 +110,7 @@
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="symbol" size="1" value="Behavior" />
 				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Outlet Types" />
+				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="save" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>

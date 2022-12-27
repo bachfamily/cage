@@ -21,7 +21,7 @@
 	Perform temporal stretch
 	
 	@description
-	Stretch all the content in a <o>bach.roll</o> statically.
+	Stretch all the content in a <o>bach.roll</o> or <o>bach.score</o> statically.
  
 	@discussion
  

@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 0,
+			"minor" : 5,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,13 +37,14 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 383.0, 57.0, 136.0, 22.0 ],
+					"patching_rect" : [ 383.0, 24.0, 136.0, 22.0 ],
 					"text" : "cage.checkbachversion"
 				}
 
@@ -84,7 +85,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 373.0, 154.0, 73.0, 22.0 ],
+					"patching_rect" : [ 411.0, 163.0, 73.0, 22.0 ],
 					"text" : "zl reg 10 10"
 				}
 
@@ -191,8 +192,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 0,
+							"minor" : 5,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -225,6 +226,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-34",
@@ -259,8 +261,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 1,
-											"revision" : 0,
+											"minor" : 5,
+											"revision" : 3,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -293,6 +295,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-6",
@@ -708,8 +711,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 1,
-											"revision" : 0,
+											"minor" : 5,
+											"revision" : 3,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -742,6 +745,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-1",
@@ -1432,7 +1436,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 630.035766999999964, 204.0, 59.0, 22.0 ],
 									"text" : "bach.lcm"
 								}
@@ -1884,12 +1888,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
+					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 5,
-					"numoutlets" : 5,
-					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 354.0, 94.0, 165.0, 22.0 ],
-					"text" : "route mode thin epsilon done"
+					"numinlets" : 6,
+					"numoutlets" : 6,
+					"outlettype" : [ "", "", "", "", "", "" ],
+					"patching_rect" : [ 354.0, 94.0, 159.0, 35.0 ],
+					"text" : "route mode interpmode thin epsilon done"
 				}
 
 			}
@@ -1903,12 +1908,12 @@
 					"numinlets" : 4,
 					"numoutlets" : 6,
 					"outlettype" : [ "bang", "", "", "", "", "" ],
-					"patching_rect" : [ 80.0, 57.0, 293.0, 22.0 ],
+					"patching_rect" : [ 80.0, 57.0, 354.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"versionnumber" : 80002
+						"versionnumber" : 80200
 					}
 ,
-					"text" : "bach.args @ins 3 @attrs mode thin epsilon @done 1"
+					"text" : "bach.args @ins 3 @attrs mode interpmode thin epsilon @done 1"
 				}
 
 			}
@@ -2074,6 +2079,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 3 ],
+					"source" : [ "obj-9", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 2 ],
 					"source" : [ "obj-9", 1 ]
 				}
 
@@ -2088,14 +2100,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-9", 3 ]
+					"source" : [ "obj-9", 4 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-9", 2 ]
+					"source" : [ "obj-9", 3 ]
 				}
 
 			}

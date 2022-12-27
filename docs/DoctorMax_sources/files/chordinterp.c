@@ -73,10 +73,10 @@ void main_foo() {
 	// If set to 0, the pitches of the resulting chord will not be quantized.
 	// The default is 2.
 	
-	CLASS_ATTR_LONG(c, "mode", 0, t_chordinterp, mode);
-	CLASS_ATTR_LABEL(c,"mode",0,"Mode");
-	CLASS_ATTR_BASIC(c,"mode",0);
-	// @description If the <m>mode</m> attribute is set to 0,
+	CLASS_ATTR_LONG(c, "interpmode", 0, t_chordinterp, mode);
+	CLASS_ATTR_LABEL(c,"interpmode",0,"Interpolation Mode");
+	CLASS_ATTR_BASIC(c,"interpmode",0);
+	// @description If the <m>interpmode</m> attribute is set to 0,
 	// interpolating between chords with different numbers of notes
 	// may produce a chord with more notes than any of its contributors.
 	// If it is set to 1, the number of notes of the resulting chord
