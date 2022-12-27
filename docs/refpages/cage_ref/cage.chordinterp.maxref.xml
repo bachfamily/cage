@@ -83,12 +83,12 @@
 
 	<!--ATTRIBUTES-->
 	<attributelist>
-		<attribute name="mode" get="1" set="1" type="int" size="1">
+		<attribute name="interpmode" get="1" set="1" type="int" size="1">
 			<digest>
-				Mode
+				Interpolation Mode
 			</digest>
 			<description>
-				If the <m>mode</m> attribute is set to 0,
+				If the <m>interpmode</m> attribute is set to 0,
 				interpolating between chords with different numbers of notes
 				may produce a chord with more notes than any of its contributors.
 				If it is set to 1, the number of notes of the resulting chord
@@ -96,7 +96,7 @@
 				The default is 0.
 			</description>
 			<attributelist>
-				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Mode" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Interpolation Mode" />
 				<attribute name="paint" get="1" set="1" type="int" size="1" value="1" />
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="text" />
 			</attributelist>
