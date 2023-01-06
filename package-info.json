@@ -4,7 +4,7 @@
 	"version" : "0.7",
 	"author" : "Andrea Agostini and Daniele Ghisi",
 	"authors" : [  ],
-	"description" : "cage: ready-made high-level modules for real-time computer-assisted composition. IMPORTANT: requires Bach 0.8.1 or higher.",
+	"description" : "cage: ready-made high-level modules for real-time computer-assisted composition. IMPORTANT: requires bach 0.8.2 or higher.",
 	"tags" : [ "computer-assisted composition", "composition", "generation", "score", "roll", "score operations", "profiles", "sdif" ],
 	"website" : "http://www.bachproject.net/cage",
 	"extends" : "",
