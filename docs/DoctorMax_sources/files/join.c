@@ -79,6 +79,12 @@ CLASS_ATTR_BASIC(c,"keepend",0);
 // (most likely created via <o>cage.slice</o>). Defaults to 0 (i.e.
 // all markers are kept, except for the ones named "end").
 
+CLASS_ATTR_CHAR(c, "autoglue", 0, t_slice, autoglue); 
+CLASS_ATTR_STYLE_LABEL(c,"autoglue",0,"text","Automatically Glue Initial Chords");
+CLASS_ATTR_BASIC(c,"autoglue",0);
+// @description For <o>bach.roll</o>s, toggles the ability to automatically glue the 
+// initial chords of a score to whatever has been already placed in it. Defaults to 1.
+
 }
 
 // ---------------

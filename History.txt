@@ -10,6 +10,7 @@ These might break compatibility with older patches
 
 - cage.virtfund: null is output if no result is found
 
+- cage.join: @autoglue: new attribute
 
 ***********************
 *** VERSION CHANGES ***
