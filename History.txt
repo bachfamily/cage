@@ -6,6 +6,8 @@ v 0.7
 
 These might break compatibility with older patches
 
+- cage.harmser: default stretch mode has changed, from frequency to pitch!
+
 - cage.sdif.ptrack.toroll		Now works with @noteoff 0 by default. Set @noteoff 1 in order to have it work as in the previous mode.
 
 - cage.virtfund: null is output if no result is found

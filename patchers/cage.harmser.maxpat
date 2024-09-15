@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 6,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-11",
@@ -188,7 +189,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 35.0, 437.0, 390.0, 22.0 ],
-					"text" : "gate 2 1"
+					"text" : "gate 2 2"
 				}
 
 			}
@@ -502,7 +503,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"midpoints" : [ 485.5, 399.5, 44.5, 399.5 ],
+					"midpoints" : [ 485.5, 424.5, 44.5, 424.5 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
