@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 225.0, 164.0, 791.0, 585.0 ],
+		"rect" : [ 263.0, 226.0, 1113.0, 640.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -199,11 +199,11 @@
 					"fontsize" : 12.0,
 					"id" : "obj-19",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 476.0, 75.0, 165.0, 22.0 ],
-					"text" : "route stretchmode numpartial"
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 476.0, 75.0, 173.0, 22.0 ],
+					"text" : "route stretchmode numpartial ji"
 				}
 
 			}
@@ -440,7 +440,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 35.0, 14.0, 25.0, 25.0 ]
 				}
 
@@ -518,7 +518,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 1 ],
-					"midpoints" : [ 558.5, 218.0, 80.5, 218.0 ],
+					"midpoints" : [ 536.833333333333371, 218.0, 80.5, 218.0 ],
 					"source" : [ "obj-19", 1 ]
 				}
 

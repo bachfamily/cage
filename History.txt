@@ -33,6 +33,7 @@ multiple modules: fixed doc
 
 - cage.ezsynth~: number of partials augmented with @zlmaxsize 32767
 
+- cage.markov.analysis: fixed behavior with list with nonative mode active
 
 v 0.6.4
 

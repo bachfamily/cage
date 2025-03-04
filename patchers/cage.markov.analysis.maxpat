@@ -3,7 +3,7 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
+			"minor" : 6,
 			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
@@ -399,9 +399,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 146.666655999999989, 132.0, 56.0, 22.0 ],
-					"text" : "sel bang"
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 146.666655999999989, 132.0, 66.0, 22.0 ],
+					"text" : "route bang"
 				}
 
 			}
@@ -445,7 +445,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
 				}
 
