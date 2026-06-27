@@ -2,8 +2,8 @@
 
 
 
-/Users/danieleghisi/Documents/Max 8/Packages/bach/source/commons/dg/bach_doc_commons_dg.h
-/Users/danieleghisi/Documents/Max 8/Packages/bach/source/commons/aa/bach_doc_commons_aa.h
+/Users/danieleghisi/Documents/Max 8/Packages/bach/source/commons/doc/bach_doc_commons.h
+
 /Users/danieleghisi/Documents/Max 8/Packages/cage/docs/refpages/cage_ref
 /Users/danieleghisi/Documents/Max 8/Packages/cage/init
 1
