@@ -35,6 +35,10 @@ multiple modules: fixed doc
 
 - cage.markov.analysis: fixed behavior with list with nonative mode active
 
+- cage.virtfund: fixed bug causing impossible @out m/t outputs
+
+- cage.timestretch: now accounts for breakpoints velocities
+
 v 0.6.4
 
 ***********************
