@@ -1,7 +1,7 @@
 {
 	"name" : "cage",
 	"displayname" : "",
-	"version" : "0.7",
+	"version" : "0.8.9",
 	"author" : "Andrea Agostini and Daniele Ghisi",
 	"authors" : [  ],
 	"description" : "cage: ready-made high-level modules for real-time computer-assisted composition. IMPORTANT: requires bach 0.8.2 or higher.",
